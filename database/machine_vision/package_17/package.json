@@ -1,0 +1,235 @@
+{
+  "package_id": "pkg17",
+  "source": "2015-05-15-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg17_mcq1",
+      "question": "Optical flow is the:",
+      "options": {
+        "A": "Apparent motion of pixels between frames",
+        "B": "3D velocity field",
+        "C": "Camera trajectory",
+        "D": "Light direction"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Define optical flow.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq2",
+      "question": "SIFT is a:",
+      "options": {
+        "A": "Scale-invariant feature transform for detection and description",
+        "B": "Color space",
+        "C": "Clustering algorithm",
+        "D": "Distance metric"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Recall SIFT.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq3",
+      "question": "A histogram is:",
+      "options": {
+        "A": "Frequency count of values",
+        "B": "Spatial map",
+        "C": "Gradient filter",
+        "D": "Transformation matrix"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Histogram definition.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq4",
+      "question": "K-nearest neighbor classifies by:",
+      "options": {
+        "A": "Majority vote of k closest training examples",
+        "B": "Centroid calculation",
+        "C": "Linear regression",
+        "D": "Neural activation"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "kNN principle.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq5",
+      "question": "HSV separates:",
+      "options": {
+        "A": "Hue, saturation, value",
+        "B": "Red, green, blue",
+        "C": "Luminance, chrominance",
+        "D": "Opponent colors"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "HSV components.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq6",
+      "question": "Hough transform is for:",
+      "options": {
+        "A": "Parametric shape detection",
+        "B": "Texture analysis",
+        "C": "Color correction",
+        "D": "Motion estimation"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Hough usage.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq7",
+      "question": "RANSAC handles:",
+      "options": {
+        "A": "Outliers in model fitting",
+        "B": "Image noise only",
+        "C": "Color balancing",
+        "D": "Clustering"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "RANSAC principle.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq8",
+      "question": "Mahalanobis distance is:",
+      "options": {
+        "A": "Covariance-weighted Euclidean",
+        "B": "Manhattan distance",
+        "C": "Cosine similarity",
+        "D": "Hamming distance"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Define Mahalanobis.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq9",
+      "question": "Morphological operations can:",
+      "options": {
+        "A": "Clean segmentation by removing noise, filling holes",
+        "B": "Compute gradients",
+        "C": "Estimate motion",
+        "D": "Classify colors"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Morphology in segmentation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg17_mcq10",
+      "question": "For texture classification, filter banks provide:",
+      "options": {
+        "A": "Multi-scale responses for features",
+        "B": "Only edge detection",
+        "C": "Color features",
+        "D": "3D depths"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Filter banks for texture.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg17_essay1",
+    "prompt": "Design a seashell classification system using texture and shape. Describe segmentation from black background using thresholding and morphology for cleanup. Explain texture extraction with filter banks/LBP/co-occurrence and classification with feature vectors, distance, classifier. Suggest shape features like eccentricity, compactness; combine via concatenation or separate classifiers. Discuss training with labeled data.",
+    "expected_keywords": [
+      "segmentation",
+      "thresholding",
+      "morphology",
+      "texture extraction",
+      "filter banks",
+      "LBP",
+      "co-occurrence",
+      "feature vectors",
+      "distance function",
+      "classifier",
+      "shape features",
+      "combination"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "segmentation",
+          "weight": 10,
+          "description": "Threshold on contrast."
+        },
+        {
+          "keyword": "thresholding",
+          "weight": 10,
+          "description": "Binary separation."
+        },
+        {
+          "keyword": "morphology",
+          "weight": 10,
+          "description": "Noise removal, hole filling."
+        },
+        {
+          "keyword": "texture extraction",
+          "weight": 15,
+          "description": "Choose method."
+        },
+        {
+          "keyword": "filter banks",
+          "weight": 5,
+          "description": "Multi-filter responses."
+        },
+        {
+          "keyword": "LBP",
+          "weight": 5,
+          "description": "Local patterns."
+        },
+        {
+          "keyword": "co-occurrence",
+          "weight": 5,
+          "description": "Spatial stats."
+        },
+        {
+          "keyword": "feature vectors",
+          "weight": 10,
+          "description": "Summarize properties."
+        },
+        {
+          "keyword": "distance function",
+          "weight": 10,
+          "description": "Similarity measure."
+        },
+        {
+          "keyword": "classifier",
+          "weight": 10,
+          "description": "kNN or other."
+        },
+        {
+          "keyword": "shape features",
+          "weight": 10,
+          "description": "Moments, boundaries."
+        },
+        {
+          "keyword": "combination",
+          "weight": 10,
+          "description": "Fuse features."
+        }
+      ],
+      "grading_notes": "Require full pipeline. Partial if missing shape integration."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

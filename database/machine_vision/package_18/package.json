@@ -1,0 +1,218 @@
+{
+  "package_id": "pkg18",
+  "source": "2017-05-18-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg18_mcq1",
+      "question": "HSV color space is useful for:",
+      "options": {
+        "A": "Intuitive color manipulation separating hue from intensity",
+        "B": "Device calibration",
+        "C": "3D modeling",
+        "D": "Motion detection"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "HSV advantages.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq2",
+      "question": "Radial distortion is modeled as:",
+      "options": {
+        "A": "Polynomial function of radius",
+        "B": "Linear shear",
+        "C": "Color shift",
+        "D": "Noise addition"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Radial distortion model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq3",
+      "question": "Aperture problem in flow:",
+      "options": {
+        "A": "One equation, two unknowns per pixel",
+        "B": "Global illumination change",
+        "C": "Sensor saturation",
+        "D": "Lens flare"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Flow ambiguity.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq4",
+      "question": "Unsupervised learning finds:",
+      "options": {
+        "A": "Hidden structures without labels",
+        "B": "Labeled predictions",
+        "C": "Optimal paths",
+        "D": "Camera poses"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Unsupervised definition.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq5",
+      "question": "A feature descriptor should be:",
+      "options": {
+        "A": "Invariant to transformations, discriminative",
+        "B": "Global only",
+        "C": "Color-dependent",
+        "D": "High-dimensional always"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Descriptor properties.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq6",
+      "question": "Diffuse reflection is:",
+      "options": {
+        "A": "Lambertian, view-independent",
+        "B": "Specular, mirror-like",
+        "C": "Transparent",
+        "D": "Emissive"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Reflection types.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq7",
+      "question": "Epipolar constraint reduces:",
+      "options": {
+        "A": "2D search to 1D line",
+        "B": "3D to 2D",
+        "C": "Color space",
+        "D": "Texture dimensions"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Epipolar utility.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq8",
+      "question": "Optical flow assumes:",
+      "options": {
+        "A": "Brightness constancy and small motion",
+        "B": "Large displacements",
+        "C": "No occlusion",
+        "D": "Known depths"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Flow assumptions.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq9",
+      "question": "LBP is rotation invariant when:",
+      "options": {
+        "A": "Using uniform patterns and rotation shifting",
+        "B": "No modifications",
+        "C": "With color",
+        "D": "In 3D"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "LBP variants.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg18_mcq10",
+      "question": "Texture synthesis generates:",
+      "options": {
+        "A": "New samples from model",
+        "B": "Only analysis",
+        "C": "Depth maps",
+        "D": "Motion fields"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Texture tasks.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg18_essay1",
+    "prompt": "Explain LBP for texture recognition, including basic operator and uniform/rotation-invariant extensions. Describe texture analysis (filter banks for energy features) and synthesis (e.g., Markov models). For 2D transformations, count DOF and min correspondences. Solve for parameters in given nonlinear example using linear system Ax=b.",
+    "expected_keywords": [
+      "LBP",
+      "binary operator",
+      "uniform patterns",
+      "texture recognition",
+      "filter banks",
+      "energy features",
+      "texture synthesis",
+      "2D transformations",
+      "DOF",
+      "linear system"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "LBP",
+          "weight": 15,
+          "description": "Neighborhood thresholding."
+        },
+        {
+          "keyword": "binary operator",
+          "weight": 10,
+          "description": "Code generation."
+        },
+        {
+          "keyword": "uniform patterns",
+          "weight": 10,
+          "description": "Reduced labels."
+        },
+        {
+          "keyword": "texture recognition",
+          "weight": 10,
+          "description": "Histogram comparison."
+        },
+        {
+          "keyword": "filter banks",
+          "weight": 10,
+          "description": "Gabor etc. for analysis."
+        },
+        {
+          "keyword": "energy features",
+          "weight": 10,
+          "description": "Response stats."
+        },
+        {
+          "keyword": "texture synthesis",
+          "weight": 10,
+          "description": "Generating new textures."
+        },
+        {
+          "keyword": "2D transformations",
+          "weight": 10,
+          "description": "DOF and correspondences."
+        },
+        {
+          "keyword": "linear system",
+          "weight": 10,
+          "description": "Ax=b setup."
+        }
+      ],
+      "grading_notes": "Require LBP details and transformation equations. Partial for missing synthesis."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

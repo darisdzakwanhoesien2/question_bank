@@ -1,0 +1,228 @@
+{
+  "package_id": "pkg19",
+  "source": "2015-09-21-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg19_mcq1",
+      "question": "Optical flow computes:",
+      "options": {
+        "A": "Pixel displacements over time",
+        "B": "Static features",
+        "C": "Color models",
+        "D": "3D poses"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Optical flow.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq2",
+      "question": "SIFT detects:",
+      "options": {
+        "A": "Scale-invariant keypoints",
+        "B": "Lines only",
+        "C": "Colors",
+        "D": "Motion"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "SIFT features.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq3",
+      "question": "HSV is:",
+      "options": {
+        "A": "Cylindrical color model",
+        "B": "Additive primaries",
+        "C": "Opponent space",
+        "D": "Device space"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "HSV.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq4",
+      "question": "Aperture problem:",
+      "options": {
+        "A": "Local motion ambiguity",
+        "B": "Global consistency",
+        "C": "Color variation",
+        "D": "Depth estimation"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Aperture issue.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq5",
+      "question": "Confusion matrix evaluates:",
+      "options": {
+        "A": "Classification errors",
+        "B": "Regression fit",
+        "C": "Clustering",
+        "D": "Compression"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Confusion matrix.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq6",
+      "question": "Unsupervised learning is:",
+      "options": {
+        "A": "Pattern discovery without labels",
+        "B": "Labeled training",
+        "C": "Reward-based",
+        "D": "Supervised validation"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Unsupervised.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq7",
+      "question": "Hough transform:",
+      "options": {
+        "A": "Detects lines via voting",
+        "B": "Segments regions",
+        "C": "Estimates flow",
+        "D": "Balances colors"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Hough.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq8",
+      "question": "Bag of words in vision:",
+      "options": {
+        "A": "Histogram of visual words for classification",
+        "B": "Text recognition",
+        "C": "3D modeling",
+        "D": "Motion analysis"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "BoW model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq9",
+      "question": "Harris detects:",
+      "options": {
+        "A": "Corners via structure tensor",
+        "B": "Blobs",
+        "C": "Lines",
+        "D": "Circles"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Harris detector.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg19_mcq10",
+      "question": "Morphology improves segmentation by:",
+      "options": {
+        "A": "Erosion/dilation for noise/holes",
+        "B": "Gradient computation",
+        "C": "Feature matching",
+        "D": "Color conversion"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Morphology usage."
+    }
+  ],
+  "essay": {
+    "id": "pkg19_essay1",
+    "prompt": "Develop seashell classifier. Segment using threshold on black background, improve with morphology. Extract texture with filter banks/LBP/co-occurrence for features. Classify with distance/classifier. Add shape like aspect ratio, combine features for joint classification. Use labeled training.",
+    "expected_keywords": [
+      "seashell classification",
+      "segmentation",
+      "thresholding",
+      "morphology",
+      "texture features",
+      "filter banks",
+      "LBP",
+      "co-occurrence",
+      "shape features",
+      "feature combination",
+      "training"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "seashell classification",
+          "weight": 5,
+          "description": "System overview."
+        },
+        {
+          "keyword": "segmentation",
+          "weight": 10,
+          "description": "Isolate shells."
+        },
+        {
+          "keyword": "thresholding",
+          "weight": 10,
+          "description": "Contrast-based."
+        },
+        {
+          "keyword": "morphology",
+          "weight": 10,
+          "description": "Cleanup."
+        },
+        {
+          "keyword": "texture features",
+          "weight": 15,
+          "description": "Extraction method."
+        },
+        {
+          "keyword": "filter banks",
+          "weight": 5,
+          "description": "One option."
+        },
+        {
+          "keyword": "LBP",
+          "weight": 5,
+          "description": "One option."
+        },
+        {
+          "keyword": "co-occurrence",
+          "weight": 5,
+          "description": "One option."
+        },
+        {
+          "keyword": "shape features",
+          "weight": 15,
+          "description": "E.g., moments."
+        },
+        {
+          "keyword": "feature combination",
+          "weight": 10,
+          "description": "Concatenate or fuse."
+        },
+        {
+          "keyword": "training",
+          "weight": 10,
+          "description": "Labeled data."
+        }
+      ],
+      "grading_notes": "Similar to pkg17."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

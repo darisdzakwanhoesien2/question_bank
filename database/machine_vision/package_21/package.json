@@ -1,0 +1,216 @@
+{
+  "package_id": "pkg21",
+  "source": "2017-09-13-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg21_mcq1",
+      "question": "A feature descriptor is used to:",
+      "options": {
+        "A": "Match points across images",
+        "B": "Calibrate cameras",
+        "C": "Segment regions",
+        "D": "Estimate depth"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Descriptor role.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq2",
+      "question": "Bayer filter arranges:",
+      "options": {
+        "A": "RGBG pattern for color capture",
+        "B": "Edge filters",
+        "C": "Motion sensors",
+        "D": "Depth pixels"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Bayer demosaicing.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq3",
+      "question": "Aperture problem:",
+      "options": {
+        "A": "Local flow underdetermined",
+        "B": "Global flow",
+        "C": "Color problem",
+        "D": "Distortion"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Aperture.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq4",
+      "question": "Hough transform:",
+      "options": {
+        "A": "Votes for lines/curves",
+        "B": "Clusters data",
+        "C": "Thresholds images",
+        "D": "Detects corners"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Hough.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq5",
+      "question": "Mahalanobis distance:",
+      "options": {
+        "A": "Scales by covariance",
+        "B": "Is Euclidean",
+        "C": "For binary",
+        "D": "For histograms"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Mahalanobis.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq6",
+      "question": "Grayscale histogram:",
+      "options": {
+        "A": "Intensity counts",
+        "B": "Spatial map",
+        "C": "Gradient hist",
+        "D": "Color hist"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Histogram.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq7",
+      "question": "K-means:",
+      "options": {
+        "A": "Iterative centroid assignment",
+        "B": "Hierarchical",
+        "C": "Density-based",
+        "D": "Spectral"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "k-means.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq8",
+      "question": "Otsu's method:",
+      "options": {
+        "A": "Optimal threshold by variance",
+        "B": "Adaptive threshold",
+        "C": "Multi-threshold",
+        "D": "Color threshold"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Otsu.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq9",
+      "question": "Harris corner uses:",
+      "options": {
+        "A": "Eigenvalues of structure tensor",
+        "B": "Laplacian",
+        "C": "Hessian",
+        "D": "DoG"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Harris.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg21_mcq10",
+      "question": "In stereo, z = f b / d, for d=2, b=6, f=1, z=:",
+      "options": {
+        "A": "3 cm",
+        "B": "0.33 cm",
+        "C": "12 cm",
+        "D": "6 cm"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Compute depth."
+    }
+  ],
+  "essay": {
+    "id": "pkg21_essay1",
+    "prompt": "Explain stereo for parallel cameras. Derive 3D from disparity. Compute z for values. Compare stereo matching to flow: similar in correspondence, different in geometry vs time.",
+    "expected_keywords": [
+      "stereo",
+      "parallel",
+      "disparity",
+      "3D equations",
+      "computation",
+      "matching",
+      "flow comparison",
+      "similarities",
+      "differences"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "stereo",
+          "weight": 10,
+          "description": "Setup."
+        },
+        {
+          "keyword": "parallel",
+          "weight": 10,
+          "description": "Cameras."
+        },
+        {
+          "keyword": "disparity",
+          "weight": 15,
+          "description": "Definition."
+        },
+        {
+          "keyword": "3D equations",
+          "weight": 15,
+          "description": "x,y,z."
+        },
+        {
+          "keyword": "computation",
+          "weight": 10,
+          "description": "Example."
+        },
+        {
+          "keyword": "matching",
+          "weight": 10,
+          "description": "Correspondence."
+        },
+        {
+          "keyword": "flow comparison",
+          "weight": 10,
+          "description": "To optical flow."
+        },
+        {
+          "keyword": "similarities",
+          "weight": 10,
+          "description": "Matching."
+        },
+        {
+          "keyword": "differences",
+          "weight": 10,
+          "description": "Constraints."
+        }
+      ],
+      "grading_notes": "Similar to pkg14."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

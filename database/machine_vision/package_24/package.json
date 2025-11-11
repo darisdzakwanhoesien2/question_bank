@@ -1,0 +1,211 @@
+{
+  "package_id": "pkg24",
+  "source": "2020-03-09-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg24_mcq1",
+      "question": "Depth of field is the:",
+      "options": {
+        "A": "Range of distances in focus",
+        "B": "Sensor size",
+        "C": "Focal length",
+        "D": "Aperture diameter"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "DOF definition.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq2",
+      "question": "HSV color space:",
+      "options": {
+        "A": "Hue for color, value for intensity",
+        "B": "RGB additive",
+        "C": "CMYK subtractive",
+        "D": "LAB perceptual"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "HSV.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq3",
+      "question": "Diffuse reflection is view-independent because:",
+      "options": {
+        "A": "Scatters light equally",
+        "B": "Reflects specularly",
+        "C": "Absorbs all light",
+        "D": "Transmits light"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Diffuse vs specular.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq4",
+      "question": "Confusion matrix tabulates:",
+      "options": {
+        "A": "Predictions vs actual classes",
+        "B": "Feature correlations",
+        "C": "Gradient directions",
+        "D": "Motion fields"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Matrix use.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq5",
+      "question": "Local descriptor is for:",
+      "options": {
+        "A": "Matching local regions",
+        "B": "Global alignment",
+        "C": "Color balancing",
+        "D": "Depth fusion"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Descriptors.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq6",
+      "question": "P3P problem solves:",
+      "options": {
+        "A": "Camera pose from 3 points",
+        "B": "Stereo disparity",
+        "C": "Texture classification",
+        "D": "Color constancy"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "P3P.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq7",
+      "question": "Image segmentation partitions into:",
+      "options": {
+        "A": "Meaningful regions",
+        "B": "Random clusters",
+        "C": "Individual pixels",
+        "D": "Frequency bands"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Segmentation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq8",
+      "question": "Optical flow for:",
+      "options": {
+        "A": "Motion estimation in video",
+        "B": "Static images only",
+        "C": "Color analysis",
+        "D": "Lens calibration"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Flow usage.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq9",
+      "question": "Structure from motion uses:",
+      "options": {
+        "A": "Uncalibrated images for 3D",
+        "B": "Known poses only",
+        "C": "Single view",
+        "D": "Shading cues"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "SfM.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg24_mcq10",
+      "question": "Essential matrix encodes:",
+      "options": {
+        "A": "Relative pose between views",
+        "B": "Intrinsic parameters",
+        "C": "Color transformation",
+        "D": "Texture mapping"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Essential matrix.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg24_essay1",
+    "prompt": "Solve for 3D point from projection matrices using linear system. Compute epipolar line from essential matrix and verify point lies on it. Explain epipolar constraint in stereo for reducing search space.",
+    "expected_keywords": [
+      "projection matrices",
+      "linear system",
+      "3D coordinates",
+      "essential matrix",
+      "epipolar line",
+      "verification",
+      "constraint usage",
+      "stereo search"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "projection matrices",
+          "weight": 15,
+          "description": "Given C, C'."
+        },
+        {
+          "keyword": "linear system",
+          "weight": 20,
+          "description": "Homogeneous equations."
+        },
+        {
+          "keyword": "3D coordinates",
+          "weight": 15,
+          "description": "Solve for X,Y,Z."
+        },
+        {
+          "keyword": "essential matrix",
+          "weight": 10,
+          "description": "Given E."
+        },
+        {
+          "keyword": "epipolar line",
+          "weight": 15,
+          "description": "Compute l' = E p."
+        },
+        {
+          "keyword": "verification",
+          "weight": 10,
+          "description": "p' ^ T l' = 0."
+        },
+        {
+          "keyword": "constraint usage",
+          "weight": 10,
+          "description": "In stereo."
+        },
+        {
+          "keyword": "stereo search",
+          "weight": 5,
+          "description": "1D reduction."
+        }
+      ],
+      "grading_notes": "Require math solutions. Partial for calculation errors."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

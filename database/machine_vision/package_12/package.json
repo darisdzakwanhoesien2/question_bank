@@ -1,0 +1,223 @@
+{
+  "package_id": "pkg12",
+  "source": "2018-03-14-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg12_mcq1",
+      "question": "What is an epipolar line in the context of stereo vision?",
+      "options": {
+        "A": "The line connecting the camera centers",
+        "B": "The projection of the epipolar plane onto one image, constraining the search for corresponding points",
+        "C": "A line of constant depth in the scene",
+        "D": "The baseline between two cameras"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Define the epipolar line and its role in correspondence search.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq2",
+      "question": "A grayscale histogram represents:",
+      "options": {
+        "A": "The spatial distribution of pixels",
+        "B": "The frequency of occurrence of each intensity level in the image",
+        "C": "The gradient magnitudes at each pixel",
+        "D": "The color channels separately"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the concept of image histograms.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq3",
+      "question": "In HSV color space, 'H' stands for:",
+      "options": {
+        "A": "Hue, representing the dominant wavelength",
+        "B": "Horizontal component",
+        "C": "Highlight intensity",
+        "D": "Histogram value"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Recall the components of HSV color model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq4",
+      "question": "Optical flow estimates:",
+      "options": {
+        "A": "The 3D motion of the camera",
+        "B": "The apparent 2D motion field in the image plane",
+        "C": "Absolute depth values",
+        "D": "Surface normals"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Define optical flow and its computation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq5",
+      "question": "An interest point is typically:",
+      "options": {
+        "A": "A uniform region with no texture",
+        "B": "A distinctive location in the image, such as a corner or blob, repeatable across views",
+        "C": "The center of the image",
+        "D": "A pixel with maximum intensity"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Explain the concept of interest points or keypoints.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq6",
+      "question": "Chromatic aberration is:",
+      "options": {
+        "A": "Distortion due to lens curvature",
+        "B": "Color fringing caused by wavelength-dependent refraction in lenses",
+        "C": "Noise in the sensor",
+        "D": "Vignetting at image corners"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Define chromatic aberration in imaging.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq7",
+      "question": "RANSAC is primarily used for:",
+      "options": {
+        "A": "Image segmentation",
+        "B": "Robust model fitting in the presence of outliers",
+        "C": "Color correction",
+        "D": "Edge detection"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Describe the principle of RANSAC for robust estimation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq8",
+      "question": "A precision-recall curve evaluates:",
+      "options": {
+        "A": "Regression models",
+        "B": "Binary classifiers by trading off precision and recall at different thresholds",
+        "C": "Clustering quality",
+        "D": "Image compression ratios"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Understand precision-recall for performance evaluation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq9",
+      "question": "The SIFT descriptor is:",
+      "options": {
+        "A": "A global image feature",
+        "B": "A local histogram-based descriptor invariant to scale and rotation",
+        "C": "A color space transformation",
+        "D": "A motion estimation algorithm"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the properties of SIFT descriptors.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg12_mcq10",
+      "question": "In homogeneous coordinates, the similarity transformation matrix has how many degrees of freedom?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Determine DOF for 2D transformations.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg12_essay1",
+    "prompt": "Discuss 2D transformations in homogeneous coordinates. Write the matrix forms for translation, rotation, similarity (RST), affine, and homography. Specify the minimum point correspondences needed for each. Using the example of a transformed rectangle with given coordinates, explain how to solve for similarity parameters. Extend to noisy affine estimation using least squares. Include advantages of homogeneous representation and applications in vision.",
+    "expected_keywords": [
+      "homogeneous coordinates",
+      "translation",
+      "rotation",
+      "similarity",
+      "affine",
+      "homography",
+      "point correspondences",
+      "least squares",
+      "matrix form",
+      "degrees of freedom"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "homogeneous coordinates",
+          "weight": 10,
+          "description": "Explains augmentation to handle projective transforms linearly."
+        },
+        {
+          "keyword": "translation",
+          "weight": 8,
+          "description": "Matrix and 2 correspondences."
+        },
+        {
+          "keyword": "rotation",
+          "weight": 8,
+          "description": "Matrix and 2 correspondences."
+        },
+        {
+          "keyword": "similarity",
+          "weight": 10,
+          "description": "4 DOF, 2 correspondences; solve example."
+        },
+        {
+          "keyword": "affine",
+          "weight": 10,
+          "description": "6 DOF, 3 correspondences."
+        },
+        {
+          "keyword": "homography",
+          "weight": 10,
+          "description": "8 DOF, 4 correspondences."
+        },
+        {
+          "keyword": "point correspondences",
+          "weight": 10,
+          "description": "Minimum for unique solution."
+        },
+        {
+          "keyword": "least squares",
+          "weight": 15,
+          "description": "Overdetermined system for noisy affine."
+        },
+        {
+          "keyword": "matrix form",
+          "weight": 10,
+          "description": "Correct 3x3 matrices shown."
+        },
+        {
+          "keyword": "degrees of freedom",
+          "weight": 9,
+          "description": "Counts for each transform."
+        }
+      ],
+      "grading_notes": "Require math matrices and example calculation. Partial for intuition without full derivation."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

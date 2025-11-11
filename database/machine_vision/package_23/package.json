@@ -1,0 +1,210 @@
+{
+  "package_id": "pkg23",
+  "source": "2019-05-06-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg23_mcq1",
+      "question": "The epipolar constraint states that:",
+      "options": {
+        "A": "Corresponding points lie on epipolar lines",
+        "B": "Motion is rigid",
+        "C": "Textures are isotropic",
+        "D": "Colors are constant"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Epipolar constraint.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq2",
+      "question": "A decision tree splits data based on:",
+      "options": {
+        "A": "Features to minimize impurity",
+        "B": "Random assignment",
+        "C": "Distance metrics",
+        "D": "Gradient descent"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Decision trees.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq3",
+      "question": "HSV is used for:",
+      "options": {
+        "A": "Robust color analysis under varying light",
+        "B": "Depth estimation",
+        "C": "Motion tracking",
+        "D": "Texture synthesis"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "HSV usage.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq4",
+      "question": "Radial distortion affects:",
+      "options": {
+        "A": "Peripheral image points more",
+        "B": "Center only",
+        "C": "Color channels",
+        "D": "Brightness"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Distortion effect.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq5",
+      "question": "SIFT descriptor uses:",
+      "options": {
+        "A": "Orientation histograms in subregions",
+        "B": "Global means",
+        "C": "Color gradients",
+        "D": "Binary codes"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "SIFT details.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq6",
+      "question": "Diffuse reflection depends on:",
+      "options": {
+        "A": "Surface normal and light direction",
+        "B": "View direction",
+        "C": "Specular angle",
+        "D": "Transparency"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Lambertian model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq7",
+      "question": "Background subtraction detects:",
+      "options": {
+        "A": "Moving objects by frame differencing",
+        "B": "Static backgrounds only",
+        "C": "Color changes",
+        "D": "Textures"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Bg subtraction.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq8",
+      "question": "Structure from motion requires:",
+      "options": {
+        "A": "Feature correspondences across views",
+        "B": "Known depths",
+        "C": "Fixed camera",
+        "D": "Single image"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "SfM requirements.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq9",
+      "question": "LBP is invariant to:",
+      "options": {
+        "A": "Monotonic illumination changes",
+        "B": "Rotation without extension",
+        "C": "Scale",
+        "D": "Color"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "LBP invariance.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg23_mcq10",
+      "question": "In stereo, z = f b / d, for d=2, b=6, f=1, z=:",
+      "options": {
+        "A": "3",
+        "B": "12",
+        "C": "0.5",
+        "D": "6"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Depth calc."
+    }
+  ],
+  "essay": {
+    "id": "pkg23_essay1",
+    "prompt": "Explain stereo system with parallel cameras. Derive 3D coordinates from disparity. Compute z for values. Compare disparity search to optical flow matching: similar in finding correspondences, different in stereo geometry vs temporal continuity.",
+    "expected_keywords": [
+      "stereo system",
+      "parallel pinhole",
+      "disparity",
+      "3D coordinates",
+      "depth computation",
+      "search similarity",
+      "optical flow",
+      "differences"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "stereo system",
+          "weight": 10,
+          "description": "Description."
+        },
+        {
+          "keyword": "parallel pinhole",
+          "weight": 10,
+          "description": "Setup."
+        },
+        {
+          "keyword": "disparity",
+          "weight": 15,
+          "description": "xl - xr."
+        },
+        {
+          "keyword": "3D coordinates",
+          "weight": 20,
+          "description": "Equations."
+        },
+        {
+          "keyword": "depth computation",
+          "weight": 10,
+          "description": "Example."
+        },
+        {
+          "keyword": "search similarity",
+          "weight": 10,
+          "description": "To flow."
+        },
+        {
+          "keyword": "optical flow",
+          "weight": 10,
+          "description": "Comparison."
+        },
+        {
+          "keyword": "differences",
+          "weight": 15,
+          "description": "Geometry vs time."
+        }
+      ],
+      "grading_notes": "Require equations and calc."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

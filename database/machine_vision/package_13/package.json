@@ -1,0 +1,223 @@
+{
+  "package_id": "pkg13",
+  "source": "2019-03-21-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg13_mcq1",
+      "question": "Metamers are:",
+      "options": {
+        "A": "Different spectral distributions that appear the same color to an observer",
+        "B": "Camera sensor artifacts",
+        "C": "3D reconstruction errors",
+        "D": "Texture patterns"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Define metamerism in color perception.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq2",
+      "question": "Unsupervised learning involves:",
+      "options": {
+        "A": "Labeled training data",
+        "B": "Discovering patterns without labels, e.g., clustering",
+        "C": "Regression prediction",
+        "D": "Reinforcement rewards"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Distinguish unsupervised from supervised learning.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq3",
+      "question": "A confusion matrix shows:",
+      "options": {
+        "A": "Classifier performance via true/false positives/negatives",
+        "B": "Image convolution results",
+        "C": "Color space transformations",
+        "D": "Feature descriptors"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Explain confusion matrix for evaluation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq4",
+      "question": "A feature descriptor encodes:",
+      "options": {
+        "A": "Global image statistics",
+        "B": "Local neighborhood properties around a keypoint",
+        "C": "Camera parameters",
+        "D": "3D coordinates"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Define feature descriptors.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq5",
+      "question": "An epipolar line constrains:",
+      "options": {
+        "A": "The location of corresponding points in stereo images",
+        "B": "Motion vectors",
+        "C": "Texture gradients",
+        "D": "Color histograms"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Recall epipolar geometry.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq6",
+      "question": "Multi-view stereo reconstructs:",
+      "options": {
+        "A": "2D panoramas",
+        "B": "3D models from multiple images via triangulation",
+        "C": "Optical flow fields",
+        "D": "Texture maps"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Describe multi-view stereo.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq7",
+      "question": "Otsu's method optimizes:",
+      "options": {
+        "A": "Threshold for binary segmentation by maximizing between-class variance",
+        "B": "Edge detection filters",
+        "C": "Feature matching",
+        "D": "Color balance"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Explain Otsu's thresholding.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq8",
+      "question": "Convolutional neural networks use:",
+      "options": {
+        "A": "Shared weights and pooling for hierarchical feature learning",
+        "B": "Only fully connected layers",
+        "C": "No activation functions",
+        "D": "Unsupervised pretraining always"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Outline CNN principles.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq9",
+      "question": "Local binary patterns (LBP) compute:",
+      "options": {
+        "A": "Binary codes from neighborhood intensity comparisons",
+        "B": "Global histograms",
+        "C": "3D normals",
+        "D": "Motion vectors"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Describe LBP operator.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg13_mcq10",
+      "question": "The temporal derivative ∂f/∂t in optical flow is estimated by:",
+      "options": {
+        "A": "Difference between consecutive frames at the same position",
+        "B": "Spatial gradients only",
+        "C": "Color changes",
+        "D": "Camera motion"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Compute derivatives for flow constraint.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg13_essay1",
+    "prompt": "Explain optical flow computation using the brightness constancy assumption. Derive the flow constraint equation involving spatial and temporal derivatives. Using the provided image patches, demonstrate calculation of ∂f/∂x, ∂f/∂y using Prewitt masks and ∂f/∂t at specific points. Discuss limitations like the aperture problem and methods to solve it (e.g., Lucas-Kanade). Include applications in motion segmentation and tracking.",
+    "expected_keywords": [
+      "optical flow",
+      "brightness constancy",
+      "constraint equation",
+      "spatial derivatives",
+      "temporal derivative",
+      "Prewitt masks",
+      "aperture problem",
+      "Lucas-Kanade",
+      "neighborhood assumption",
+      "motion segmentation"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "optical flow",
+          "weight": 10,
+          "description": "Defines as apparent motion field."
+        },
+        {
+          "keyword": "brightness constancy",
+          "weight": 10,
+          "description": "Assumes I(x,y,t) = I(x+u,y+v,t+1)."
+        },
+        {
+          "keyword": "constraint equation",
+          "weight": 15,
+          "description": "Derives Ix u + Iy v + It = 0."
+        },
+        {
+          "keyword": "spatial derivatives",
+          "weight": 15,
+          "description": "Computes with Prewitt at given points."
+        },
+        {
+          "keyword": "temporal derivative",
+          "weight": 10,
+          "description": "Frame difference at points."
+        },
+        {
+          "keyword": "Prewitt masks",
+          "weight": 10,
+          "description": "Applies correctly to patches."
+        },
+        {
+          "keyword": "aperture problem",
+          "weight": 10,
+          "description": "Ambiguity in local estimation."
+        },
+        {
+          "keyword": "Lucas-Kanade",
+          "weight": 10,
+          "description": "Local constancy over window."
+        },
+        {
+          "keyword": "neighborhood assumption",
+          "weight": 5,
+          "description": "Constant flow in small area."
+        },
+        {
+          "keyword": "motion segmentation",
+          "weight": 5,
+          "description": "Application example."
+        }
+      ],
+      "grading_notes": "Require accurate derivative calculations from patches. Partial if math errors but correct method."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "package_id": "pkg16",
+  "source": "2016-09-21-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg16_mcq1",
+      "question": "Radial distortion causes:",
+      "options": {
+        "A": "Straight lines to curve in images",
+        "B": "Color shifts",
+        "C": "Motion blur",
+        "D": "Texture loss"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Define radial lens distortion.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq2",
+      "question": "RGB color space is:",
+      "options": {
+        "A": "Additive primaries for displays",
+        "B": "Perceptually uniform",
+        "C": "Device-independent",
+        "D": "Cylindrical coordinates"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Describe RGB model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq3",
+      "question": "An image histogram shows:",
+      "options": {
+        "A": "Intensity frequency distribution",
+        "B": "Spatial positions",
+        "C": "Gradients",
+        "D": "3D depths"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Explain histograms.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq4",
+      "question": "A feature descriptor is:",
+      "options": {
+        "A": "Vector summarizing local patch",
+        "B": "Global statistic",
+        "C": "Camera parameter",
+        "D": "Light model"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Define descriptors.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq5",
+      "question": "The aperture problem arises because:",
+      "options": {
+        "A": "Local motion is ambiguous along contours",
+        "B": "Aperture size affects light",
+        "C": "Sensors have limited resolution",
+        "D": "Colors vary"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Aperture problem in flow.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq6",
+      "question": "Structure-from-motion is:",
+      "options": {
+        "A": "3D from moving camera images",
+        "B": "2D alignment",
+        "C": "Color recovery",
+        "D": "Texture synthesis"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Define SfM.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq7",
+      "question": "K-means is used for:",
+      "options": {
+        "A": "Unsupervised clustering",
+        "B": "Supervised classification",
+        "C": "Regression",
+        "D": "Dimensionality reduction"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "K-means principle.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq8",
+      "question": "Hough transform uses:",
+      "options": {
+        "A": "Accumulator voting for parameters",
+        "B": "Gradient descent",
+        "C": "Neural networks",
+        "D": "Histogram equalization"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Hough voting.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq9",
+      "question": "In stereo, depth z =:",
+      "options": {
+        "A": "f b / d",
+        "B": "d b / f",
+        "C": "f d / b",
+        "D": "b / (f d)"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Stereo depth formula.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg16_mcq10",
+      "question": "Stereo matching differs from flow by:",
+      "options": {
+        "A": "Known geometry vs. unknown motion",
+        "B": "Both seek correspondences",
+        "C": "Stereo uses rectification",
+        "D": "All of the above"
+      },
+      "correct_option": "D",
+      "difficulty": "hard",
+      "learning_objective": "Compare stereo and flow.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg16_essay1",
+    "prompt": "Describe stereo geometry for parallel pinhole cameras. Derive 3D coordinates from disparity, including depth z = f b / d. Compute for given values. Compare correspondence in stereo to optical flow, similarities in feature matching, differences in constraints and applications.",
+    "expected_keywords": [
+      "stereo geometry",
+      "pinhole cameras",
+      "baseline b",
+      "focal f",
+      "disparity d",
+      "3D reconstruction",
+      "correspondence",
+      "optical flow",
+      "similarities",
+      "differences"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "stereo geometry",
+          "weight": 10,
+          "description": "Parallel setup."
+        },
+        {
+          "keyword": "pinhole cameras",
+          "weight": 10,
+          "description": "Projection model."
+        },
+        {
+          "keyword": "baseline b",
+          "weight": 10,
+          "description": "Separation."
+        },
+        {
+          "keyword": "focal f",
+          "weight": 10,
+          "description": "Length."
+        },
+        {
+          "keyword": "disparity d",
+          "weight": 15,
+          "description": "xl - xr."
+        },
+        {
+          "keyword": "3D reconstruction",
+          "weight": 15,
+          "description": "Equations for x,y,z."
+        },
+        {
+          "keyword": "correspondence",
+          "weight": 10,
+          "description": "Matching points."
+        },
+        {
+          "keyword": "optical flow",
+          "weight": 10,
+          "description": "Temporal matching."
+        },
+        {
+          "keyword": "similarities",
+          "weight": 5,
+          "description": "Search for matches."
+        },
+        {
+          "keyword": "differences",
+          "weight": 5,
+          "description": "Geometry vs. dynamics."
+        }
+      ],
+      "grading_notes": "Require derivation and example. Partial for missing comparisons."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

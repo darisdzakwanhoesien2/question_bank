@@ -1,0 +1,205 @@
+{
+  "package_id": "pkg22",
+  "source": "2019-11-04-exam.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg22_mcq1",
+      "question": "A confusion matrix is used to:",
+      "options": {
+        "A": "Visualize classification performance showing true and predicted labels",
+        "B": "Compute image gradients",
+        "C": "Estimate camera pose",
+        "D": "Generate textures"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Explain confusion matrix for evaluation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq2",
+      "question": "HSV color space decouples:",
+      "options": {
+        "A": "Color (hue, saturation) from brightness (value)",
+        "B": "Red, green, blue channels",
+        "C": "Opponent colors",
+        "D": "Spectral wavelengths"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Describe HSV components.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq3",
+      "question": "The pinhole model idealizes:",
+      "options": {
+        "A": "Perspective projection without lens effects",
+        "B": "Orthographic projection",
+        "C": "Fisheye distortion",
+        "D": "Chromatic effects"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Define pinhole camera model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq4",
+      "question": "A feature descriptor provides:",
+      "options": {
+        "A": "Robust representation of local image patch",
+        "B": "Global histogram",
+        "C": "3D coordinates",
+        "D": "Motion vectors"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Role of descriptors.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq5",
+      "question": "Chromatic aberration results from:",
+      "options": {
+        "A": "Different refraction for wavelengths",
+        "B": "Sensor Bayer pattern",
+        "C": "Motion blur",
+        "D": "Radial warping"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Cause of chromatic aberration.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq6",
+      "question": "Structure-from-motion combines:",
+      "options": {
+        "A": "Feature tracking and bundle adjustment for 3D and poses",
+        "B": "Stereo pairs only",
+        "C": "Shading cues",
+        "D": "Texture gradients"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "SfM overview.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq7",
+      "question": "Optical flow assumes brightness constancy to estimate:",
+      "options": {
+        "A": "2D motion field",
+        "B": "3D structure",
+        "C": "Camera intrinsics",
+        "D": "Light sources"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Flow principle.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq8",
+      "question": "Otsu's method finds threshold by:",
+      "options": {
+        "A": "Maximizing inter-class variance",
+        "B": "Minimizing entropy",
+        "C": "Edge detection",
+        "D": "Clustering colors"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Otsu algorithm.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq9",
+      "question": "K-means iteratively:",
+      "options": {
+        "A": "Assigns points to centroids and updates",
+        "B": "Builds decision trees",
+        "C": "Fits lines",
+        "D": "Computes gradients"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "k-means steps.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg22_mcq10",
+      "question": "Roberts masks detect edges in:",
+      "options": {
+        "A": "Diagonal directions",
+        "B": "Horizontal only",
+        "C": "Vertical only",
+        "D": "Circular patterns"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Roberts for gradients.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg22_essay1",
+    "prompt": "For texture classification of patches, compute Roberts filter responses, mean features, and classify unknown with Euclidean. Detail LBP procedure, issues with small patches. Discuss filter banks as alternative for texture analysis.",
+    "expected_keywords": [
+      "texture classification",
+      "Roberts filter",
+      "mean features",
+      "Euclidean distance",
+      "LBP procedure",
+      "small patch issues",
+      "filter banks"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "texture classification",
+          "weight": 10,
+          "description": "Task overview."
+        },
+        {
+          "keyword": "Roberts filter",
+          "weight": 20,
+          "description": "Responses calculation."
+        },
+        {
+          "keyword": "mean features",
+          "weight": 15,
+          "description": "Vectors."
+        },
+        {
+          "keyword": "Euclidean distance",
+          "weight": 15,
+          "description": "Classification."
+        },
+        {
+          "keyword": "LBP procedure",
+          "weight": 20,
+          "description": "Steps for texture."
+        },
+        {
+          "keyword": "small patch issues",
+          "weight": 10,
+          "description": "Reliability."
+        },
+        {
+          "keyword": "filter banks",
+          "weight": 10,
+          "description": "Alternative."
+        }
+      ],
+      "grading_notes": "Require computations. Partial for errors."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}
