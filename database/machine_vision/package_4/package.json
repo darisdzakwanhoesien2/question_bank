@@ -1,0 +1,301 @@
+{
+  "package_id": "pkg8",
+  "source": "04-binary-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg8_mcq1",
+      "question": "What is the primary purpose of binarization in image processing?",
+      "options": {
+        "A": "To enhance color saturation",
+        "B": "To separate foreground objects from the background using a single threshold",
+        "C": "To compute optical flow",
+        "D": "To perform 3D reconstruction"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the goal of converting a grayscale image into a binary representation.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg8_mcq2",
+      "question": "In global thresholding, the binary image \\(B(x,y)\\) is defined as:",
+      "options": {
+        "A": "\\(B(x,y) = I(x,y) > T\\)",
+        "B": "\\(B(x,y) = I(x,y) \\times T\\)",
+        "C": "\\(B(x,y) = \\max(I(x,y), T)\\)",
+        "D": "\\(B(x,y) = I(x,y)^T\\)"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Recall the mathematical formulation of thresholding.",
+      "slide_refs": [6]
+    },
+    {
+      "id": "pkg8_mcq3",
+      "question": "Which of the following is a common challenge when applying a fixed global threshold?",
+      "options": {
+        "A": "Perfect separation in all lighting conditions",
+        "B": "Non-uniform illumination causing intensity variation across the image",
+        "C": "Too many connected components",
+        "D": "Loss of texture details only in color images"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Identify limitations of global thresholding in real-world images.",
+      "slide_refs": [7]
+    },
+    {
+      "id": "pkg8_mcq4",
+      "question": "The 4-connected neighborhood of a pixel \\((x,y)\\) includes:",
+      "options": {
+        "A": "Only the pixel itself",
+        "B": "Pixels at \\((x\\pm1, y)\\) and \\((x, y\\pm1)\\)",
+        "C": "All eight surrounding pixels",
+        "D": "Diagonal pixels only"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Define pixel connectivity in binary images.",
+      "slide_refs": [10]
+    },
+    {
+      "id": "pkg8_mcq5",
+      "question": "In connected component labeling, a foreground object is defined as:",
+      "options": {
+        "A": "A maximal set of background pixels",
+        "B": "A maximal 4- or 8-connected set of foreground pixels",
+        "C": "Any pixel with intensity above 128",
+        "D": "The boundary between foreground and background"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Understand the concept of connected components in binary segmentation.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg8_mcq6",
+      "question": "Which morphological operation uses a structuring element to remove small noise blobs in a binary image?",
+      "options": {
+        "A": "Dilation",
+        "B": "Erosion",
+        "C": "Opening",
+        "D": "Closing"
+      },
+      "correct_option": "C",
+      "difficulty": "medium",
+      "learning_objective": "Apply morphological operations to clean binary images.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg8_mcq7",
+      "question": "The operation of closing in binary morphology is equivalent to:",
+      "options": {
+        "A": "Erosion followed by dilation",
+        "B": "Dilation followed by erosion",
+        "C": "Opening followed by thresholding",
+        "D": "Boundary extraction"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the sequence of operations in morphological closing.",
+      "slide_refs": [16]
+    },
+    {
+      "id": "pkg8_mcq8",
+      "question": "In the context of document image analysis, binarization is crucial for:",
+      "options": {
+        "A": "Color restoration",
+        "B": "Enabling OCR by isolating text from paper background",
+        "C": "Estimating camera motion",
+        "D": "3D surface reconstruction"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Recognize application-specific importance of binary processing.",
+      "slide_refs": [18]
+    },
+    {
+      "id": "pkg8_mcq9",
+      "question": "The two-pass algorithm for connected component labeling works by:",
+      "options": {
+        "A": "Scanning the image once and assigning final labels immediately",
+        "B": "First assigning provisional labels and resolving equivalences in a second pass using Union-Find",
+        "C": "Using depth-first search on the fly",
+        "D": "Applying morphological dilation repeatedly"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Describe efficient algorithms for labeling connected regions.",
+      "slide_refs": [13]
+    },
+    {
+      "id": "pkg8_mcq10",
+      "question": "Which of the following is NOT a typical post-processing step after binarization?",
+      "options": {
+        "A": "Morphological opening to remove salt noise",
+        "B": "Connected component analysis to extract text lines",
+        "C": "Applying Gaussian blur to restore gradients",
+        "D": "Hole filling via morphological closing"
+      },
+      "correct_option": "C",
+      "difficulty": "hard",
+      "learning_objective": "Distinguish appropriate binary image cleanup operations.",
+      "slide_refs": [17]
+    }
+  ],
+  "essay": {
+    "id": "pkg8_essay1",
+    "prompt": "Explain the complete pipeline for binary image analysis as presented in the lecture. Start with the motivation for binarization and the challenges posed by real-world imaging conditions (e.g., lighting, sensor noise). Describe global and adaptive thresholding methods, their assumptions, and failure cases. Then, detail the role of connectivity (4- vs 8-connected) and the two-pass connected component labeling algorithm using provisional labels and equivalence resolution. Finally, discuss morphological post-processing (opening, closing) with structuring elements to clean up noise and fill holes, and conclude with applications such as document OCR or object counting. Include mathematical definitions where appropriate (e.g., erosion, dilation).",
+    "expected_keywords": [
+      "binarization",
+      "thresholding",
+      "global threshold",
+      "adaptive threshold",
+      "illumination variation",
+      "connected component",
+      "4-connected",
+      "8-connected",
+      "labeling algorithm",
+      "two-pass",
+      "provisional label",
+      "equivalence",
+      "Union-Find",
+      "morphology",
+      "structuring element",
+      "erosion",
+      "dilation",
+      "opening",
+      "closing",
+      "noise removal",
+      "hole filling",
+      "OCR",
+      "document analysis"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "binarization",
+          "weight": 6,
+          "description": "Defines conversion of grayscale to binary via intensity threshold."
+        },
+        {
+          "keyword": "thresholding",
+          "weight": 6,
+          "description": "Explains \\(B(x,y) = 1\\) if \\(I(x,y) > T\\), else 0."
+        },
+        {
+          "keyword": "global threshold",
+          "weight": 5,
+          "description": "Single \\(T\\) for whole image; fails under non-uniform light."
+        },
+        {
+          "keyword": "adaptive threshold",
+          "weight": 6,
+          "description": "Local \\(T\\) per region (e.g., mean of neighborhood)."
+        },
+        {
+          "keyword": "illumination variation",
+          "weight": 5,
+          "description": "Identifies shading, shadows as key challenges."
+        },
+        {
+          "keyword": "connected component",
+          "weight": 6,
+          "description": "Maximal set of foreground pixels connected via adjacency."
+        },
+        {
+          "keyword": "4-connected",
+          "weight": 4,
+          "description": "Horizontal/vertical neighbors only."
+        },
+        {
+          "keyword": "8-connected",
+          "weight": 4,
+          "description": "Includes diagonal neighbors."
+        },
+        {
+          "keyword": "labeling algorithm",
+          "weight": 6,
+          "description": "Assigns unique ID to each component."
+        },
+        {
+          "keyword": "two-pass",
+          "weight": 7,
+          "description": "First pass: provisional labels + equivalence table; second: resolve."
+        },
+        {
+          "keyword": "provisional label",
+          "weight": 5,
+          "description": "Temporary IDs during raster scan."
+        },
+        {
+          "keyword": "equivalence",
+          "weight": 5,
+          "description": "Merged labels when adjacent components connect."
+        },
+        {
+          "keyword": "Union-Find",
+          "weight": 5,
+          "description": "Efficient data structure for equivalence class management."
+        },
+        {
+          "keyword": "morphology",
+          "weight": 5,
+          "description": "Set operations using structuring element \\(S\\)."
+        },
+        {
+          "keyword": "structuring element",
+          "weight": 5,
+          "description": "Small binary mask (e.g., 3×3 cross or disk)."
+        },
+        {
+          "keyword": "erosion",
+          "weight": 5,
+          "description": "\\(A \\ominus S = \\{z \\mid S_z \\subseteq A\\}\\)."
+        },
+        {
+          "keyword": "dilation",
+          "weight": 5,
+          "description": "\\(A \\oplus S = \\{z \\mid S_z \\cap A \\neq \\emptyset\\}\\)."
+        },
+        {
+          "keyword": "opening",
+          "weight": 5,
+          "description": "Erosion then dilation; removes small objects."
+        },
+        {
+          "keyword": "closing",
+          "weight": 5,
+          "description": "Dilation then erosion; fills small holes."
+        },
+        {
+          "keyword": "noise removal",
+          "weight": 4,
+          "description": "Opening eliminates salt noise and thin protrusions."
+        },
+        {
+          "keyword": "hole filling",
+          "weight": 4,
+          "description": "Closing merges gaps in foreground."
+        },
+        {
+          "keyword": "OCR",
+          "weight": 4,
+          "description": "Clean binary text enables character segmentation."
+        },
+        {
+          "keyword": "document analysis",
+          "weight": 4,
+          "description": "Layout analysis, table detection, etc."
+        }
+      ],
+      "grading_notes": "Require correct math for erosion/dilation and two-pass labeling logic. Full credit only if adaptive thresholding and morphology sequence are justified. Partial credit for good flow without full formalism. Deduct if connectivity types are confused or applications missing."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

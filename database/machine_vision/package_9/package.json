@@ -1,0 +1,249 @@
+{
+  "package_id": "pkg3",
+  "source": "09-matching-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg3_mcq1",
+      "question": "In the context of 2D model fitting, what is the primary goal of choosing a parametric model for a set of image features?",
+      "options": {
+        "A": "To increase computational complexity",
+        "B": "To represent object geometry with a compact mathematical description",
+        "C": "To eliminate all outliers automatically",
+        "D": "To perform edge detection"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the purpose of parametric modeling in object representation.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg3_mcq2",
+      "question": "Which of the following is NOT listed as a common geometric primitive for 2D object modeling?",
+      "options": {
+        "A": "Point",
+        "B": "Line",
+        "C": "Triangle",
+        "D": "Ellipse"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "Recall basic 2D geometric primitives used in model fitting.",
+      "slide_refs": [13]
+    },
+    {
+      "id": "pkg3_mcq3",
+      "question": "In the case study on line detection shown in the lecture, which of the following is identified as a source of 'missing data'?",
+      "options": {
+        "A": "Noise in feature locations",
+        "B": "Multiple overlapping lines",
+        "C": "Occlusions",
+        "D": "Clutter from background textures"
+      },
+      "correct_option": "C",
+      "difficulty": "medium",
+      "learning_objective": "Identify real-world challenges in model fitting due to missing data.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg3_mcq4",
+      "question": "What type of data issue is illustrated by the presence of multiple coins in the 'simple model: circles' example?",
+      "options": {
+        "A": "Noise",
+        "B": "Extraneous data (clutter)",
+        "C": "Missing data",
+        "D": "Model mismatch"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Distinguish between noise, clutter, and missing data in fitting scenarios.",
+      "slide_refs": [14]
+    },
+    {
+      "id": "pkg3_mcq5",
+      "question": "When fitting a complex model like 'car' using multiple ellipses, the system must handle:",
+      "options": {
+        "A": "Only position and scale parameters",
+        "B": "Pose, articulation, and part-based alignment",
+        "C": "Only global rotation",
+        "D": "Only color consistency"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Recognize the increased complexity in fitting articulated or multi-part models.",
+      "slide_refs": [14]
+    },
+    {
+      "id": "pkg3_mcq6",
+      "question": "Which of the following best describes the role of model parameters in 2D fitting?",
+      "options": {
+        "A": "They define only the color of the object",
+        "B": "They specify size, position, and orientation of the geometric primitive",
+        "C": "They are used only for line detection",
+        "D": "They replace the need for feature extraction"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the semantic meaning of model parameters in geometric fitting.",
+      "slide_refs": [13]
+    },
+    {
+      "id": "pkg3_mcq7",
+      "question": "In the presence of occlusion, a robust fitting algorithm should:",
+      "options": {
+        "A": "Fail completely if any part is occluded",
+        "B": "Use only visible parts to estimate model parameters",
+        "C": "Assume all data is missing",
+        "D": "Increase sensitivity to noise"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Apply robustness principles to partial visibility in model fitting.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg3_mcq8",
+      "question": "Which image in the lecture demonstrates the use of a 'complicated model: car' with deformable parts?",
+      "options": {
+        "A": "The image with multiple coins",
+        "B": "The image with a red microcar and yellow contour overlay",
+        "C": "The line detection case study with a house",
+        "D": "The structured light example"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Identify examples of complex model fitting in real images.",
+      "slide_refs": [14]
+    }
+  ],
+  "essay": {
+    "id": "pkg3_essay1",
+    "prompt": "Discuss the key challenges in 2D model fitting as illustrated in the lecture. Categorize the problems into noise, extraneous data (clutter/outliers), and missing data (occlusions). For each category, provide a real-world example from the slides, explain why it violates ideal assumptions, and suggest a computational strategy (e.g., RANSAC, part-based models, robust estimators) to address it. Conclude with a discussion on how increasing model complexity (from lines to articulated cars) impacts both robustness and computational cost.",
+    "expected_keywords": [
+      "model fitting",
+      "parametric model",
+      "geometric primitives",
+      "noise",
+      "extraneous data",
+      "clutter",
+      "outliers",
+      "missing data",
+      "occlusion",
+      "line detection",
+      "circle fitting",
+      "car model",
+      "RANSAC",
+      "robust estimation",
+      "part-based model",
+      "hypothesis generation",
+      "verification",
+      "computational cost",
+      "articulation"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "model fitting",
+          "weight": 5,
+          "description": "Clearly defines model fitting as estimating parameters of a geometric model from image features."
+        },
+        {
+          "keyword": "parametric model",
+          "weight": 5,
+          "description": "Mentions use of mathematical models with parameters (size, position, orientation)."
+        },
+        {
+          "keyword": "geometric primitives",
+          "weight": 5,
+          "description": "Lists at least two primitives (e.g., line, circle, ellipse)."
+        },
+        {
+          "keyword": "noise",
+          "weight": 8,
+          "description": "Defines as small random errors in feature locations; links to robust estimators."
+        },
+        {
+          "keyword": "extraneous data",
+          "weight": 8,
+          "description": "Defines as irrelevant features; example: multiple coins when fitting one circle."
+        },
+        {
+          "keyword": "clutter",
+          "weight": 5,
+          "description": "Synonym for extraneous data; used in context of background distractors."
+        },
+        {
+          "keyword": "outliers",
+          "weight": 5,
+          "description": "Refers to data not belonging to the target model instance."
+        },
+        {
+          "keyword": "missing data",
+          "weight": 8,
+          "description": "Defines as parts of the object not visible; example: occluded car wheel."
+        },
+        {
+          "keyword": "occlusion",
+          "weight": 5,
+          "description": "Specific cause of missing data in real scenes."
+        },
+        {
+          "keyword": "line detection",
+          "weight": 5,
+          "description": "Uses house facade example to illustrate multiple lines and occlusion."
+        },
+        {
+          "keyword": "circle fitting",
+          "weight": 5,
+          "description": "Uses coin example to show clutter/outliers."
+        },
+        {
+          "keyword": "car model",
+          "weight": 5,
+          "description": "Discusses complexity of articulated, multi-part model."
+        },
+        {
+          "keyword": "RANSAC",
+          "weight": 8,
+          "description": "Explains hypothesis-and-verify paradigm for handling outliers."
+        },
+        {
+          "keyword": "robust estimation",
+          "weight": 6,
+          "description": "Mentions M-estimators or least median of squares as alternatives."
+        },
+        {
+          "keyword": "part-based model",
+          "weight": 6,
+          "description": "Suggests modeling car as assembly of ellipses to handle occlusion."
+        },
+        {
+          "keyword": "hypothesis generation",
+          "weight": 4,
+          "description": "Briefly notes minimal subsets for parameter estimation."
+        },
+        {
+          "keyword": "verification",
+          "weight": 4,
+          "description": "Mentions consensus set size or residual error."
+        },
+        {
+          "keyword": "computational cost",
+          "weight": 5,
+          "description": "Discusses trade-off: more complex models need more hypotheses."
+        },
+        {
+          "keyword": "articulation",
+          "weight": 3,
+          "description": "Acknowledges deformable or pose-varying components in complex models."
+        }
+      ],
+      "grading_notes": "Require at least one example per challenge category. Full credit for suggesting appropriate algorithm (e.g., RANSAC for outliers). Deduct if strategies are generic or not linked to specific problem. Partial credit for good intuition without naming algorithms."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

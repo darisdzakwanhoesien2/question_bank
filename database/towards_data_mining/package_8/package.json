@@ -1,0 +1,271 @@
+{
+"package_id": "pkg8",
+"source": "towards_data_mining_lecture_8_2024.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg8_mcq1",
+"question": "In data mining, what does 'generalizability' of a model refer to?",
+"options": {
+"A": "The ability of the model to fit the training data perfectly.",
+"B": "How well the model performs on new or unseen data.",
+"C": "The capacity of the model to memorize patterns from noise.",
+"D": "The degree to which the model parameters can be freely adjusted."
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Define model generalization and its importance in evaluating model performance.",
+"slide_refs": [6, 7]
+},
+{
+"id": "pkg8_mcq2",
+"question": "Which type of model is primarily used to test causal hypotheses and explain relationships between variables?",
+"options": {
+"A": "Descriptive model",
+"B": "Predictive model",
+"C": "Explanatory model",
+"D": "Diagnostic model"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Distinguish between descriptive, predictive, and explanatory models in data mining.",
+"slide_refs": [11, 13]
+},
+{
+"id": "pkg8_mcq3",
+"question": "Predictive modeling focuses on:",
+"options": {
+"A": "Identifying causal mechanisms in data.",
+"B": "Summarizing existing patterns without forecasting.",
+"C": "Using training data to predict outputs for new observations.",
+"D": "Visualizing relationships between features."
+},
+"correct_option": "C",
+"difficulty": "easy",
+"learning_objective": "Understand the purpose and structure of predictive modeling.",
+"slide_refs": [12]
+},
+{
+"id": "pkg8_mcq4",
+"question": "Which of the following statements correctly explains why explanatory and predictive models differ?",
+"options": {
+"A": "Explanatory models optimize accuracy; predictive models optimize interpretability.",
+"B": "Explanatory models are data-driven; predictive models are theory-driven.",
+"C": "Explanatory models aim for causal inference, while predictive models aim for accuracy on new data.",
+"D": "There are no practical differences between them."
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Explain the conceptual difference between explanatory and predictive modeling.",
+"slide_refs": [13, 15]
+},
+{
+"id": "pkg8_mcq5",
+"question": "What problem often occurs when the training dataset is too small?",
+"options": {
+"A": "Underfitting due to excessive model complexity.",
+"B": "Overfitting, leading to poor generalization on test data.",
+"C": "Reduced variance in model predictions.",
+"D": "Higher confidence intervals around estimates."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Recognize the impact of sample size on model overfitting and generalizability.",
+"slide_refs": [18]
+},
+{
+"id": "pkg8_mcq6",
+"question": "Which data partitioning strategy helps to ensure a model’s generalization ability?",
+"options": {
+"A": "Training only on the full dataset.",
+"B": "Using independent training and test sets with 80-20 or 2/3-1/3 split.",
+"C": "Evaluating on the same data used for training.",
+"D": "Merging training and test sets for better accuracy."
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Understand the role of data partitioning in training and testing models.",
+"slide_refs": [25]
+},
+{
+"id": "pkg8_mcq7",
+"question": "What is the primary purpose of a validation set during model development?",
+"options": {
+"A": "To fine-tune model hyperparameters and prevent overfitting.",
+"B": "To evaluate final model performance on unseen data.",
+"C": "To reduce the size of the training set for faster computation.",
+"D": "To randomly mix samples from the test set."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Differentiate between validation and test sets in model selection and tuning.",
+"slide_refs": [26]
+},
+{
+"id": "pkg8_mcq8",
+"question": "Which statement about k-fold cross-validation is true?",
+"options": {
+"A": "It is used only when datasets are extremely large.",
+"B": "Each observation is used once for validation and multiple times for training.",
+"C": "It is identical to leave-one-out validation regardless of k.",
+"D": "It prevents any need for a separate test set."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Understand how k-fold cross-validation balances training and testing efficiency.",
+"slide_refs": [28]
+},
+{
+"id": "pkg8_mcq9",
+"question": "Leave-one-out validation is particularly characterized by:",
+"options": {
+"A": "High computational cost for large datasets.",
+"B": "Using 50% of data for training and 50% for testing.",
+"C": "Strong bias due to limited resampling.",
+"D": "Completely eliminating variance in results."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Recognize the strengths and limitations of leave-one-out validation.",
+"slide_refs": [29]
+},
+{
+"id": "pkg8_mcq10",
+"question": "Population models differ from individual models in that:",
+"options": {
+"A": "Population models generalize better across individuals.",
+"B": "Individual models require fewer observations.",
+"C": "Population models are prone to overfitting individual-level noise.",
+"D": "Individual models are always less interpretable."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Compare individual-level and population-level models regarding generalization.",
+"slide_refs": [30]
+},
+{
+"id": "pkg8_mcq11",
+"question": "When handling temporally dependent data, why is random sampling inappropriate for creating training and test sets?",
+"options": {
+"A": "It causes information leakage between temporally related samples.",
+"B": "It increases model bias but not variance.",
+"C": "Temporal data do not require validation.",
+"D": "It ensures test data contain only anomalies."
+},
+"correct_option": "A",
+"difficulty": "hard",
+"learning_objective": "Identify correct data partitioning strategies for time-dependent datasets.",
+"slide_refs": [36, 37]
+},
+{
+"id": "pkg8_mcq12",
+"question": "What is the main goal of feature extraction using sliding windows in time series data?",
+"options": {
+"A": "To transform raw data into fixed-length statistical features.",
+"B": "To increase data redundancy for training.",
+"C": "To segment continuous data into random samples.",
+"D": "To remove all temporal dependencies between samples."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Explain feature extraction through segmentation and summarize its role in model efficiency.",
+"slide_refs": [37]
+},
+{
+"id": "pkg8_mcq13",
+"question": "According to the lecture, simpler models tend to generalize better because:",
+"options": {
+"A": "They have more parameters to capture complex data patterns.",
+"B": "They reduce overfitting and improve interpretability.",
+"C": "They use less training data and lower variance estimates.",
+"D": "They assume perfect model fit."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Understand the relationship between model complexity, overfitting, and generalization.",
+"slide_refs": [39]
+}
+],
+"essay": {
+"id": "pkg8_essay1",
+"prompt": "Write a 700–900 word essay discussing model generalization in data mining. Your essay should (1) compare explanatory, predictive, and descriptive modeling, (2) describe how sample size, data partitioning, and validation strategies affect generalization, and (3) analyze the importance of managing temporal dependence and model complexity when building reliable models.",
+"expected_keywords": [
+"model generalization",
+"descriptive modeling",
+"explanatory modeling",
+"predictive modeling",
+"sample size",
+"training and test sets",
+"validation set",
+"cross-validation",
+"leave-one-out",
+"individual models",
+"population models",
+"temporal dependence",
+"sliding window",
+"overfitting",
+"model selection",
+"bias-variance tradeoff"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "model generalization",
+"weight": 10,
+"description": "Defines generalization and explains its significance for unseen data."
+},
+{
+"keyword": "model types",
+"weight": 12,
+"description": "Compares descriptive, explanatory, and predictive models with real examples."
+},
+{
+"keyword": "sample size",
+"weight": 10,
+"description": "Explains how training sample size impacts bias, variance, and overfitting."
+},
+{
+"keyword": "data partitioning",
+"weight": 10,
+"description": "Describes correct use of training, validation, and test sets to ensure fairness."
+},
+{
+"keyword": "cross-validation",
+"weight": 8,
+"description": "Analyzes k-fold and leave-one-out strategies for robust evaluation."
+},
+{
+"keyword": "temporal dependence",
+"weight": 10,
+"description": "Discusses the pitfalls of random sampling and temporal leakage in time-dependent data."
+},
+{
+"keyword": "overfitting",
+"weight": 10,
+"description": "Explains overfitting prevention using validation and model simplification."
+},
+{
+"keyword": "model complexity",
+"weight": 8,
+"description": "Examines why simpler models often generalize better."
+},
+{
+"keyword": "feature extraction",
+"weight": 6,
+"description": "Describes how sliding windows and feature engineering support generalization."
+},
+{
+"keyword": "bias-variance tradeoff",
+"weight": 6,
+"description": "Connects generalization to balance between bias and variance."
+}
+],
+"grading_notes": "Essays should demonstrate deep conceptual understanding, practical reasoning, and examples connecting model validation, data partitioning, and generalization theory."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON structured output for automated question and rubric integration.",
+"contact": "Question Bank Generator"
+}
+}

@@ -1,0 +1,313 @@
+{
+"package_id": "pkg6",
+"source": "towards_data_mining_lecture_6_2024.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg6_mcq1",
+"question": "Which of the following best defines 'attribute noise' in data mining?",
+"options": {
+"A": "Errors or missing values in data features rather than in class labels.",
+"B": "Incorrect class labels due to human bias.",
+"C": "Inconsistencies between data sources during merging.",
+"D": "Random variations in signal saturation levels."
+},
+"correct_option": "A",
+"difficulty": "easy",
+"learning_objective": "Identify different types of noise in data, particularly attribute and label noise.",
+"slide_refs": [3]
+},
+{
+"id": "pkg6_mcq2",
+"question": "Which of the following approaches focuses on correcting noisy instances before model training?",
+"options": {
+"A": "Data polishing",
+"B": "Noise filtering",
+"C": "Robust learning",
+"D": "Feature normalization"
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Understand the role of data polishing as a preprocessing technique to handle noise.",
+"slide_refs": [4]
+},
+{
+"id": "pkg6_mcq3",
+"question": "Noise filters that target specific frequencies, such as 50 Hz from power lines, primarily operate on which kind of data?",
+"options": {
+"A": "Categorical data",
+"B": "Continuous signals",
+"C": "Textual datasets",
+"D": "Sparse matrices"
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Recognize noise filtering applications in continuous signal data.",
+"slide_refs": [5]
+},
+{
+"id": "pkg6_mcq4",
+"question": "What characterizes signal saturation during data collection?",
+"options": {
+"A": "A signal’s amplitude exceeds its maximum measurable value, causing flat peaks at threshold limits.",
+"B": "Signal values are randomly distributed across the expected range.",
+"C": "The sampling rate is too low to capture full waveform detail.",
+"D": "The sensor produces noisy outputs due to temperature drift."
+},
+"correct_option": "A",
+"difficulty": "easy",
+"learning_objective": "Explain the concept and implications of signal saturation in sensor data.",
+"slide_refs": [7]
+},
+{
+"id": "pkg6_mcq5",
+"question": "What distinguishes an anomaly from an outlier according to the lecture?",
+"options": {
+"A": "An anomaly is always erroneous; an outlier is usually valid.",
+"B": "An anomaly represents a rare but valid event, while an outlier may be noise or error.",
+"C": "Anomalies and outliers are statistically identical concepts.",
+"D": "Anomalies occur only in categorical data."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Differentiate between anomalies and outliers in the context of data mining.",
+"slide_refs": [9]
+},
+{
+"id": "pkg6_mcq6",
+"question": "Which of the following describes the correct workflow for handling harmful outliers?",
+"options": {
+"A": "Detect → Normalize → Delete",
+"B": "Investigate → Correct → Recollect",
+"C": "Detect → Investigate → Correct or treat as missing",
+"D": "Ignore → Smooth → Recluster"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Apply systematic procedures for identifying and managing harmful outliers.",
+"slide_refs": [12]
+},
+{
+"id": "pkg6_mcq7",
+"question": "A group of points that collectively deviates from the overall dataset, but whose individual members may not be extreme, are called:",
+"options": {
+"A": "Global outliers",
+"B": "Contextual outliers",
+"C": "Collective outliers",
+"D": "Statistical residuals"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Classify outlier types and identify examples of collective outliers.",
+"slide_refs": [14]
+},
+{
+"id": "pkg6_mcq8",
+"question": "Why is building a universal model for outlier detection often impractical?",
+"options": {
+"A": "Data distributions and contexts vary widely across applications.",
+"B": "All datasets contain perfectly labeled outliers.",
+"C": "Outlier thresholds are globally defined constants.",
+"D": "Outlier detection always requires supervised learning."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Understand why application-specific context complicates outlier detection.",
+"slide_refs": [15]
+},
+{
+"id": "pkg6_mcq9",
+"question": "Which of the following statements about supervised outlier detection is correct?",
+"options": {
+"A": "It trains only on outliers to classify normal data.",
+"B": "It uses labeled data to distinguish normal from abnormal patterns.",
+"C": "It requires no labeled examples at all.",
+"D": "It assumes all outliers are randomly distributed."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Explain how supervised learning can be used for outlier detection.",
+"slide_refs": [16]
+},
+{
+"id": "pkg6_mcq10",
+"question": "Which of the following is an example of a nonparametric statistical outlier detection method?",
+"options": {
+"A": "Gaussian distribution modeling",
+"B": "Kernel density estimation",
+"C": "Linear regression residual analysis",
+"D": "Support Vector Machine"
+},
+"correct_option": "B",
+"difficulty": "hard",
+"learning_objective": "Differentiate between parametric and nonparametric statistical approaches to outlier detection.",
+"slide_refs": [17]
+},
+{
+"id": "pkg6_mcq11",
+"question": "What is the key idea behind proximity-based outlier detection methods?",
+"options": {
+"A": "Outliers are data points with significantly fewer neighbors within a certain distance threshold.",
+"B": "Outliers form dense clusters that differ from normal data clusters.",
+"C": "Outliers always belong to a specific known distribution.",
+"D": "Outliers are identified using time-series autocorrelation."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Describe the principle behind distance and density-based proximity methods.",
+"slide_refs": [18]
+},
+{
+"id": "pkg6_mcq12",
+"question": "Which method can identify both global and local outliers by comparing densities in local neighborhoods?",
+"options": {
+"A": "k-Nearest Neighbor (kNN)",
+"B": "Local Outlier Factor (LOF)",
+"C": "Gaussian Mixture Model (GMM)",
+"D": "Principal Component Analysis (PCA)"
+},
+"correct_option": "B",
+"difficulty": "hard",
+"learning_objective": "Explain the Local Outlier Factor method for density-based detection.",
+"slide_refs": [18]
+},
+{
+"id": "pkg6_mcq13",
+"question": "In clustering-based outlier detection, normal data typically belong to:",
+"options": {
+"A": "Sparse, scattered clusters",
+"B": "Large and dense clusters",
+"C": "No clusters at all",
+"D": "Temporal patterns in time series"
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Understand how clustering methods distinguish normal data from outliers.",
+"slide_refs": [19]
+},
+{
+"id": "pkg6_mcq14",
+"question": "Which classification-based approach models only the normal class to detect outliers?",
+"options": {
+"A": "Random Forest Classifier",
+"B": "One-Class Support Vector Machine (SVM)",
+"C": "Naïve Bayes Classifier",
+"D": "Logistic Regression"
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Recognize the function of one-class models in outlier detection.",
+"slide_refs": [19]
+},
+{
+"id": "pkg6_mcq15",
+"question": "Which of the following is most applicable for real-time outlier detection in time series data?",
+"options": {
+"A": "Autoregressive models and streaming analysis",
+"B": "Balanced sampling and cross-validation",
+"C": "Principal component projection",
+"D": "Batch-mode K-Means clustering"
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Identify time-series methods suitable for streaming outlier detection.",
+"slide_refs": [20]
+}
+],
+"essay": {
+"id": "pkg6_essay1",
+"prompt": "Compose a 700–900 word essay explaining how noise, signal saturation, and outliers affect data mining workflows. Your essay should (1) classify noise and discuss its impact on supervised learning, (2) explain various outlier detection methods such as statistical, proximity, clustering, and classification-based approaches, and (3) discuss practical strategies for distinguishing anomalies from harmful data errors in real-world contexts like sensor analysis or fraud detection.",
+"expected_keywords": [
+"noise",
+"attribute noise",
+"label noise",
+"data polishing",
+"robust learners",
+"noise filtering",
+"signal saturation",
+"outliers",
+"global outliers",
+"contextual outliers",
+"collective outliers",
+"anomalies",
+"outlier detection",
+"statistical methods",
+"kernel density estimation",
+"kNN",
+"Local Outlier Factor",
+"clustering methods",
+"one-class SVM",
+"time series"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "noise",
+"weight": 10,
+"description": "Defines noise and distinguishes between attribute and label noise."
+},
+{
+"keyword": "data polishing",
+"weight": 8,
+"description": "Explains noise correction techniques and their limitations."
+},
+{
+"keyword": "robust learners",
+"weight": 8,
+"description": "Describes algorithms resilient to data corruption."
+},
+{
+"keyword": "signal saturation",
+"weight": 8,
+"description": "Discusses how sensor saturation distorts data and analysis."
+},
+{
+"keyword": "outliers",
+"weight": 10,
+"description": "Defines outliers and explains their statistical effects."
+},
+{
+"keyword": "outlier detection",
+"weight": 12,
+"description": "Covers multiple outlier detection techniques and their assumptions."
+},
+{
+"keyword": "Local Outlier Factor",
+"weight": 8,
+"description": "Explains the principle of local density comparison in outlier identification."
+},
+{
+"keyword": "clustering methods",
+"weight": 8,
+"description": "Discusses clustering-based approaches and their scalability limits."
+},
+{
+"keyword": "one-class SVM",
+"weight": 8,
+"description": "Describes how one-class SVMs identify anomalies without labeled outlier data."
+},
+{
+"keyword": "anomalies",
+"weight": 6,
+"description": "Differentiates anomalies from noise and outliers with domain examples."
+},
+{
+"keyword": "time series",
+"weight": 6,
+"description": "Explains predictive and unsupervised techniques for detecting temporal anomalies."
+},
+{
+"keyword": "application examples",
+"weight": 8,
+"description": "Illustrates methods through real-world cases like fraud detection or sensor monitoring."
+}
+],
+"grading_notes": "Essays should integrate theoretical understanding with practical applications and emphasize conceptual distinctions between noise, outliers, and anomalies. Full credit requires linking detection techniques to real-world contexts."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON-structured content for automated question generation and assessment pipelines.",
+"contact": "Question Bank Generator"
+}
+}

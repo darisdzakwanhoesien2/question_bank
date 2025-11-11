@@ -1,0 +1,301 @@
+{
+  "package_id": "pkg6",
+  "source": "06-features-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg6_mcq1",
+      "question": "What is the primary purpose of detecting local features in images?",
+      "options": {
+        "A": "To compress the image for storage",
+        "B": "To enable robust image matching by finding corresponding points across views",
+        "C": "To directly reconstruct 3D geometry without correspondences",
+        "D": "To perform global color correction"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the motivation for local feature detection in image matching.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg6_mcq2",
+      "question": "The Harris corner detector identifies points where:",
+      "options": {
+        "A": "Intensity is locally maximum",
+        "B": "The image gradient changes significantly in two orthogonal directions",
+        "C": "Edges are perfectly straight",
+        "D": "Texture is uniform"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the core principle behind Harris corner detection.",
+      "slide_refs": [7]
+    },
+    {
+      "id": "pkg6_mcq3",
+      "question": "In the Harris corner response function, the matrix \\(M\\) is constructed from:",
+      "options": {
+        "A": "Raw pixel intensities in a local window",
+        "B": "Spatial gradients \\(I_x\\) and \\(I_y\\) averaged over a neighborhood",
+        "C": "Second derivatives of the image",
+        "D": "Laplacian of Gaussian responses"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Describe the structure tensor used in Harris corner detection.",
+      "slide_refs": [10]
+    },
+    {
+      "id": "pkg6_mcq4",
+      "question": "The corner response \\(R = \\det(M) - k \\cdot \\trace(M)^2\\) is high when:",
+      "options": {
+        "A": "Both eigenvalues of \\(M\\) are small",
+        "B": "One eigenvalue is large and the other is small",
+        "C": "Both eigenvalues are large",
+        "D": "The trace is zero"
+      },
+      "correct_option": "C",
+      "difficulty": "hard",
+      "learning_objective": "Interpret the eigenvalue analysis of the structure tensor for corner classification.",
+      "slide_refs": [11]
+    },
+    {
+      "id": "pkg6_mcq5",
+      "question": "Which of the following is a key advantage of Harris corners over simple edge detectors?",
+      "options": {
+        "A": "They are invariant to full projective transformations",
+        "B": "They provide precise localization at junctions where two edges meet",
+        "C": "They require no gradient computation",
+        "D": "They are scale-invariant by default"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Evaluate the localization precision of corner features.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg6_mcq6",
+      "question": "In practice, non-maximum suppression is applied to Harris corner responses to:",
+      "options": {
+        "A": "Increase the number of detected corners",
+        "B": "Select the strongest local maxima and avoid clustered responses",
+        "C": "Smooth the image before detection",
+        "D": "Threshold based on global intensity"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Explain post-processing steps in feature detection.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg6_mcq7",
+      "question": "The parameter \\(k\\) in the Harris response function typically ranges between:",
+      "options": {
+        "A": "0.001 to 0.01",
+        "B": "0.04 to 0.06",
+        "C": "0.5 to 1.0",
+        "D": "10 to 100"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Recall empirical values for the Harris detector sensitivity parameter.",
+      "slide_refs": [11]
+    },
+    {
+      "id": "pkg6_mcq8",
+      "question": "Which visual example in the lecture demonstrates successful matching using local features?",
+      "options": {
+        "A": "Two identical images of a flat wall",
+        "B": "Two mountain panorama images with corresponding red lines connecting feature points",
+        "C": "A single image with motion blur",
+        "D": "A 3D reconstructed point cloud"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Identify real-world application of feature matching.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg6_mcq9",
+      "question": "The Harris detector is based on the autocorrelation function of the image. A corner corresponds to a point where this function:",
+      "options": {
+        "A": "Is flat in all directions",
+        "B": "Has a peak in one direction only",
+        "C": "Drops rapidly in multiple directions",
+        "D": "Is zero"
+      },
+      "correct_option": "C",
+      "difficulty": "hard",
+      "learning_objective": "Connect Harris method to the concept of image autocorrelation.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg6_mcq10",
+      "question": "Why are local features preferred over global image descriptors for matching under viewpoint changes?",
+      "options": {
+        "A": "They are computationally cheaper to extract globally",
+        "B": "They allow partial matching and are robust to occlusion and clutter",
+        "C": "They encode color information more accurately",
+        "D": "They require calibrated cameras"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Justify the use of sparse local features in robust correspondence.",
+      "slide_refs": [8]
+    }
+  ],
+  "essay": {
+    "id": "pkg6_essay1",
+    "prompt": "Explain the Harris corner detector in detail. Start with the motivation for detecting local features in image matching. Derive the structure tensor \\(M\\) from the image gradients and the autocorrelation approximation. Describe how the corner response \\(R = \\det(M) - k \\trace(M)^2\\) classifies image regions into flat, edge, and corner using eigenvalue analysis. Discuss practical implementation steps (Gaussian smoothing, non-maximum suppression, thresholding) and limitations (scale variance, sensitivity to noise). Conclude with how Harris features enable robust correspondence in stereo, motion, or recognition pipelines.",
+    "expected_keywords": [
+      "local features",
+      "image matching",
+      "correspondence",
+      "Harris corner",
+      "structure tensor",
+      "image gradients",
+      "I_x",
+      "I_y",
+      "autocorrelation",
+      "corner response",
+      "det(M)",
+      "trace(M)",
+      "eigenvalues",
+      "flat region",
+      "edge",
+      "corner",
+      "Gaussian window",
+      "non-maximum suppression",
+      "thresholding",
+      "scale invariance",
+      "noise sensitivity",
+      "sparse features",
+      "robust matching"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "local features",
+          "weight": 5,
+          "description": "Defines need for repeatable, localizable points for matching."
+        },
+        {
+          "keyword": "image matching",
+          "weight": 5,
+          "description": "Links to finding correspondences across views."
+        },
+        {
+          "keyword": "correspondence",
+          "weight": 5,
+          "description": "Mentions applications in stereo, motion, recognition."
+        },
+        {
+          "keyword": "Harris corner",
+          "weight": 5,
+          "description": "Names the detector and its goal: find L- or X-junctions."
+        },
+        {
+          "keyword": "structure tensor",
+          "weight": 8,
+          "description": "Shows \\(M = \\begin{bmatrix} \\langle I_x^2 \\rangle & \\langle I_x I_y \\rangle \\\\ \\langle I_x I_y \\rangle & \\langle I_y^2 \\rangle \\end{bmatrix}\\)."
+        },
+        {
+          "keyword": "image gradients",
+          "weight": 6,
+          "description": "Explains computation of \\(I_x, I_y\\) via finite differences."
+        },
+        {
+          "keyword": "I_x",
+          "weight": 3,
+          "description": "Used in gradient products."
+        },
+        {
+          "keyword": "I_y",
+          "weight": 3,
+          "description": "Used in gradient products."
+        },
+        {
+          "keyword": "autocorrelation",
+          "weight": 7,
+          "description": "Connects to Taylor expansion and shift-induced intensity change."
+        },
+        {
+          "keyword": "corner response",
+          "weight": 7,
+          "description": "States \\(R = \\det(M) - k \\trace(M)^2\\)."
+        },
+        {
+          "keyword": "det(M)",
+          "weight": 5,
+          "description": "Interprets as product of eigenvalues."
+        },
+        {
+          "keyword": "trace(M)",
+          "weight": 5,
+          "description": "Interprets as sum of eigenvalues."
+        },
+        {
+          "keyword": "eigenvalues",
+          "weight": 8,
+          "description": "Classifies: both small → flat; one large → edge; both large → corner."
+        },
+        {
+          "keyword": "flat region",
+          "weight": 4,
+          "description": "R ≈ 0 (small negative or positive)."
+        },
+        {
+          "keyword": "edge",
+          "weight": 4,
+          "description": "R large negative."
+        },
+        {
+          "keyword": "corner",
+          "weight": 4,
+          "description": "R large positive."
+        },
+        {
+          "keyword": "Gaussian window",
+          "weight": 5,
+          "description": "Averages gradients to reduce noise."
+        },
+        {
+          "keyword": "non-maximum suppression",
+          "weight": 5,
+          "description": "Ensures one response per corner."
+        },
+        {
+          "keyword": "thresholding",
+          "weight": 4,
+          "description": "Filters weak responses."
+        },
+        {
+          "keyword": "scale invariance",
+          "weight": 5,
+          "description": "Notes Harris is not scale-invariant; needs multi-scale."
+        },
+        {
+          "keyword": "noise sensitivity",
+          "weight": 5,
+          "description": "Discusses impact of derivative noise."
+        },
+        {
+          "keyword": "sparse features",
+          "weight": 4,
+          "description": "Contrasts with dense methods."
+        },
+        {
+          "keyword": "robust matching",
+          "weight": 5,
+          "description": "Enables RANSAC, triangulation, etc."
+        }
+      ],
+      "grading_notes": "Require eigenvalue interpretation and response formula for full credit. Allow partial math if intuition is strong. Deduct if autocorrelation or gradient averaging is missing. Award bonus for mentioning later improvements (e.g., SIFT)."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "package_id": "pkg10",
+  "source": "02-imaging-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg10_mcq1",
+      "question": "The pinhole camera model assumes that a 3D world point \\((X, Y, Z)\\) projects to an image point \\((x, y)\\) through perspective projection. Under the standard pinhole model with the camera center at the origin and image plane at \\(Z = f\\), the correct projection equations are:",
+      "options": {
+        "A": "\\(x = X/Z, \\; y = Y/Z\\)",
+        "B": "\\(x = f \\cdot X/Y, \\; y = f \\cdot Z/Y\\)",
+        "C": "\\(x = f \\cdot X/Z, \\; y = f \\cdot Y/Z\\)",
+        "D": "\\(x = f \\cdot Y/Z, \\; y = f \\cdot X/Z\\)"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "Recall the basic perspective projection equations of the pinhole camera model.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg10_mcq2",
+      "question": "In homogeneous coordinates, the full 3×4 camera projection matrix \\(P\\) for a pinhole camera with intrinsic matrix \\(K\\) and extrinsic parameters \\([R \\; t]\\) is given by:",
+      "options": {
+        "A": "\\(P = K [R \\; t]\\)",
+        "B": "\\(P = [R \\; t] K\\)",
+        "C": "\\(P = K [I \\; 0] [R \\; t]\\)",
+        "D": "\\(P = [K \\; 0] [R \\; t]\\)"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Derive the general form of the camera projection matrix in homogeneous coordinates.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg10_mcq3",
+      "question": "The intrinsic parameter \\(\\alpha_x = f \\cdot m_x\\) represents:",
+      "options": {
+        "A": "The skew between image axes",
+        "B": "The focal length in horizontal pixel units",
+        "C": "The principal point offset in y-direction",
+        "D": "The aspect ratio correction factor"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Interpret the components of the intrinsic calibration matrix \\(K\\).",
+      "slide_refs": [10]
+    },
+    {
+      "id": "pkg10_mcq4",
+      "question": "A finite camera has exactly how many degrees of freedom in its projection matrix \\(P\\)?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "11",
+        "D": "12"
+      },
+      "correct_option": "C",
+      "difficulty": "hard",
+      "learning_objective": "Understand the dimensionality of general projective cameras.",
+      "slide_refs": [14]
+    },
+    {
+      "id": "pkg10_mcq5",
+      "question": "Radial distortion in real lenses causes straight lines in the world to appear curved in the image. The distortion model commonly used corrects coordinates \\((x_d, y_d)\\) to undistorted \\((x_u, y_u)\\) via:",
+      "options": {
+        "A": "\\(x_u = x_d (1 + k_1 r^2 + k_2 r^4)\\)",
+        "B": "\\(x_d = x_u (1 + k_1 r^2 + k_2 r^4)\\)",
+        "C": "\\(x_u = x_d + t_x, \\; y_u = y_d + t_y\\)",
+        "D": "\\(x_u = \\alpha x_d + \\beta y_d\\)"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the polynomial radial distortion model and its direction of correction.",
+      "slide_refs": [18]
+    },
+    {
+      "id": "pkg10_mcq6",
+      "question": "The principal point \\((c_x, c_y)\\) is defined as:",
+      "options": {
+        "A": "The center of the sensor array",
+        "B": "The optical axis intersection with the image plane",
+        "C": "The pixel with maximum intensity",
+        "D": "The vanishing point of parallel lines"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Define the role of the principal point in camera calibration.",
+      "slide_refs": [10]
+    },
+    {
+      "id": "pkg10_mcq7",
+      "question": "In the pinhole model, a point at infinity in 3D (direction vector) projects to:",
+      "options": {
+        "A": "The image origin",
+        "B": "A vanishing point in the image",
+        "C": "The principal point",
+        "D": "No valid image point"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Explain the imaging of points at infinity and vanishing points.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg10_mcq8",
+      "question": "Camera calibration using a known 3D calibration object (e.g., checkerboard) typically solves for:",
+      "options": {
+        "A": "Only intrinsic parameters",
+        "B": "Only extrinsic parameters per view",
+        "C": "Both intrinsic \\(K\\) and per-view extrinsics \\(R, t\\)",
+        "D": "Only radial distortion coefficients"
+      },
+      "correct_option": "C",
+      "difficulty": "medium",
+      "learning_objective": "Describe the standard camera calibration pipeline.",
+      "slide_refs": [20]
+    },
+    {
+      "id": "pkg10_mcq9",
+      "question": "The skew parameter \\(s\\) in the intrinsic matrix is zero when:",
+      "options": {
+        "A": "Pixel aspect ratio is 1:1",
+        "B": "Image axes are orthogonal (no shearing)",
+        "C": "Focal length equals sensor size",
+        "D": "Lens has no radial distortion"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Interpret the skew parameter in modern digital cameras.",
+      "slide_refs": [10]
+    },
+    {
+      "id": "pkg10_mcq10",
+      "question": "The weak perspective (scaled orthographic) approximation is valid when:",
+      "options": {
+        "A": "Scene depth variation is small compared to average distance to camera",
+        "B": "Camera is at infinity",
+        "C": "Objects are perfectly planar",
+        "D": "Lens distortion is negligible"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Recognize conditions under which perspective effects can be approximated linearly.",
+      "slide_refs": [22]
+    }
+  ],
+  "essay": {
+    "id": "pkg10_essay1",
+    "prompt": "Provide a comprehensive explanation of the pinhole camera model and its extensions in computer vision. Start with the ideal perspective projection geometry and derive the mapping from 3D world points to 2D image points using both Cartesian and homogeneous coordinates. Present the full camera matrix \\(P = K [R \\; t]\\) and explain each component of the intrinsic matrix \\(K\\) (focal length, principal point, skew, pixel aspect ratio). Discuss the role of extrinsic parameters and the decomposition of \\(P\\). Then, cover real-world deviations: radial and tangential lens distortion models, and their parameterization (k1, k2, p1, p2). Describe the standard calibration procedure using multiple views of a checkerboard pattern, including corner detection, homography estimation, and nonlinear optimization. Finally, discuss limitations of the pinhole model (finite aperture blur, rolling shutter, chromatic aberration) and advanced models (rational polynomial, fisheye). Include mathematical formulations and practical implications for downstream tasks like 3D reconstruction and augmented reality.",
+    "expected_keywords": [
+      "pinhole model",
+      "perspective projection",
+      "homogeneous coordinates",
+      "camera matrix",
+      "intrinsic parameters",
+      "K matrix",
+      "focal length",
+      "principal point",
+      "skew",
+      "extrinsic parameters",
+      "rotation R",
+      "translation t",
+      "projection matrix P",
+      "radial distortion",
+      "tangential distortion",
+      "distortion coefficients",
+      "camera calibration",
+      "checkerboard",
+      "homography",
+      "Zhang's method",
+      "corner detection",
+      "nonlinear optimization",
+      "vanishing points",
+      "weak perspective",
+      "affine camera",
+      "rolling shutter",
+      "chromatic aberration"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "pinhole model",
+          "weight": 6,
+          "description": "Defines ideal perspective projection with infinitesimal aperture."
+        },
+        {
+          "keyword": "perspective projection",
+          "weight": 7,
+          "description": "Derives \\(x = f X/Z, y = f Y/Z\\) geometrically."
+        },
+        {
+          "keyword": "homogeneous coordinates",
+          "weight": 7,
+          "description": "Shows 3D → 2D via 3×4 matrix and dehomogenization."
+        },
+        {
+          "keyword": "camera matrix",
+          "weight": 6,
+          "description": "States \\(P = K [R | t]\\) with correct dimensions."
+        },
+        {
+          "keyword": "intrinsic parameters",
+          "weight": 6,
+          "description": "Lists all five: \\(\\alpha_x, \\alpha_y, s, c_x, c_y\\)."
+        },
+        {
+          "keyword": "K matrix",
+          "weight": 6,
+          "description": "Writes upper-triangular form explicitly."
+        },
+        {
+          "keyword": "focal length",
+          "weight": 5,
+          "description": "Relates physical \\(f\\) to pixel units via sensor size."
+        },
+        {
+          "keyword": "principal point",
+          "weight": 5,
+          "description": "Optical center offset; often near image center."
+        },
+        {
+          "keyword": "skew",
+          "weight": 4,
+          "description": "Non-zero in scanned film or misaligned sensors."
+        },
+        {
+          "keyword": "extrinsic parameters",
+          "weight": 5,
+          "description": "6 DOF rigid transformation from world to camera."
+        },
+        {
+          "keyword": "rotation R",
+          "weight": 4,
+          "description": "3×3 orthogonal matrix with det=1."
+        },
+        {
+          "keyword": "translation t",
+          "weight": 4,
+          "description": "Camera center in world coordinates."
+        },
+        {
+          "keyword": "projection matrix P",
+          "weight": 5,
+          "description": "11 DOF (up to scale); QR-like decomposition."
+        },
+        {
+          "keyword": "radial distortion",
+          "weight": 6,
+          "description": "Polynomial model with \\(k_1, k_2, k_3\\); barrel/pincushion."
+        },
+        {
+          "keyword": "tangential distortion",
+          "weight": 5,
+          "description": "Parameters \\(p_1, p_2\\) for decentering."
+        },
+        {
+          "keyword": "distortion coefficients",
+          "weight": 4,
+          "description": "Typically 5 parameters total."
+        },
+        {
+          "keyword": "camera calibration",
+          "weight": 6,
+          "description": "Multi-view optimization of reprojection error."
+        },
+        {
+          "keyword": "checkerboard",
+          "weight": 4,
+          "description": "Known 3D corners for correspondences."
+        },
+        {
+          "keyword": "homography",
+          "weight": 5,
+          "description": "Planar → image mapping per view."
+        },
+        {
+          "keyword": "Zhang's method",
+          "weight": 5,
+          "description": "Closed-form then nonlinear refinement."
+        },
+        {
+          "keyword": "corner detection",
+          "weight": 4,
+          "description": "Sub-pixel Harris or saddle-point methods."
+        },
+        {
+          "keyword": "nonlinear optimization",
+          "weight": 5,
+          "description": "Levenberg-Marquardt on all parameters."
+        },
+        {
+          "keyword": "vanishing points",
+          "weight": 3,
+          "description": "Bonus: lines at infinity for calibration."
+        },
+        {
+          "keyword": "weak perspective",
+          "weight": 3,
+          "description": "Bonus: approximation for distant objects."
+        },
+        {
+          "keyword": "rolling shutter",
+          "weight": 3,
+          "description": "Bonus: CMOS readout distortion."
+        },
+        {
+          "keyword": "chromatic aberration",
+          "weight": 3,
+          "description": "Bonus: wavelength-dependent focal length."
+        }
+      ],
+      "grading_notes": "Require correct projection equations and full K matrix for full marks. Award partial credit for good geometric intuition without full math. Deduct if intrinsic/extrinsic roles are swapped or distortion model direction is wrong. Bonus for mentioning modern tools (OpenCV calibrateCamera)."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

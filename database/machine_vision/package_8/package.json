@@ -1,0 +1,259 @@
+{
+  "package_id": "pkg4",
+  "source": "08-motion-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg4_mcq1",
+      "question": "Which of the following is NOT a reason why analyzing visual motion is important in computer vision?",
+      "options": {
+        "A": "To stabilize shaky video caused by camera jitter",
+        "B": "To track and analyze object trajectories",
+        "C": "To directly compute absolute depth from a single image",
+        "D": "To reveal spatial layout via motion parallax"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "Identify valid applications of motion analysis in vision systems.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg4_mcq2",
+      "question": "Motion parallax refers to the phenomenon where:",
+      "options": {
+        "A": "Closer objects appear to move faster than distant ones when the camera translates",
+        "B": "Objects rotate around their center when the camera moves",
+        "C": "Parallel lines converge at the vanishing point due to camera motion",
+        "D": "Image brightness changes uniformly across the frame"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Recall the definition and visual effect of motion parallax.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg4_mcq3",
+      "question": "In the context of perceptual organization, motion can serve as a powerful cue for grouping when:",
+      "options": {
+        "A": "All points in the image move at the same velocity",
+        "B": "Regions move coherently with a common motion pattern",
+        "C": "Motion is completely random across the image",
+        "D": "Only static edges are present"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Understand motion as a segmentation and grouping cue.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg4_mcq4",
+      "question": "The aperture problem states that:",
+      "options": {
+        "A": "Local motion measurements through a small aperture are ambiguous",
+        "B": "Global optical flow is always unique",
+        "C": "Only translational motion can be recovered",
+        "D": "Motion perpendicular to an edge is always detectable"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Explain the fundamental ambiguity in local motion estimation.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg4_mcq5",
+      "question": "For a rigidly moving object under orthographic projection, the instantaneous 2D motion field is best approximated by:",
+      "options": {
+        "A": "A pure translation",
+        "B": "An affine transformation with 6 parameters",
+        "C": "A full projective transformation",
+        "D": "A single scale factor"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Derive the parametric form of 2D motion under rigid 3D motion and orthographic camera.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg4_mcq6",
+      "question": "The brightness constancy assumption in optical flow estimation states that:",
+      "options": {
+        "A": "Image intensity at a point remains constant over time if the point moves",
+        "B": "All pixels have the same brightness",
+        "C": "Motion causes uniform change in intensity",
+        "D": "Lighting direction is known and fixed"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "State the core assumption behind differential optical flow methods.",
+      "slide_refs": [18]
+    },
+    {
+      "id": "pkg4_mcq7",
+      "question": "The Lucas-Kanade method assumes that motion is approximately constant:",
+      "options": {
+        "A": "Over the entire image",
+        "B": "In a small spatial neighborhood around each pixel",
+        "C": "Only at feature points",
+        "D": "Along epipolar lines"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the local smoothness assumption in Lucas-Kanade optical flow.",
+      "slide_refs": [20]
+    },
+    {
+      "id": "pkg4_mcq8",
+      "question": "In the Horn-Schunck optical flow formulation, the smoothness term regularizes the flow field by minimizing:",
+      "options": {
+        "A": "The magnitude of the flow vectors",
+        "B": "The spatial gradients of the flow components \\(\\frac{\\partial u}{\\partial x}, \\frac{\\partial u}{\\partial y}, \\frac{\\partial v}{\\partial x}, \\frac{\\partial v}{\\partial y}\\)",
+        "C": "The difference between consecutive frames",
+        "D": "The total number of non-zero flow vectors"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Understand the global regularization in dense optical flow estimation.",
+      "slide_refs": [22]
+    },
+    {
+      "id": "pkg4_mcq9",
+      "question": "Which of the following is a common failure case of the brightness constancy assumption?",
+      "options": {
+        "A": "Slow camera motion",
+        "B": "Specular reflections or moving shadows",
+        "C": "Pure translational motion",
+        "D": "High-contrast textures"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Identify real-world violations of optical flow assumptions.",
+      "slide_refs": [19]
+    },
+    {
+      "id": "pkg4_mcq10",
+      "question": "To estimate an affine 2D motion model using least squares, the minimum number of point correspondences required is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Determine minimal sample size for parametric motion estimation.",
+      "slide_refs": [16]
+    }
+  ],
+  "essay": {
+    "id": "pkg4_essay1",
+    "prompt": "Explain the optical flow estimation problem and the two fundamental approaches: Lucas-Kanade (local) and Horn-Schunck (global). Describe the brightness constancy constraint, the aperture problem, and how each method addresses motion ambiguity. Compare their assumptions, advantages, and limitations, particularly in handling occlusions, large motions, and textureless regions. Include a brief discussion on modern extensions (e.g., robust penalties, coarse-to-fine warping).",
+    "expected_keywords": [
+      "optical flow",
+      "brightness constancy",
+      "aperture problem",
+      "Lucas-Kanade",
+      "local method",
+      "spatial coherence",
+      "weighted least squares",
+      "Horn-Schunck",
+      "global method",
+      "smoothness term",
+      "variational formulation",
+      "occlusions",
+      "large displacement",
+      "coarse-to-fine",
+      "image pyramid",
+      "robust penalty"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "optical flow",
+          "weight": 6,
+          "description": "Defines optical flow as the apparent 2D motion field induced by 3D scene/camera motion."
+        },
+        {
+          "keyword": "brightness constancy",
+          "weight": 8,
+          "description": "States \\(I(x,y,t) = I(x+u\\Delta t, y+v\\Delta t, t+\\Delta t)\\) and derives the optical flow constraint equation."
+        },
+        {
+          "keyword": "aperture problem",
+          "weight": 8,
+          "description": "Explains local ambiguity: only normal flow recoverable from edge-like structures."
+        },
+        {
+          "keyword": "Lucas-Kanade",
+          "weight": 8,
+          "description": "Describes assumption of constant flow in small window and solution via weighted least squares."
+        },
+        {
+          "keyword": "local method",
+          "weight": 5,
+          "description": "Notes sparsity (flow computed only at reliable points) and robustness to noise in textured areas."
+        },
+        {
+          "keyword": "spatial coherence",
+          "weight": 5,
+          "description": "Mentions neighborhood votes to resolve aperture ambiguity."
+        },
+        {
+          "keyword": "weighted least squares",
+          "weight": 5,
+          "description": "Shows system \\(A^T W A \\mathbf{v} = A^T W \\mathbf{b}\\) for solving local flow."
+        },
+        {
+          "keyword": "Horn-Schunck",
+          "weight": 8,
+          "description": "Presents energy functional \\(E = \\int (I_x u + I_y v + I_t)^2 + \\alpha (|\\nabla u|^2 + |\\nabla v|^2) \\,dx\\,dy\\)."
+        },
+        {
+          "keyword": "global method",
+          "weight": 5,
+          "description": "Emphasizes dense flow field and global smoothness propagation."
+        },
+        {
+          "keyword": "smoothness term",
+          "weight": 6,
+          "description": "Explains role of \\(\\alpha\\) in trading off data fidelity vs. smoothness."
+        },
+        {
+          "keyword": "variational formulation",
+          "weight": 5,
+          "description": "Mentions Euler-Lagrange equations or iterative solution."
+        },
+        {
+          "keyword": "occlusions",
+          "weight": 6,
+          "description": "Discusses failure at motion boundaries; LK may skip, HS over-smooths."
+        },
+        {
+          "keyword": "large displacement",
+          "weight": 6,
+          "description": "Notes linearization fails; both need coarse-to-fine or warping."
+        },
+        {
+          "keyword": "coarse-to-fine",
+          "weight": 6,
+          "description": "Describes multi-scale pyramid to handle large motions."
+        },
+        {
+          "keyword": "image pyramid",
+          "weight": 4,
+          "description": "Explains downsampling and incremental flow refinement."
+        },
+        {
+          "keyword": "robust penalty",
+          "weight": 4,
+          "description": "Mentions modern use of L1 or censored penalties for outlier rejection."
+        }
+      ],
+      "grading_notes": "Require clear distinction between local and global methods. Full credit only if both aperture problem and smoothness regularization are explained. Allow partial credit for intuitive descriptions without full math. Deduct if methods are confused or assumptions misstated."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

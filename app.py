@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List
-import openai
+from openai import OpenAI
 
 # -------------------------------
 # CONFIGURATION
@@ -17,7 +17,7 @@ PROMPT_FILE = BASE_DIR / "config" / "prompts" / "generate_questions.txt"
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # Load API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.set_page_config(page_title="Question Bank Generator & Test Simulator", layout="wide")
 st.title("📘 Question Bank Generator & Test Simulator")
@@ -50,8 +50,8 @@ PDF Content:
 """
 
     with st.spinner("Generating question package via GPT... ⏳"):
-        response = openai.ChatCompletion.create(
-            model="gpt-5",
+        response = client.chat.completions.create(
+            model="gpt-4",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
@@ -59,7 +59,7 @@ PDF Content:
             temperature=0.4
         )
 
-    raw_output = response["choices"][0]["message"]["content"].strip()
+    raw_output = response.choices[0].message.content.strip()
     try:
         data = json.loads(raw_output)
     except Exception:

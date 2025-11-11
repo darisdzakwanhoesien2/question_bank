@@ -1,0 +1,301 @@
+{
+  "package_id": "pkg11",
+  "source": "01-intro-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg11_mcq1",
+      "question": "The lecture series is structured around which central theme?",
+      "options": {
+        "A": "Machine learning for image classification",
+        "B": "From photons to semantics – building a complete computer vision pipeline",
+        "C": "Real-time video processing on embedded devices",
+        "D": "Deep neural network architectures for vision"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Identify the overarching goal of the course as a full vision pipeline.",
+      "slide_refs": [3]
+    },
+    {
+      "id": "pkg11_mcq2",
+      "question": "Which of the following is NOT listed as a core module in the course outline?",
+      "options": {
+        "A": "Imaging and the pinhole model",
+        "B": "Light and color – specular reflection",
+        "C": "Graph cuts and energy minimization",
+        "D": "Recognition – basics"
+      },
+      "correct_option": "C",
+      "difficulty": "medium",
+      "learning_objective": "Recall the sequence and titles of the 11 main lecture modules.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg11_mcq3",
+      "question": "The course emphasizes that modern computer vision relies heavily on:",
+      "options": {
+        "A": "Hand-crafted geometric models only",
+        "B": "Learning from large labeled datasets",
+        "C": "Real-time GPU acceleration",
+        "D": "Quantum imaging sensors"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the paradigm shift toward data-driven methods.",
+      "slide_refs": [7]
+    },
+    {
+      "id": "pkg11_mcq4",
+      "question": "A key challenge highlighted in the introduction is:",
+      "options": {
+        "A": "The inverse problem of recovering 3D scene properties from 2D projections",
+        "B": "Storing high-resolution images efficiently",
+        "C": "Training neural networks in under one second",
+        "D": "Designing lenses with zero distortion"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Recognize the ill-posed nature of vision as inverse optics.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg11_mcq5",
+      "question": "The lecture on 'Depth from images – 3D cues' (10.1) primarily covers:",
+      "options": {
+        "A": "Active structured light and time-of-flight",
+        "B": "Monocular cues such as texture gradient, shading, and focus",
+        "C": "Multi-view stereo reconstruction",
+        "D": "Photometric stereo with known light directions"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Differentiate passive monocular depth cues from active or stereo methods.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg11_mcq6",
+      "question": "Which module directly follows 'Local features – Harris corners' (6.1)?",
+      "options": {
+        "A": "Recognition – Basics",
+        "B": "2D models – Fitting",
+        "C": "Motion – Basics",
+        "D": "Texture analysis – Basics"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Memorize the chronological order of lecture topics.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg11_mcq7",
+      "question": "The introductory slides claim that vision is 'easy for humans, hard for machines' because:",
+      "options": {
+        "A": "Humans have higher resolution retinas",
+        "B": "The mapping from 3D world to 2D image loses information irreversibly",
+        "C": "Machines cannot process color information",
+        "D": "Human eyes have larger field of view"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Explain the information loss in image formation.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg11_mcq8",
+      "question": "In the course roadmap, '3D – Affine transformation' (11.1) is positioned as:",
+      "options": {
+        "A": "The final topic before advanced deep learning",
+        "B": "A bridge between 2D image processing and full 3D reconstruction",
+        "C": "An optional module on linear algebra",
+        "D": "A review of camera calibration"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Interpret the pedagogical progression from 2D to 3D reasoning.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg11_mcq9",
+      "question": "Which real-world application is explicitly mentioned as a motivation for studying motion analysis?",
+      "options": {
+        "A": "Autonomous driving and action recognition",
+        "B": "Medical image registration",
+        "C": "Satellite image mosaicking",
+        "D": "All of the above"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "Connect theoretical modules to practical vision systems.",
+      "slide_refs": [6]
+    },
+    {
+      "id": "pkg11_mcq10",
+      "question": "The slide titled 'What is computer vision?' defines it as:",
+      "options": {
+        "A": "Making useful decisions about real physical objects and scenes based on sensed images",
+        "B": "Digitizing analog photographs",
+        "C": "Compressing image files",
+        "D": "Designing better camera hardware"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "State the standard definition of the field.",
+      "slide_refs": [4]
+    }
+  ],
+  "essay": {
+    "id": "pkg11_essay1",
+    "prompt": "Provide an overview of the entire computer vision course as outlined in the introductory lecture. List all 11 modules in order with their exact titles and briefly describe the role of each in building a complete vision system from raw pixels to semantic understanding. Explain how the course progresses from low-level image formation (imaging, light, color) through mid-level feature extraction and geometric reasoning (binary analysis, texture, local features, 2D/3D models, motion, depth cues) to high-level recognition and 3D interpretation. Discuss the pedagogical motivation for this bottom-up structure and how it mirrors both classical and modern vision pipelines. Finally, reflect on the challenges highlighted in the introduction (ambiguity, illumination, occlusion, scale) and how subsequent modules address them.",
+    "expected_keywords": [
+      "course outline",
+      "module sequence",
+      "1.1 Introduction",
+      "2.1 Imaging – Pinhole model",
+      "3.1 Light and color",
+      "4.1 Binary image analysis",
+      "5.1 Texture analysis",
+      "6.1 Local features – Harris",
+      "7.1 Recognition – Basics",
+      "8.1 Motion – Basics",
+      "9.1 2D models – Fitting",
+      "10.1 Depth from images – 3D cues",
+      "11.1 3D – Affine transformation",
+      "low-level processing",
+      "mid-level features",
+      "high-level recognition",
+      "bottom-up pipeline",
+      "inverse problem",
+      "ambiguity",
+      "illumination variation",
+      "occlusion",
+      "scale changes",
+      "photons to semantics"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "course outline",
+          "weight": 6,
+          "description": "Accurately lists all 11 modules with correct numbering and titles."
+        },
+        {
+          "keyword": "module sequence",
+          "weight": 5,
+          "description": "Presents modules in exact chronological order."
+        },
+        {
+          "keyword": "1.1 Introduction",
+          "weight": 3,
+          "description": "Sets context and motivation."
+        },
+        {
+          "keyword": "2.1 Imaging – Pinhole model",
+          "weight": 4,
+          "description": "Image formation and geometry."
+        },
+        {
+          "keyword": "3.1 Light and color",
+          "weight": 4,
+          "description": "Physics of light-surface interaction."
+        },
+        {
+          "keyword": "4.1 Binary image analysis",
+          "weight": 4,
+          "description": "Segmentation and morphology."
+        },
+        {
+          "keyword": "5.1 Texture analysis",
+          "weight": 4,
+          "description": "Surface properties and shape cues."
+        },
+        {
+          "keyword": "6.1 Local features – Harris",
+          "weight": 4,
+          "description": "Correspondence and matching."
+        },
+        {
+          "keyword": "7.1 Recognition – Basics",
+          "weight": 4,
+          "description": "Classification and learning."
+        },
+        {
+          "keyword": "8.1 Motion – Basics",
+          "weight": 4,
+          "description": "Optical flow and tracking."
+        },
+        {
+          "keyword": "9.1 2D models – Fitting",
+          "weight": 4,
+          "description": "Lines, conics, RANSAC."
+        },
+        {
+          "keyword": "10.1 Depth from images – 3D cues",
+          "weight": 4,
+          "description": "Monocular depth estimation."
+        },
+        {
+          "keyword": "11.1 3D – Affine transformation",
+          "weight": 4,
+          "description": "3D reasoning and reconstruction."
+        },
+        {
+          "keyword": "low-level processing",
+          "weight": 5,
+          "description": "Modules 2–5: pixels to regions."
+        },
+        {
+          "keyword": "mid-level features",
+          "weight": 5,
+          "description": "Modules 6–10: structure and relations."
+        },
+        {
+          "keyword": "high-level recognition",
+          "weight": 5,
+          "description": "Module 7 and beyond: semantics."
+        },
+        {
+          "keyword": "bottom-up pipeline",
+          "weight": 6,
+          "description": "Mimics classical vision hierarchy."
+        },
+        {
+          "keyword": "inverse problem",
+          "weight": 5,
+          "description": "Recovering 3D from 2D is ill-posed."
+        },
+        {
+          "keyword": "ambiguity",
+          "weight": 4,
+          "description": "Multiple 3D scenes → same image."
+        },
+        {
+          "keyword": "illumination variation",
+          "weight": 4,
+          "description": "Handled in color and recognition."
+        },
+        {
+          "keyword": "occlusion",
+          "weight": 4,
+          "description": "Addressed in motion and 2D/3D fitting."
+        },
+        {
+          "keyword": "scale changes",
+          "weight": 4,
+          "description": "Local features and multi-scale analysis."
+        },
+        {
+          "keyword": "photons to semantics",
+          "weight": 5,
+          "description": "Overall course mantra."
+        }
+      ],
+      "grading_notes": "Require exact module titles and order for full credit. Allow flexible grouping into low/mid/high levels. Deduct if any module is missing or misordered. Award bonus for connecting specific challenges to later modules (e.g., occlusion → motion segmentation)."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

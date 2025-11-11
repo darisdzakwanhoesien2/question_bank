@@ -1,0 +1,277 @@
+{
+  "package_id": "pkg7",
+  "source": "05-texture-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg7_mcq1",
+      "question": "What is the primary goal of texture analysis in computer vision?",
+      "options": {
+        "A": "To reconstruct 3D geometry from a single image",
+        "B": "To characterize local image patterns for segmentation, classification, or shape inference",
+        "C": "To detect and track moving objects in video",
+        "D": "To calibrate camera intrinsic parameters"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the role of texture in image interpretation.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg7_mcq2",
+      "question": "Texture can be used as a monocular cue for 3D shape perception because:",
+      "options": {
+        "A": "It remains constant under perspective projection",
+        "B": "Regular texture elements distort predictably with surface orientation (slant and tilt)",
+        "C": "It is invariant to lighting conditions",
+        "D": "It encodes depth directly in intensity"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Explain how texture gradient provides surface orientation cues.",
+      "slide_refs": [6]
+    },
+    {
+      "id": "pkg7_mcq3",
+      "question": "In the context of shape from texture, the two key parameters describing surface orientation are:",
+      "options": {
+        "A": "Scale and rotation",
+        "B": "Slant (\\(\\phi\\)) and tilt (\\(\\tau\\))",
+        "C": "Translation and shear",
+        "D": "Foreshortening and compression"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Recall the geometric parameters in texture-based surface estimation.",
+      "slide_refs": [7]
+    },
+    {
+      "id": "pkg7_mcq4",
+      "question": "Under the isotropy assumption in shape from texture, the texture elements are:",
+      "options": {
+        "A": "Perfectly circular in 3D",
+        "B": "Statistically identical in all directions on the surface",
+        "C": "Aligned with the image axes",
+        "D": "Projected with uniform scale"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "State the isotropy assumption and its implication for foreshortening.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg7_mcq5",
+      "question": "The foreshortening effect in projected texture causes:",
+      "options": {
+        "A": "Texture elements to appear larger when surface is tilted away",
+        "B": "Compression of texture in the direction of maximum slant",
+        "C": "Uniform scaling in all directions",
+        "D": "Rotation without distortion"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Describe how slant affects texture element appearance.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg7_mcq6",
+      "question": "Which of the following is a common method to estimate local texture distortion for shape from texture?",
+      "options": {
+        "A": "Applying global Fourier transform",
+        "B": "Fitting ellipses to the autocorrelation or power spectrum of local patches",
+        "C": "Using Harris corner detection",
+        "D": "Computing optical flow"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Identify spectral or statistical methods for measuring texture anisotropy.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg7_mcq7",
+      "question": "The tilt angle \\(\\tau\\) in shape from texture corresponds to:",
+      "options": {
+        "A": "The magnitude of surface slant",
+        "B": "The direction in the image plane toward which the surface is most slanted",
+        "C": "The scale factor of texture elements",
+        "D": "The camera focal length"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Differentiate between slant and tilt in surface orientation.",
+      "slide_refs": [7]
+    },
+    {
+      "id": "pkg7_mcq8",
+      "question": "A major limitation of shape from texture methods is:",
+      "options": {
+        "A": "They require stereo image pairs",
+        "B": "They assume texture is regular and isotropic in 3D, which is often violated",
+        "C": "They cannot handle colored textures",
+        "D": "They are computationally more expensive than shape from shading"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Recognize real-world violations of texture assumptions.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg7_mcq9",
+      "question": "In texture segmentation, co-occurrence matrices are used to capture:",
+      "options": {
+        "A": "Global frequency content",
+        "B": "Second-order statistics of intensity pairs at specific offsets",
+        "C": "Edge orientations only",
+        "D": "Motion vectors"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall classical texture descriptors based on spatial relationships.",
+      "slide_refs": [18]
+    },
+    {
+      "id": "pkg7_mcq10",
+      "question": "Which of the following is NOT a typical application of texture analysis mentioned in the lecture?",
+      "options": {
+        "A": "Material classification",
+        "B": "Image retrieval by content",
+        "C": "Absolute camera pose estimation",
+        "D": "Surface defect detection"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "Identify standard use cases of texture in vision systems.",
+      "slide_refs": [5]
+    }
+  ],
+  "essay": {
+    "id": "pkg7_essay1",
+    "prompt": "Explain the role of texture as a monocular cue for 3D shape perception. Define the concepts of slant and tilt and describe how isotropic texture is distorted under perspective projection. Derive the relationship between surface orientation and the aspect ratio/orientation of projected texture elements (e.g., via ellipse fitting in the frequency domain). Discuss the isotropy and homogeneity assumptions, their geometric implications, and common violations in real scenes. Compare shape from texture with shape from shading in terms of input requirements, robustness, and output (qualitative vs. metric). Include a brief mention of texture segmentation using statistical descriptors.",
+    "expected_keywords": [
+      "texture analysis",
+      "shape from texture",
+      "monocular cue",
+      "slant",
+      "tilt",
+      "isotropy",
+      "homogeneity",
+      "foreshortening",
+      "perspective projection",
+      "ellipse fitting",
+      "autocorrelation",
+      "power spectrum",
+      "frequency domain",
+      "aspect ratio",
+      "surface normal",
+      "shape from shading",
+      "statistical descriptors",
+      "co-occurrence matrix",
+      "segmentation"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "texture analysis",
+          "weight": 5,
+          "description": "Defines texture as repetitive local pattern; role in segmentation and shape."
+        },
+        {
+          "keyword": "shape from texture",
+          "weight": 7,
+          "description": "States goal: recover surface orientation from texture distortion."
+        },
+        {
+          "keyword": "monocular cue",
+          "weight": 5,
+          "description": "Classifies as single-image 3D cue alongside shading, contour."
+        },
+        {
+          "keyword": "slant",
+          "weight": 6,
+          "description": "Angle between surface normal and viewing direction (0° frontal, 90° edge-on)."
+        },
+        {
+          "keyword": "tilt",
+          "weight": 6,
+          "description": "Direction of steepest ascent in image plane."
+        },
+        {
+          "keyword": "isotropy",
+          "weight": 7,
+          "description": "Assumes texture statistically uniform in all 3D directions."
+        },
+        {
+          "keyword": "homogeneity",
+          "weight": 5,
+          "description": "Texture density constant over surface."
+        },
+        {
+          "keyword": "foreshortening",
+          "weight": 7,
+          "description": "Compression along tilt direction proportional to \\(\\cos \\phi\\)."
+        },
+        {
+          "keyword": "perspective projection",
+          "weight": 6,
+          "description": "Links 3D slant to 2D affine distortion of texture elements."
+        },
+        {
+          "keyword": "ellipse fitting",
+          "weight": 8,
+          "description": "Explains fitting ellipse to spectral peak or autocorrelation to estimate axes."
+        },
+        {
+          "keyword": "autocorrelation",
+          "weight": 5,
+          "description": "Mentions local ACF reveals texel shape and spacing."
+        },
+        {
+          "keyword": "power spectrum",
+          "weight": 5,
+          "description": "Frequency domain dual: energy concentrated in elliptical region."
+        },
+        {
+          "keyword": "frequency domain",
+          "weight": 5,
+          "description": "Advantage: robust to phase, sensitive to scale/orientation."
+        },
+        {
+          "keyword": "aspect ratio",
+          "weight": 6,
+          "description": "Minor/major axis ratio = \\(\\cos \\phi\\); major axis aligned with tilt."
+        },
+        {
+          "keyword": "surface normal",
+          "weight": 6,
+          "description": "Recovers normal up to ambiguity (convex/concave)."
+        },
+        {
+          "keyword": "shape from shading",
+          "weight": 6,
+          "description": "Compares: SfT needs texture, SfS needs smooth surface and known light."
+        },
+        {
+          "keyword": "statistical descriptors",
+          "weight": 5,
+          "description": "Briefly notes GLCM, LBP for segmentation."
+        },
+        {
+          "keyword": "co-occurrence matrix",
+          "weight": 4,
+          "description": "Captures spatial gray-level dependencies."
+        },
+        {
+          "keyword": "segmentation",
+          "weight": 4,
+          "description": "Texture features for region labeling."
+        }
+      ],
+      "grading_notes": "Require geometric derivation (foreshortening → ellipse) for full marks. Allow qualitative explanation of spectrum method. Deduct if slant/tilt confused or assumptions misstated. Partial credit for good intuition without math."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,241 @@
+{
+"package_id": "pkg4",
+"source": "towards_data_mining_lecture_4_2024.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg4_mcq1",
+"question": "When merging data from multiple sources, what is one key requirement for combining sensor data measuring the same phenomenon?",
+"options": {
+"A": "Sensors must all measure in different units for diversity.",
+"B": "Sensors must have identical sampling frequencies.",
+"C": "Sensors must come from the same manufacturer.",
+"D": "Sensors must be used under identical environmental conditions."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Understand the technical requirements for merging multisource sensor data.",
+"slide_refs": [5, 6]
+},
+{
+"id": "pkg4_mcq2",
+"question": "Which of the following is a potential issue when merging datasets from different sources?",
+"options": {
+"A": "Identical timestamping and data alignment",
+"B": "Differences in data formats, units, and time representations",
+"C": "Overrepresentation of rare classes",
+"D": "High recall but low precision"
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Recognize format, unit, and timestamp issues in multisource data integration.",
+"slide_refs": [6, 7]
+},
+{
+"id": "pkg4_mcq3",
+"question": "What is the primary problem introduced by **downsampling** when aligning signals from different sensors?",
+"options": {
+"A": "Loss of temporal synchronization",
+"B": "Increased data noise",
+"C": "Loss of information due to reduced data density",
+"D": "Bias toward high-frequency data"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Evaluate trade-offs in downsampling during data fusion.",
+"slide_refs": [12]
+},
+{
+"id": "pkg4_mcq4",
+"question": "What is the **main consequence** of oversampling to match the least common multiple (LCM) of sampling rates?",
+"options": {
+"A": "Reduced computational time",
+"B": "Loss of information from low-frequency sensors",
+"C": "Increased data size and computational load",
+"D": "Destruction of temporal structure"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Identify computational trade-offs of oversampling in multi-rate data integration.",
+"slide_refs": [13]
+},
+{
+"id": "pkg4_mcq5",
+"question": "Which sampling method ensures every observation has an equal chance to be selected but is not replaced once drawn?",
+"options": {
+"A": "SRSWR (Simple Random Sampling With Replacement)",
+"B": "SRSWOR (Simple Random Sampling Without Replacement)",
+"C": "Balanced Sampling",
+"D": "Cluster Sampling"
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Differentiate between basic random sampling strategies.",
+"slide_refs": [17]
+},
+{
+"id": "pkg4_mcq6",
+"question": "In the SMOTE algorithm, how are synthetic samples created?",
+"options": {
+"A": "By duplicating minority class samples exactly",
+"B": "By adding Gaussian noise to majority class data points",
+"C": "By interpolating between a sample and its k nearest neighbors",
+"D": "By randomly assigning new class labels to samples"
+},
+"correct_option": "C",
+"difficulty": "hard",
+"learning_objective": "Understand the SMOTE technique for addressing class imbalance.",
+"slide_refs": [23, 24, 25]
+},
+{
+"id": "pkg4_mcq7",
+"question": "Which performance metric tends to overestimate model performance on imbalanced datasets?",
+"options": {
+"A": "Precision",
+"B": "Recall",
+"C": "Accuracy",
+"D": "F1 Score"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Recognize limitations of accuracy as a performance measure in imbalanced data.",
+"slide_refs": [32, 35]
+},
+{
+"id": "pkg4_mcq8",
+"question": "Which formula correctly defines **balanced accuracy**?",
+"options": {
+"A": "Balanced accuracy = (Precision + Recall)/2",
+"B": "Balanced accuracy = (TP/(TP+FN) + TN/(TN+FP))/2",
+"C": "Balanced accuracy = (TP + TN)/(TP + FP + TN + FN)",
+"D": "Balanced accuracy = 2 * (Precision * Recall)/(Precision + Recall)"
+},
+"correct_option": "B",
+"difficulty": "hard",
+"learning_objective": "Apply the correct formula for balanced accuracy in performance evaluation.",
+"slide_refs": [36]
+},
+{
+"id": "pkg4_mcq9",
+"question": "Which of the following metrics captures the balance between precision and recall?",
+"options": {
+"A": "Specificity",
+"B": "Accuracy",
+"C": "F1 Score",
+"D": "Cohen’s Kappa"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Interpret and apply F1-score in evaluating classifier performance.",
+"slide_refs": [40]
+},
+{
+"id": "pkg4_mcq10",
+"question": "Cohen’s Kappa is primarily used to:",
+"options": {
+"A": "Measure agreement between observed and predicted labels beyond chance",
+"B": "Estimate the percentage of correctly classified samples",
+"C": "Quantify the recall rate in multi-class problems",
+"D": "Compute mean differences between class probabilities"
+},
+"correct_option": "A",
+"difficulty": "hard",
+"learning_objective": "Explain Cohen’s Kappa as an inter-rater and classification agreement metric.",
+"slide_refs": [41]
+}
+],
+"essay": {
+"id": "pkg4_essay1",
+"prompt": "Write a 600–800 word analytical essay discussing the challenges and solutions for merging, sampling, and balancing data in data mining. Include: (1) methods to synchronize and harmonize multisource datasets, (2) statistical implications of over- and under-sampling, and (3) approaches for evaluating model performance under imbalanced data conditions using metrics such as balanced accuracy, F1-score, and Cohen’s Kappa.",
+"expected_keywords": [
+"data merging",
+"sampling frequency",
+"downsampling",
+"oversampling",
+"SRSWR",
+"SRSWOR",
+"balanced sample",
+"SMOTE",
+"artificial data",
+"noise injection",
+"class imbalance",
+"accuracy paradox",
+"balanced accuracy",
+"precision",
+"recall",
+"specificity",
+"F1 score",
+"Cohen’s Kappa"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "data merging",
+"weight": 10,
+"description": "Explains technical and semantic challenges in integrating multisource datasets."
+},
+{
+"keyword": "sampling frequency",
+"weight": 8,
+"description": "Describes how sampling rates affect signal merging and data consistency."
+},
+{
+"keyword": "downsampling",
+"weight": 6,
+"description": "Discusses the benefits and information loss associated with downsampling."
+},
+{
+"keyword": "oversampling",
+"weight": 6,
+"description": "Explains the computational implications and redundancy risks of oversampling."
+},
+{
+"keyword": "SMOTE",
+"weight": 10,
+"description": "Describes the SMOTE algorithm and its use in addressing class imbalance."
+},
+{
+"keyword": "class imbalance",
+"weight": 10,
+"description": "Analyzes causes and implications of imbalanced datasets in predictive modeling."
+},
+{
+"keyword": "balanced accuracy",
+"weight": 8,
+"description": "Applies balanced accuracy to correctly interpret model fairness under imbalance."
+},
+{
+"keyword": "precision",
+"weight": 6,
+"description": "Defines and interprets precision as a metric sensitive to false positives."
+},
+{
+"keyword": "recall",
+"weight": 6,
+"description": "Explains recall’s role in sensitivity and detection of positive classes."
+},
+{
+"keyword": "F1 score",
+"weight": 8,
+"description": "Evaluates trade-offs between precision and recall via F1 metric."
+},
+{
+"keyword": "Cohen’s Kappa",
+"weight": 8,
+"description": "Explains Kappa’s interpretation beyond chance agreement and its importance in classifier reliability."
+},
+{
+"keyword": "accuracy paradox",
+"weight": 8,
+"description": "Critically examines the misleading nature of accuracy in imbalanced datasets."
+}
+],
+"grading_notes": "Essays should synthesize technical, statistical, and interpretive aspects of data preparation and model evaluation. Full credit requires clear integration of examples from merging, sampling, and performance assessment."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON-only structured output for educational assessment pipelines.",
+"contact": "Question Bank Generator"
+}
+}

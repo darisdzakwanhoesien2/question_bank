@@ -1,0 +1,255 @@
+{
+  "package_id": "pkg5",
+  "source": "07-recognition-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg5_mcq1",
+      "question": "According to the lecture, pattern recognition is fundamentally the assignment of a label to a given input value. Which of the following is NOT explicitly listed as an example of pattern recognition?",
+      "options": {
+        "A": "Classification",
+        "B": "Regression",
+        "C": "Clustering",
+        "D": "Handprinted character recognition"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "Recall the definition and common examples of pattern recognition.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg5_mcq2",
+      "question": "In the context of pattern recognition, the lecture emphasizes that the process typically involves:",
+      "options": {
+        "A": "Manual rule-based decision making",
+        "B": "Learning from data in most practical cases",
+        "C": "Hard-coded geometric models only",
+        "D": "Direct pixel intensity comparison"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Understand the role of learning in modern pattern recognition systems.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg5_mcq3",
+      "question": "The lecture shows binary images of handwritten digits. What is the primary challenge illustrated by these examples?",
+      "options": {
+        "A": "High-resolution color variations",
+        "B": "Large intra-class variability in shape and style",
+        "C": "Complex background clutter",
+        "D": "3D pose estimation"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Identify the core difficulty in recognizing deformable or variable patterns like handwriting.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg5_mcq4",
+      "question": "Which of the following best describes the goal of a pattern recognition system for handwritten character recognition?",
+      "options": {
+        "A": "To reconstruct the 3D pen trajectory",
+        "B": "To assign a discrete class label (e.g., '0'–'9') to the input image",
+        "C": "To estimate continuous stroke thickness",
+        "D": "To detect ink color"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Define the output of a classification-based recognition task.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg5_mcq5",
+      "question": "The lecture contrasts pattern recognition with other vision tasks. Which statement is correct?",
+      "options": {
+        "A": "Recognition is only about detecting objects, not classifying them.",
+        "B": "Recognition often requires learning statistical models from labeled training data.",
+        "C": "Recognition can always be solved using geometric fitting alone.",
+        "D": "Recognition does not benefit from machine learning techniques."
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Differentiate recognition from low-level vision tasks and emphasize data-driven approaches.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg5_mcq6",
+      "question": "In the broader context of the course (as referenced in prior lectures), object recognition may build upon earlier modules. Which of the following is a prerequisite for robust recognition in real-world images?",
+      "options": {
+        "A": "Accurate 2D model fitting under occlusion and clutter",
+        "B": "Direct pixel-to-label mapping without preprocessing",
+        "C": "Assuming all objects are rigid and fully visible",
+        "D": "Using only global image statistics"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Connect recognition challenges to model fitting and robustness (cross-reference with Lecture 9).",
+      "slide_refs": [12, 14]
+    },
+    {
+      "id": "pkg5_mcq7",
+      "question": "The lecture introduces recognition as a decision-making process. What is the input to this decision in the handwritten digit example?",
+      "options": {
+        "A": "A 3D point cloud",
+        "B": "A binary or grayscale image patch containing a single digit",
+        "C": "A sequence of video frames",
+        "D": "A set of edge maps"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Identify the typical input representation in a recognition pipeline.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg5_mcq8",
+      "question": "Which of the following is a key difference between classification and regression in the context of pattern recognition?",
+      "options": {
+        "A": "Classification outputs discrete labels; regression outputs continuous values.",
+        "B": "Classification uses learning; regression does not.",
+        "C": "Regression is only for 2D data; classification for 3D.",
+        "D": "There is no difference; both are identical."
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Distinguish between discrete and continuous prediction tasks in recognition.",
+      "slide_refs": [12]
+    }
+  ],
+  "essay": {
+    "id": "pkg5_essay1",
+    "prompt": "Define pattern recognition and explain its role in computer vision using the handwritten character recognition example from the lecture. Discuss the key challenges: intra-class variability, inter-class similarity, and the need for learning from data. Describe a typical machine learning-based recognition pipeline (preprocessing → feature extraction → classifier training → inference). Contrast this with rule-based or template-matching approaches, highlighting why learning is essential in practice. Finally, connect recognition to prior topics in the course (e.g., 2D model fitting, motion, 3D cues) and explain how robust low-level processing enables high-level recognition.",
+    "expected_keywords": [
+      "pattern recognition",
+      "label assignment",
+      "classification",
+      "regression",
+      "handwritten digits",
+      "intra-class variability",
+      "inter-class similarity",
+      "learning from data",
+      "training set",
+      "feature extraction",
+      "classifier",
+      "template matching",
+      "rule-based",
+      "machine learning",
+      "preprocessing",
+      "inference",
+      "2D model fitting",
+      "occlusion",
+      "motion segmentation",
+      "3D cues"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "pattern recognition",
+          "weight": 6,
+          "description": "Clearly defines as assigning a label to an input pattern."
+        },
+        {
+          "keyword": "label assignment",
+          "weight": 5,
+          "description": "Emphasizes decision-making from image to semantic category."
+        },
+        {
+          "keyword": "classification",
+          "weight": 5,
+          "description": "Identifies discrete output (e.g., digit 0–9)."
+        },
+        {
+          "keyword": "regression",
+          "weight": 4,
+          "description": "Mentions continuous output as alternative (e.g., bounding box coordinates)."
+        },
+        {
+          "keyword": "handwritten digits",
+          "weight": 5,
+          "description": "Uses lecture example to illustrate real-world variability."
+        },
+        {
+          "keyword": "intra-class variability",
+          "weight": 7,
+          "description": "Explains same class (e.g., '1') can look very different."
+        },
+        {
+          "keyword": "inter-class similarity",
+          "weight": 6,
+          "description": "Notes different classes (e.g., '1' vs '7') can be confusable."
+        },
+        {
+          "keyword": "learning from data",
+          "weight": 8,
+          "description": "States that rules are hard to write; models must be learned."
+        },
+        {
+          "keyword": "training set",
+          "weight": 5,
+          "description": "Mentions labeled examples needed for supervised learning."
+        },
+        {
+          "keyword": "feature extraction",
+          "weight": 7,
+          "description": "Describes transforming raw pixels into discriminative representation."
+        },
+        {
+          "keyword": "classifier",
+          "weight": 6,
+          "description": "Names examples: k-NN, SVM, neural networks."
+        },
+        {
+          "keyword": "template matching",
+          "weight": 6,
+          "description": "Critiques as brittle to variation in pose, style, illumination."
+        },
+        {
+          "keyword": "rule-based",
+          "weight": 5,
+          "description": "Notes difficulty in hand-crafting rules for complex patterns."
+        },
+        {
+          "keyword": "machine learning",
+          "weight": 6,
+          "description": "Contrasts with traditional AI; data-driven generalization."
+        },
+        {
+          "keyword": "preprocessing",
+          "weight": 5,
+          "description": "Includes normalization, binarization, noise removal."
+        },
+        {
+          "keyword": "inference",
+          "weight": 5,
+          "description": "Describes applying trained model to new input."
+        },
+        {
+          "keyword": "2D model fitting",
+          "weight": 5,
+          "description": "Links to locating object parts despite occlusion/clutter."
+        },
+        {
+          "keyword": "occlusion",
+          "weight": 4,
+          "description": "Notes recognition must handle partial visibility."
+        },
+        {
+          "keyword": "motion segmentation",
+          "weight": 4,
+          "description": "Connects to isolating moving objects before recognition."
+        },
+        {
+          "keyword": "3D cues",
+          "weight": 4,
+          "description": "Mentions depth, perspective aid in disambiguating 2D projections."
+        }
+      ],
+      "grading_notes": "Require pipeline structure and contrast with non-learning methods. Full credit only if challenges (variability) and need for learning are well-explained. Allow flexibility in classifier choice. Deduct if recognition is confused with detection or reconstruction."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "package_id": "pkg9",
+  "source": "03-color-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg9_mcq1",
+      "question": "What are the three primary additive colors used in digital color displays?",
+      "options": {
+        "A": "Cyan, Magenta, Yellow",
+        "B": "Red, Green, Blue",
+        "C": "Hue, Saturation, Value",
+        "D": "Lightness, a, b"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Recall the basis of the RGB color model for image representation.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg9_mcq2",
+      "question": "In the CIE 1931 chromaticity diagram, the horseshoe-shaped boundary represents:",
+      "options": {
+        "A": "All possible RGB values",
+        "B": "The locus of pure spectral colors (monochromatic light)",
+        "C": "The gamut of typical CMYK printers",
+        "D": "Perceptual uniformity in color differences"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Understand the spectral locus in the standard chromaticity space.",
+      "slide_refs": [10]
+    },
+    {
+      "id": "pkg9_mcq3",
+      "question": "The dichromatic reflection model separates surface reflectance into:",
+      "options": {
+        "A": "Diffuse and specular components only",
+        "B": "Body (diffuse) reflection and interface (specular) reflection",
+        "C": "Ambient and directed lighting",
+        "D": "Matte and glossy albedo"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the two-term reflection model for color highlight analysis.",
+      "slide_refs": [15]
+    },
+    {
+      "id": "pkg9_mcq4",
+      "question": "In the Shafer dichromatic model, specular highlights from a white light source on a colored surface lie along a line in RGB space that:",
+      "options": {
+        "A": "Passes through the origin",
+        "B": "Is parallel to the lighting color vector",
+        "C": "Connects the surface body color to the illuminant color",
+        "D": "Is perpendicular to the surface normal"
+      },
+      "correct_option": "C",
+      "difficulty": "hard",
+      "learning_objective": "Explain the geometry of specular highlights in RGB color space.",
+      "slide_refs": [16]
+    },
+    {
+      "id": "pkg9_mcq5",
+      "question": "Which color space is designed to be perceptually uniform, meaning equal Euclidean distances correspond roughly to equal perceived color differences?",
+      "options": {
+        "A": "RGB",
+        "B": "HSV",
+        "C": "CIE L*a*b*",
+        "D": "YCbCr"
+      },
+      "correct_option": "C",
+      "difficulty": "medium",
+      "learning_objective": "Identify color spaces intended for perceptual uniformity.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg9_mcq6",
+      "question": "The phenomenon where the perceived color of a surface remains relatively constant under changing illumination is known as:",
+      "options": {
+        "A": "Color quantization",
+        "B": "Color constancy",
+        "C": "Metamerism",
+        "D": "Gamut mapping"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Define the human visual system's ability to discount illuminant changes.",
+      "slide_refs": [20]
+    },
+    {
+      "id": "pkg9_mcq7",
+      "question": "A simple algorithm for computational color constancy estimates the illuminant by assuming:",
+      "options": {
+        "A": "The brightest pixel is a specular highlight from white light",
+        "B": "The average color of the image is gray (Gray World assumption)",
+        "C": "The darkest pixel represents black shadow",
+        "D": "All colors are equally likely"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Recall the Gray World hypothesis for illuminant estimation.",
+      "slide_refs": [22]
+    },
+    {
+      "id": "pkg9_mcq8",
+      "question": "In the context of specular highlight removal, clustering in RGB space works because:",
+      "options": {
+        "A": "Diffuse pixels form a compact cluster; specular pixels form a separate skewed cluster",
+        "B": "All pixels lie on the Planckian locus",
+        "C": "Specularities reduce saturation uniformly",
+        "D": "Highlights are always white regardless of surface color"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Apply the dichromatic model to separate reflection components via clustering.",
+      "slide_refs": [18]
+    },
+    {
+      "id": "pkg9_mcq9",
+      "question": "The conversion from RGB to HSV separates color into:",
+      "options": {
+        "A": "Luminance, chrominance, and saturation",
+        "B": "Hue (dominant wavelength), Saturation (purity), Value (brightness)",
+        "C": "Opponent red-green, yellow-blue, and light-dark channels",
+        "D": "CIELAB lightness and chromatic opponents"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Describe the intuitive components of the HSV color representation.",
+      "slide_refs": [8]
+    },
+    {
+      "id": "pkg9_mcq10",
+      "question": "Metamerism occurs when:",
+      "options": {
+        "A": "Two different spectral distributions produce the same tristimulus values (RGB)",
+        "B": "A single surface appears different under two illuminants",
+        "C": "The camera sensor has non-ideal spectral sensitivities",
+        "D": "White balancing fails in post-processing"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Understand the fundamental reason for color matching ambiguities.",
+      "slide_refs": [9]
+    }
+  ],
+  "essay": {
+    "id": "pkg9_essay1",
+    "prompt": "Explain the physics and perception of color in computer vision, focusing on the dichromatic reflection model and its implications for highlight analysis and color constancy. Start with light-surface interaction (body vs. interface reflection) and derive the linear clustering property in RGB space for neutral interface reflection (NIR). Describe how this enables specular highlight detection and removal using pixel clustering or line fitting. Then, discuss computational color constancy: define the problem, explain the Gray World and White Patch assumptions, and their limitations under colored illuminants or non-Lambertian surfaces. Compare RGB-based methods with learning-based approaches (e.g., gamut mapping). Conclude with the role of color in higher-level vision tasks (segmentation, recognition) and challenges posed by sensor metamerism.",
+    "expected_keywords": [
+      "color perception",
+      "additive primaries",
+      "RGB",
+      "CIE chromaticity",
+      "spectral locus",
+      "dichromatic model",
+      "body reflection",
+      "interface reflection",
+      "specular highlight",
+      "neutral interface",
+      "RGB clustering",
+      "highlight removal",
+      "color constancy",
+      "illuminant estimation",
+      "Gray World",
+      "White Patch",
+      "gamut mapping",
+      "metamerism",
+      "sensor sensitivity",
+      "segmentation",
+      "recognition"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "color perception",
+          "weight": 5,
+          "description": "Links human cone responses to trichromatic theory."
+        },
+        {
+          "keyword": "additive primaries",
+          "weight": 4,
+          "description": "Mentions RGB basis for displays."
+        },
+        {
+          "keyword": "RGB",
+          "weight": 4,
+          "description": "Standard image representation."
+        },
+        {
+          "keyword": "CIE chromaticity",
+          "weight": 5,
+          "description": "Normalizes for brightness; shows diagram."
+        },
+        {
+          "keyword": "spectral locus",
+          "weight": 5,
+          "description": "Boundary of visible monochromatic colors."
+        },
+        {
+          "keyword": "dichromatic model",
+          "weight": 7,
+          "description": "Two-term: \\(I = I_b + I_s\\)."
+        },
+        {
+          "keyword": "body reflection",
+          "weight": 6,
+          "description": "Lambertian, colored by surface albedo."
+        },
+        {
+          "keyword": "interface reflection",
+          "weight": 6,
+          "description": "Mirror-like, colored by light (white for NIR)."
+        },
+        {
+          "keyword": "specular highlight",
+          "weight": 6,
+          "description": "Bright spots where view aligns with reflection."
+        },
+        {
+          "keyword": "neutral interface",
+          "weight": 6,
+          "description": "Specular component = illuminant color."
+        },
+        {
+          "keyword": "RGB clustering",
+          "weight": 8,
+          "description": "Diffuse pixels cluster; specular form line to light color."
+        },
+        {
+          "keyword": "highlight removal",
+          "weight": 7,
+          "description": "Subtract specular via clustering or inpainting."
+        },
+        {
+          "keyword": "color constancy",
+          "weight": 7,
+          "description": "Estimate illuminant to recover canonical albedo."
+        },
+        {
+          "keyword": "illuminant estimation",
+          "weight": 6,
+          "description": "Goal: find light color from image alone."
+        },
+        {
+          "keyword": "Gray World",
+          "weight": 6,
+          "description": "Average image color = gray → light = average."
+        },
+        {
+          "keyword": "White Patch",
+          "weight": 6,
+          "description": "Brightest pixel = white under light."
+        },
+        {
+          "keyword": "gamut mapping",
+          "weight": 5,
+          "description": "Constrain possible illuminants by surface gamut."
+        },
+        {
+          "keyword": "metamerism",
+          "weight": 5,
+          "description": "Different spectra → same RGB."
+        },
+        {
+          "keyword": "sensor sensitivity",
+          "weight": 4,
+          "description": "Camera ≠ human cones → color errors."
+        },
+        {
+          "keyword": "segmentation",
+          "weight": 4,
+          "description": "Color as feature beyond intensity."
+        },
+        {
+          "keyword": "recognition",
+          "weight": 4,
+          "description": "Material/color diagnostic for object ID."
+        }
+      ],
+      "grading_notes": "Require geometric explanation of dichromatic lines in RGB. Full credit only if both Gray World and White Patch are critiqued (e.g., fails on single-color scenes). Allow modern methods mention for bonus. Deduct if reflection model confused with shading."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,286 @@
+{
+"package_id": "pkg7",
+"source": "towards_data_mining_lecture_7_2024.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg7_mcq1",
+"question": "Why is normalization often performed after outlier detection and noise removal?",
+"options": {
+"A": "It introduces artificial variation to enhance learning complexity.",
+"B": "It improves model performance, stabilizes learning, and simplifies result interpretation.",
+"C": "It reduces data dimensionality through feature extraction.",
+"D": "It ensures outliers remain visible in data visualization."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Understand why normalization follows noise and outlier handling in preprocessing pipelines.",
+"slide_refs": [3]
+},
+{
+"id": "pkg7_mcq2",
+"question": "What is the purpose of normalization or scaling in data preprocessing?",
+"options": {
+"A": "To convert categorical data to numeric codes.",
+"B": "To adjust values on different scales to a common range.",
+"C": "To remove multicollinearity among variables.",
+"D": "To enforce Gaussian distribution on non-normal data."
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Define normalization and identify its primary goal in data preprocessing.",
+"slide_refs": [5]
+},
+{
+"id": "pkg7_mcq3",
+"question": "Which normalization technique rescales values to the range [0, 1]?",
+"options": {
+"A": "Z-score standardization",
+"B": "Min-Max normalization",
+"C": "Decimal scaling",
+"D": "Box-Cox transformation"
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Differentiate between common normalization and scaling methods.",
+"slide_refs": [9]
+},
+{
+"id": "pkg7_mcq4",
+"question": "Z-score standardization is particularly suitable when:",
+"options": {
+"A": "Minimum and maximum population values are unknown.",
+"B": "All variables are categorical.",
+"C": "Data contains negative values that must be converted to positive.",
+"D": "The dataset is uniform without outliers."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Identify scenarios where Z-score standardization is preferable.",
+"slide_refs": [10]
+},
+{
+"id": "pkg7_mcq5",
+"question": "Decimal scaling normalization works by:",
+"options": {
+"A": "Subtracting the mean and dividing by standard deviation.",
+"B": "Shifting the decimal point based on the largest absolute value.",
+"C": "Dividing all data by the mean of the variable.",
+"D": "Applying logarithmic transformation for skewed data."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Explain the process of decimal scaling normalization.",
+"slide_refs": [11]
+},
+{
+"id": "pkg7_mcq6",
+"question": "When is it appropriate to discretize a continuous variable?",
+"options": {
+"A": "When researchers believe distinct groups exist or categorical methods are required.",
+"B": "When there are no meaningful patterns in the data.",
+"C": "When the data already consists of ordinal variables.",
+"D": "Only when missing values must be replaced."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Recognize justifiable uses of discretization in data preprocessing.",
+"slide_refs": [15]
+},
+{
+"id": "pkg7_mcq7",
+"question": "What is a major drawback of dichotomizing continuous variables?",
+"options": {
+"A": "It introduces nonlinearity into the dataset.",
+"B": "It causes loss of information and potential misclassification.",
+"C": "It prevents visualizations such as scatter plots.",
+"D": "It increases variance and statistical noise."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Evaluate the trade-offs associated with discretization or dichotomization.",
+"slide_refs": [19, 20]
+},
+{
+"id": "pkg7_mcq8",
+"question": "Which of the following methods can handle categorical variables in regression models?",
+"options": {
+"A": "Principal Component Analysis",
+"B": "Box-Cox transformation",
+"C": "Dummy coding",
+"D": "Logarithmic scaling"
+},
+"correct_option": "C",
+"difficulty": "easy",
+"learning_objective": "Understand how dummy variables are used for categorical data in regression.",
+"slide_refs": [23]
+},
+{
+"id": "pkg7_mcq9",
+"question": "What is the main goal of data reduction?",
+"options": {
+"A": "To simplify data while maintaining analytical integrity.",
+"B": "To remove all redundant and correlated features.",
+"C": "To discard irrelevant data to fit memory constraints only.",
+"D": "To normalize data to Gaussian distribution."
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Explain the purpose of data reduction in data mining workflows.",
+"slide_refs": [25]
+},
+{
+"id": "pkg7_mcq10",
+"question": "Which data reduction method groups continuous values into intervals to simplify analysis?",
+"options": {
+"A": "Aggregation",
+"B": "Binning",
+"C": "Clustering",
+"D": "Sampling"
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Identify common value reduction methods such as binning and aggregation.",
+"slide_refs": [26]
+},
+{
+"id": "pkg7_mcq11",
+"question": "Principal Component Analysis (PCA) primarily aims to:",
+"options": {
+"A": "Increase the dimensionality of feature space.",
+"B": "Select the most correlated variables.",
+"C": "Reduce dimensionality by identifying orthogonal components explaining maximum variance.",
+"D": "Convert categorical variables into dummy variables."
+},
+"correct_option": "C",
+"difficulty": "hard",
+"learning_objective": "Describe the goal and process of PCA for dimensionality reduction.",
+"slide_refs": [31]
+},
+{
+"id": "pkg7_mcq12",
+"question": "Which of the following statements correctly differentiates PCA and Discrete Wavelet Transform (DWT)?",
+"options": {
+"A": "PCA uses variance-based selection; DWT uses coefficient magnitude-based selection.",
+"B": "PCA requires categorical data; DWT works on text data only.",
+"C": "DWT is non-linear; PCA is always non-parametric.",
+"D": "Both require combining samples across all datasets."
+},
+"correct_option": "A",
+"difficulty": "hard",
+"learning_objective": "Compare PCA and DWT as dimension reduction techniques.",
+"slide_refs": [32]
+},
+{
+"id": "pkg7_mcq13",
+"question": "Box-Cox transformation is applicable only when:",
+"options": {
+"A": "The data contains both positive and negative values.",
+"B": "The dataset contains only positive values.",
+"C": "The data is already normalized to [0,1].",
+"D": "The data is categorical."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Recognize constraints and applicability of Box-Cox transformations.",
+"slide_refs": [36]
+},
+{
+"id": "pkg7_mcq14",
+"question": "Which of the following transformations can help achieve normality when data violates Gaussian assumptions?",
+"options": {
+"A": "Min-max scaling",
+"B": "Box-Cox transformation",
+"C": "Dummy coding",
+"D": "Equal-width discretization"
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Apply transformation techniques to achieve data normality for parametric analysis.",
+"slide_refs": [35, 36]
+}
+],
+"essay": {
+"id": "pkg7_essay1",
+"prompt": "Write a 700–900 word essay analyzing the role of normalization, discretization, data reduction, and transformations to normality in preparing data for data mining. Discuss (1) when and why each preprocessing step is necessary, (2) compare techniques like Z-score, Min-Max scaling, PCA, and Box-Cox transformation, and (3) evaluate the trade-offs between information preservation, interpretability, and computational efficiency.",
+"expected_keywords": [
+"normalization",
+"Min-Max normalization",
+"Z-score standardization",
+"decimal scaling",
+"discretization",
+"categorical data",
+"dummy coding",
+"data reduction",
+"aggregation",
+"binning",
+"PCA",
+"Discrete Wavelet Transform",
+"Box-Cox transformation",
+"Gaussian distribution",
+"non-parametric methods",
+"information loss",
+"dimensionality reduction"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "normalization",
+"weight": 10,
+"description": "Explains the concept, purpose, and methods of normalization including scaling and standardization."
+},
+{
+"keyword": "discretization",
+"weight": 10,
+"description": "Discusses discretization techniques, their use cases, and drawbacks."
+},
+{
+"keyword": "dummy coding",
+"weight": 8,
+"description": "Describes how categorical variables can be represented numerically."
+},
+{
+"keyword": "data reduction",
+"weight": 10,
+"description": "Explains reduction goals and methods such as aggregation, binning, and sampling."
+},
+{
+"keyword": "PCA",
+"weight": 10,
+"description": "Discusses PCA’s function, advantages, and interpretation limits."
+},
+{
+"keyword": "Box-Cox transformation",
+"weight": 8,
+"description": "Explains transformation for normality and constraints (e.g., positive-only data)."
+},
+{
+"keyword": "information loss",
+"weight": 8,
+"description": "Evaluates trade-offs and risks in discretization and data reduction."
+},
+{
+"keyword": "computational efficiency",
+"weight": 8,
+"description": "Analyzes how preprocessing impacts computational performance and model training time."
+},
+{
+"keyword": "Gaussian distribution",
+"weight": 8,
+"description": "Relates transformation to normality requirements in parametric models."
+},
+{
+"keyword": "interpretability",
+"weight": 10,
+"description": "Assesses how preprocessing steps affect transparency and ease of result interpretation."
+}
+],
+"grading_notes": "Full credit requires a structured argument linking normalization, reduction, and transformation steps with their mathematical and practical roles in data mining. Examples from engineering or physical sciences should be included where applicable."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON structured for direct use in assessment systems and question banks.",
+"contact": "Question Bank Generator"
+}
+}

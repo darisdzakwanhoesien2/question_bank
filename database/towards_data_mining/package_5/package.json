@@ -1,0 +1,212 @@
+{
+"package_id": "pkg3",
+"source": "towards_data_mining_lecture_5_2024.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg3_mcq1",
+"question": "Which of the following is **not** a common cause of missing data as described in the lecture?",
+"options": {
+"A": "Equipment malfunction or sensor failure",
+"B": "Data corruption during storage or transfer",
+"C": "Overfitting of predictive models",
+"D": "Non-response in surveys"
+},
+"correct_option": "C",
+"difficulty": "easy",
+"learning_objective": "Identify typical causes of missing values in datasets.",
+"slide_refs": [3, 5]
+},
+{
+"id": "pkg3_mcq2",
+"question": "In the context of missing data mechanisms, which statement best describes **Missing Completely at Random (MCAR)**?",
+"options": {
+"A": "The probability of a value being missing depends on other observed variables but not on the missing value itself.",
+"B": "The probability of a value being missing is related to the value that is missing.",
+"C": "The probability of a value being missing is independent of both observed and unobserved data.",
+"D": "The probability of a value being missing depends on unmeasured latent variables."
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Distinguish between MCAR, MAR, and MNAR mechanisms in data collection.",
+"slide_refs": [6, 7, 8]
+},
+{
+"id": "pkg3_mcq3",
+"question": "Which deletion method uses all available data points for each variable pair when computing correlations?",
+"options": {
+"A": "Listwise deletion",
+"B": "Pairwise deletion",
+"C": "Hot deck imputation",
+"D": "Regression imputation"
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Differentiate between listwise and pairwise deletion strategies for handling missing data.",
+"slide_refs": [10, 11]
+},
+{
+"id": "pkg3_mcq4",
+"question": "Which imputation technique replaces missing values with the mean (numerical) or mode (categorical) of the variable?",
+"options": {
+"A": "Hot deck imputation",
+"B": "Regression imputation",
+"C": "Mean imputation",
+"D": "Multiple imputation"
+},
+"correct_option": "C",
+"difficulty": "easy",
+"learning_objective": "Understand basic imputation methods and their assumptions.",
+"slide_refs": [14, 15]
+},
+{
+"id": "pkg3_mcq5",
+"question": "Which imputation technique involves fitting a regression model on observed data to predict the missing values, assuming MAR holds?",
+"options": {
+"A": "Regression imputation",
+"B": "Hot deck imputation",
+"C": "k-Nearest Neighbour (kNN) imputation",
+"D": "Maximum likelihood estimation"
+},
+"correct_option": "A",
+"difficulty": "medium",
+"learning_objective": "Explain the process and assumptions of regression-based imputation.",
+"slide_refs": [16, 17]
+},
+{
+"id": "pkg3_mcq6",
+"question": "What is the main advantage of **multiple imputation** over single imputation methods?",
+"options": {
+"A": "It produces identical estimates across imputations, simplifying analysis.",
+"B": "It avoids uncertainty estimation and reduces computational complexity.",
+"C": "It accounts for the uncertainty in missing data by generating multiple plausible datasets and pooling results.",
+"D": "It always yields unbiased estimates, regardless of missingness type."
+},
+"correct_option": "C",
+"difficulty": "hard",
+"learning_objective": "Understand the rationale, steps, and advantages of multiple imputation.",
+"slide_refs": [21, 22, 23]
+},
+{
+"id": "pkg3_mcq7",
+"question": "Which of the following statements about the **Expectation-Maximization (EM)** algorithm is true?",
+"options": {
+"A": "It is mainly used for categorical data sets.",
+"B": "It alternates between estimating missing data expectations and maximizing the likelihood function.",
+"C": "It requires no iteration and converges in a single step.",
+"D": "It always overestimates standard errors compared to multiple imputation."
+},
+"correct_option": "B",
+"difficulty": "hard",
+"learning_objective": "Explain the EM algorithm’s role in maximum likelihood estimation with missing data.",
+"slide_refs": [26, 27, 28]
+},
+{
+"id": "pkg3_mcq8",
+"question": "In time series or longitudinal data, why can simple deletion lead to biased results?",
+"options": {
+"A": "Because deletion assumes MAR always holds.",
+"B": "Because deletion can disrupt temporal dependencies or autocorrelations.",
+"C": "Because deletion alters class distributions in classification tasks.",
+"D": "Because deletion introduces new missingness mechanisms."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Recognize challenges of handling missing data in time-dependent datasets.",
+"slide_refs": [29]
+}
+],
+"essay": {
+"id": "pkg3_essay1",
+"prompt": "Compose a 500–700 word essay critically evaluating the mechanisms, implications, and methods for handling missing data in real-world datasets. Your discussion should: (1) compare MCAR, MAR, and MNAR; (2) analyze the statistical and practical consequences of different handling methods such as deletion, imputation, and maximum likelihood; and (3) argue for best practices in applying multiple imputation and EM-based methods for modern data mining tasks.",
+"expected_keywords": [
+"MCAR",
+"MAR",
+"MNAR",
+"deletion",
+"listwise deletion",
+"pairwise deletion",
+"mean imputation",
+"regression imputation",
+"stochastic regression",
+"multiple imputation",
+"maximum likelihood estimation",
+"EM algorithm",
+"bias",
+"uncertainty",
+"variance",
+"time series",
+"autocorrelation"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "MCAR",
+"weight": 10,
+"description": "Accurately defines MCAR and its implications for unbiasedness when missing values are ignored."
+},
+{
+"keyword": "MAR",
+"weight": 10,
+"description": "Explains MAR with examples and highlights model assumptions for unbiased estimation."
+},
+{
+"keyword": "MNAR",
+"weight": 10,
+"description": "Describes MNAR and explains challenges in modeling missingness depending on unobserved data."
+},
+{
+"keyword": "deletion",
+"weight": 8,
+"description": "Compares listwise and pairwise deletion, addressing data loss and potential bias."
+},
+{
+"keyword": "mean imputation",
+"weight": 8,
+"description": "Discusses the simplicity and limitations (e.g., reduced variability, bias) of mean imputation."
+},
+{
+"keyword": "regression imputation",
+"weight": 8,
+"description": "Explains regression-based approaches and when they produce unbiased estimates."
+},
+{
+"keyword": "multiple imputation",
+"weight": 12,
+"description": "Analyzes multiple imputation’s workflow (imputation, analysis, pooling) and how it manages uncertainty."
+},
+{
+"keyword": "maximum likelihood estimation",
+"weight": 10,
+"description": "Describes how ML estimation and the EM algorithm estimate parameters from incomplete data."
+},
+{
+"keyword": "bias",
+"weight": 8,
+"description": "Evaluates the sources and effects of bias in missing data handling."
+},
+{
+"keyword": "uncertainty",
+"weight": 6,
+"description": "Explains how multiple imputation accounts for imputation uncertainty."
+},
+{
+"keyword": "time series",
+"weight": 5,
+"description": "Mentions longitudinal data challenges such as autocorrelation and timeline disruption."
+},
+{
+"keyword": "best practices",
+"weight": 5,
+"description": "Proposes practical and ethical data management recommendations for modern research."
+}
+],
+"grading_notes": "High-quality essays integrate conceptual definitions, practical examples, and methodological reasoning. Full credit requires linking statistical methods with data mining implications."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON-only output designed for integration into automated academic assessment systems.",
+"contact": "Question Bank Generator"
+}
+}
