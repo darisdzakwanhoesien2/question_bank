@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-11-11T07:58:27.316286",
+  "subject": "towards_data_mining",
+  "package_id": "package_3",
+  "mcq_score": 0,
+  "mcq_total": 3,
+  "essay_score": 0,
+  "essay_total": 100,
+  "final_score": 0.0,
+  "matched_keywords": [],
+  "user_answers": {
+    "pkg2_mcq1": "A",
+    "pkg2_mcq2": "A",
+    "pkg2_mcq3": "A"
+  },
+  "user_essay": "Testing"
+}

@@ -1,0 +1,155 @@
+{
+"package_id": "pkg2",
+"source": "towards_data_mining_lecture_3_2024.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg2_mcq1",
+"question": "According to the lecture, what was the main cause of the NASA Mars Climate Orbiter mission failure in 1999?",
+"options": {
+"A": "A software virus corrupted the navigation data.",
+"B": "Engineers failed to convert measurement units between English and metric systems.",
+"C": "The lander’s parachute deployed prematurely due to faulty sensors.",
+"D": "Incorrect sample size estimation led to navigation errors."
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Recognize the importance of consistent units and measurement standards in data collection and engineering.",
+"slide_refs": [6, 7]
+},
+{
+"id": "pkg2_mcq2",
+"question": "Which of the following best defines a non-stationary element in data collection as discussed in the lecture?",
+"options": {
+"A": "An element that maintains constant statistical properties over time.",
+"B": "An element whose characteristics or state change over time due to environmental or human factors.",
+"C": "An element that cannot be measured repeatedly with the same instrument.",
+"D": "An element that is unaffected by sensor drift or external conditions."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Differentiate between stationary and non-stationary elements and understand their implications for data collection.",
+"slide_refs": [19, 20]
+},
+{
+"id": "pkg2_mcq3",
+"question": "Which principle from human research ethics emphasizes that individuals should be treated as autonomous agents and given additional protections if autonomy is diminished?",
+"options": {
+"A": "Beneficence",
+"B": "Justice",
+"C": "Respect for persons",
+"D": "Confidentiality"
+},
+"correct_option": "C",
+"difficulty": "medium",
+"learning_objective": "Identify the three core ethical principles governing human data collection and apply them appropriately.",
+"slide_refs": [26, 27, 28]
+}
+],
+"essay": {
+"id": "pkg2_essay1",
+"prompt": "Discuss the key methodological, ethical, and practical considerations in planning and conducting a human-centered data collection study (such as the wearable-sensor gym activity project presented in the lecture). Your answer should: (1) describe how to plan for repeatability, reproducibility, and accuracy; (2) outline how ethical concerns such as informed consent, privacy, and risk-benefit balance should be addressed; and (3) suggest strategies for mitigating technical and human-related data collection problems.",
+"expected_keywords": [
+"planning",
+"repeatability",
+"reproducibility",
+"accuracy",
+"informed consent",
+"privacy",
+"confidentiality",
+"risk-benefit balance",
+"sample size",
+"non-stationary data",
+"bias",
+"sensor calibration",
+"documentation",
+"Bluetooth connectivity",
+"volunteer recruitment"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "planning",
+"weight": 10,
+"description": "Clearly outlines planning steps including defining goals, procedures, and methodologies."
+},
+{
+"keyword": "repeatability",
+"weight": 8,
+"description": "Describes procedures to ensure data can be replicated under similar conditions."
+},
+{
+"keyword": "reproducibility",
+"weight": 8,
+"description": "Explains how others can independently reproduce results from the same dataset."
+},
+{
+"keyword": "accuracy",
+"weight": 8,
+"description": "Mentions calibration, signal verification, and error checking to maintain data accuracy."
+},
+{
+"keyword": "informed consent",
+"weight": 12,
+"description": "Discusses voluntary, informed participation and explains consent procedures for human subjects."
+},
+{
+"keyword": "privacy",
+"weight": 8,
+"description": "Addresses protection of personal information and limits on data disclosure."
+},
+{
+"keyword": "confidentiality",
+"weight": 6,
+"description": "Explains how data will be securely stored and shared only with authorized personnel."
+},
+{
+"keyword": "risk-benefit balance",
+"weight": 8,
+"description": "Evaluates participant risks versus benefits and proposes measures to minimize harm."
+},
+{
+"keyword": "sample size",
+"weight": 6,
+"description": "Includes rationale for selecting a statistically significant sample size."
+},
+{
+"keyword": "non-stationary data",
+"weight": 6,
+"description": "Explains how variability in human or environmental conditions affects data collection."
+},
+{
+"keyword": "bias",
+"weight": 6,
+"description": "Discusses researcher and respondent biases and strategies to reduce them."
+},
+{
+"keyword": "sensor calibration",
+"weight": 5,
+"description": "Mentions procedures for checking and aligning sensors before and during experiments."
+},
+{
+"keyword": "documentation",
+"weight": 5,
+"description": "Emphasizes the role of thorough documentation for traceability and quality assurance."
+},
+{
+"keyword": "Bluetooth connectivity",
+"weight": 4,
+"description": "Identifies technical reliability issues and mitigation approaches (e.g., real-time monitoring)."
+},
+{
+"keyword": "volunteer recruitment",
+"weight": 4,
+"description": "Notes practical difficulties in participant recruitment and compliance."
+}
+],
+"grading_notes": "Award full marks for structured, well-argued essays demonstrating integration of ethical, methodological, and practical aspects. Partial credit given for coverage of individual points without synthesis."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON-only output intended for automated ingestion into educational assessment systems.",
+"contact": "Question Bank Generator"
+}
+}
