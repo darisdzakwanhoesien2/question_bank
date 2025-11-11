@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List
-# from openai import OpenAI  # Temporarily disabled to avoid Streamlit Cloud import error
+# from openai import OpenAI  # Uncomment this line once OpenAI is installed
 
 # -------------------------------
 # CONFIGURATION
@@ -16,7 +16,7 @@ PROMPT_FILE = BASE_DIR / "config" / "prompts" / "generate_questions.txt"
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
-# --- Temporarily disable OpenAI client creation ---
+# --- Initialize OpenAI client (commented out for now) ---
 # client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.set_page_config(page_title="Question Bank Generator & Test Simulator", layout="wide")
@@ -28,21 +28,53 @@ st.title("📘 Question Bank Generator & Test Simulator")
 
 def load_prompt() -> str:
     """Load generation prompt template."""
-    if os.path.exists(PROMPT_FILE):
-        with open(PROMPT_FILE, "r", encoding="utf-8") as f:
-            return f.read()
-    else:
+    if not os.path.exists(PROMPT_FILE):
         return "Prompt file not found."
+    with open(PROMPT_FILE, "r", encoding="utf-8") as f:
+        return f.read()
 
 def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, level: str, subject: str) -> Dict:
-    """Dummy version when OpenAI is unavailable."""
+    """Simulated version of GPT generation (OpenAI commented out)."""
     import fitz  # PyMuPDF
     doc = fitz.open(pdf_path)
     text = ""
     for page in doc:
         text += page.get_text("text")
 
-    st.warning("⚠️ OpenAI generation temporarily disabled. Returning placeholder JSON.")
+    # -------------------------------
+    # OpenAI generation (disabled)
+    # -------------------------------
+    # system_prompt = load_prompt()
+    # user_prompt = f"""
+    # Input: {source}
+    # Package number: {package_id}
+    # Subject: {subject}
+    # Level: {level}
+    # PDF Content:
+    # {text[:10000]}
+    # """
+    #
+    # with st.spinner("Generating question package via GPT... ⏳"):
+    #     response = client.chat.completions.create(
+    #         model="gpt-4",
+    #         messages=[
+    #             {"role": "system", "content": system_prompt},
+    #             {"role": "user", "content": user_prompt}
+    #         ],
+    #         temperature=0.4
+    #     )
+    #
+    # raw_output = response.choices[0].message.content.strip()
+    # try:
+    #     data = json.loads(raw_output)
+    # except Exception:
+    #     st.error("❌ Invalid JSON format returned from the model.")
+    #     return {}
+
+    # -------------------------------
+    # Fallback placeholder generation
+    # -------------------------------
+    st.warning("⚠️ GPT generation is currently disabled. Using a sample placeholder instead.")
     return {
         "package_id": package_id,
         "source": source,
@@ -50,29 +82,33 @@ def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, lev
         "mcqs": [
             {
                 "id": f"{package_id}_mcq1",
-                "question": f"Example question for {subject}",
-                "options": {"A": "Option A", "B": "Option B", "C": "Option C", "D": "Option D"},
+                "question": f"Example MCQ question for {subject}.",
+                "options": {
+                    "A": "Example Option A",
+                    "B": "Example Option B",
+                    "C": "Example Option C",
+                    "D": "Example Option D"
+                },
                 "correct_option": "A",
                 "difficulty": "easy",
-                "learning_objective": "Placeholder objective",
-                "slide_refs": [1, 2, 3]
+                "learning_objective": "Understand example placeholder question",
+                "slide_refs": [1, 2]
             }
         ],
         "essay": {
             "id": f"{package_id}_essay1",
-            "prompt": f"Write an essay about {subject} (placeholder prompt).",
+            "prompt": f"Write an essay discussing key ideas of {subject}.",
             "expected_keywords": ["example", "placeholder", "essay"],
             "rubric": {
                 "total_points": 100,
                 "criteria": [
                     {"keyword": "example", "weight": 40, "description": "Mentions example concept"},
                     {"keyword": "placeholder", "weight": 40, "description": "Mentions placeholder concept"},
-                    {"keyword": "essay", "weight": 20, "description": "Mentions essay concept"}
+                    {"keyword": "essay", "weight": 20, "description": "Mentions essay structure"}
                 ],
-                "grading_notes": "This is a placeholder rubric."
+                "grading_notes": "This is a placeholder rubric until OpenAI is re-enabled."
             }
-        },
-        "notes_for_integration": {"formatting": "JSON-only output for demo"}
+        }
     }
 
 def save_json(data: Dict, subject: str, package_id: str):
@@ -131,7 +167,7 @@ if mode == "🏗️ Generate Question Bank":
         with open(pdf_path, "wb") as f:
             f.write(pdf_file.getvalue())
 
-        if st.button("🚀 Generate Questions (Demo Mode)"):
+        if st.button("🚀 Generate Questions"):
             result = generate_questions_from_pdf(
                 pdf_path=str(pdf_path),
                 package_id=package_id,
@@ -187,9 +223,10 @@ elif mode == "🧩 Take Test":
 
                     st.success(f"MCQ: {mcq_correct}/{mcq_total}")
                     st.success(f"Essay: {essay_score}/{essay_total}")
-                    st.info(f"Matched Keywords: {', '.join(matched)}")
+                    st.info(f"Matched Keywords: {', '.join(matched) if matched else 'None'}")
                     st.metric("Final Score", f"{total_score:.1f} / 100")
 
+                    # Save results
                     result_data = {
                         "timestamp": datetime.now().isoformat(),
                         "subject": subject,
