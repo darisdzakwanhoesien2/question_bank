@@ -1,0 +1,140 @@
+{
+"package_id": "pkg1",
+"source": "towards_data_mining_lecture_2_slides.pdf",
+"level": "advanced_undergraduate",
+"mcqs": [
+{
+"id": "pkg1_mcq1",
+"question": "Which of the following best describes a limitation of 'informed consent' in the context of data mining, as discussed in the lecture slides?",
+"options": {
+"A": "Informed consent is always sufficient because once users agree they waive all privacy rights.",
+"B": "Informed consent may be insufficient because data mining can discover unforeseen sensitive information that could not be fully described to subjects in advance.",
+"C": "Informed consent is unnecessary when datasets are anonymised because anonymisation removes all privacy risk.",
+"D": "Informed consent is only required for data collected in clinical trials, not for routine digital traces."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Recognise limits of informed consent for large-scale data mining and privacy implications",
+"slide_refs": [10, 11, 12, 26]
+},
+{
+"id": "pkg1_mcq2",
+"question": "Which anonymisation approach (mentioned in the slides) explicitly requires that each released record be indistinguishable from at least k-1 other records with respect to a set of quasi-identifiers?",
+"options": {
+"A": "Pseudonymisation",
+"B": "k-anonymity",
+"C": "Encryption",
+"D": "Differential privacy"
+},
+"correct_option": "B",
+"difficulty": "easy",
+"learning_objective": "Identify k-anonymity as a structural anonymisation technique for protecting privacy",
+"slide_refs": [29, 31]
+},
+{
+"id": "pkg1_mcq3",
+"question": "According to the lecture slides, which statement correctly contrasts relational databases and document-oriented NoSQL databases (e.g., MongoDB)?",
+"options": {
+"A": "Relational databases permit embedded documents and lack a fixed schema, while MongoDB enforces a strict schema across all documents.",
+"B": "Relational databases provide a standardised query language (SQL) and strong schema constraints; document stores offer flexible schemas but less standardisation.",
+"C": "Document stores always provide stronger consistency guarantees than relational databases.",
+"D": "Relational databases are unsuitable for any scalable or distributed use; NoSQL databases are the only scalable option."
+},
+"correct_option": "B",
+"difficulty": "medium",
+"learning_objective": "Compare trade-offs between relational and NoSQL systems (schema, standardisation, consistency, flexibility)",
+"slide_refs": [60, 61, 63]
+}
+],
+"essay": {
+"id": "pkg1_essay1",
+"prompt": "Write an essay (approximately 400–600 words) that: (1) explains the major ethical, legal, and technical challenges when publishing open datasets containing personal information; and (2) proposes a concrete, defensible workflow an academic researcher could follow to prepare and publish such a dataset while minimising privacy risks and complying with relevant legal requirements.",
+"expected_keywords": [
+"informed consent",
+"data minimisation",
+"anonymisation",
+"pseudonymisation",
+"k-anonymity",
+"GDPR",
+"lawful basis",
+"metadata",
+"FAIR",
+"licensing",
+"CC BY",
+"ODbL",
+"access controls",
+"encryption",
+"data quality"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "informed consent",
+"weight": 15,
+"description": "Discusses the need for informed, specific consent (or alternative lawful basis) and the limits of consent for future/unknown uses."
+},
+{
+"keyword": "GDPR",
+"weight": 15,
+"description": "Explains legal obligations under GDPR (personal data definition, lawful basis, data subject rights, data minimisation) or references equivalent legal principles."
+},
+{
+"keyword": "anonymisation",
+"weight": 12,
+"description": "Describes anonymisation strategies and their limitations; distinguishes anonymisation from pseudonymisation."
+},
+{
+"keyword": "pseudonymisation",
+"weight": 8,
+"description": "Explains separation of identifiers from data and when pseudonymisation is appropriate vs. insufficient."
+},
+{
+"keyword": "k-anonymity",
+"weight": 8,
+"description": "Mentions k-anonymity or similar technical metrics as concrete measures and notes risks of re-identification."
+},
+{
+"keyword": "data minimisation",
+"weight": 8,
+"description": "Argues for collecting and publishing only the data needed and reducing data granularity where possible."
+},
+{
+"keyword": "metadata",
+"weight": 6,
+"description": "Addresses the need for rich metadata for reuse and provenance, balanced with privacy considerations."
+},
+{
+"keyword": "FAIR",
+"weight": 6,
+"description": "References FAIR principles (Findable, Accessible, Interoperable, Re-usable) and discusses balancing FAIR with privacy."
+},
+{
+"keyword": "licensing",
+"weight": 6,
+"description": "Identifies appropriate open-data licenses (e.g., CC0/CC BY/ODbL) and the implications of license choice."
+},
+{
+"keyword": "access controls",
+"weight": 6,
+"description": "Proposes controlled-access mechanisms (embargo, tiered access, data use agreements) when full openness is unsafe."
+},
+{
+"keyword": "encryption",
+"weight": 5,
+"description": "Mentions technical safeguards like encryption for storage and transfer where relevant."
+},
+{
+"keyword": "data quality",
+"weight": 5,
+"description": "Addresses the importance of data quality (bias, accuracy) to ethical reuse and downstream decision-making."
+}
+],
+"grading_notes": "Scores are additive across criteria. A defensible workflow should be concrete (steps, checks, and responsible actors) and should address legal, ethical, and technical safeguards. Partial credit is given for mentioning concepts without deep explanation; full credit requires correct reasoning and linkage between steps and safeguards."
+}
+},
+"notes_for_integration": {
+"formatting": "JSON-only output intended for automated ingestion into assessment pipelines.",
+"contact": "Question Bank Generator"
+}
+}
