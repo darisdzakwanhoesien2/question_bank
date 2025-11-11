@@ -1,0 +1,235 @@
+{
+  "package_id": "pkg2",
+  "source": "10-3D_perception-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg2_mcq1",
+      "question": "Which of the following is a monocular 3D cue that relies on the assumption that parallel lines in the real world converge to a vanishing point in the image?",
+      "options": {
+        "A": "Texture gradient",
+        "B": "Interposition",
+        "C": "Vanishing points",
+        "D": "Motion parallax"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "Identify monocular 3D cues available in single 2D images.",
+      "slide_refs": [3]
+    },
+    {
+      "id": "pkg2_mcq2",
+      "question": "In the context of shape from shading, the image intensity \\(I\\) at a point \\(P\\) under diffuse reflection and unit albedo is given by \\(I = \\mathbf{N} \\cdot \\mathbf{L}\\). What does \\(\\mathbf{L}\\) represent?",
+      "options": {
+        "A": "Surface normal at point \\(P\\)",
+        "B": "Incident light direction",
+        "C": "Camera viewing direction",
+        "D": "Reflected light intensity"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Recall the Lambertian reflectance model for shape from shading.",
+      "slide_refs": [6]
+    },
+    {
+      "id": "pkg2_mcq3",
+      "question": "Which of the following statements about T-junctions is correct?",
+      "options": {
+        "A": "They indicate that the occluding object is farther away.",
+        "B": "Two aligning T-junctions provide stronger evidence of occlusion than a single T-junction.",
+        "C": "They occur when two surfaces have the same depth.",
+        "D": "They are irrelevant to relative depth estimation."
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Understand the role of T-junctions in occlusion and relative depth perception.",
+      "slide_refs": [2]
+    },
+    {
+      "id": "pkg2_mcq4",
+      "question": "In shape from texture, the surface normal \\(\\mathbf{N}\\) is related to the slant \\(\\phi\\) and tilt \\(\\tau\\). Which angle represents the orientation of the surface normal projected into the image plane?",
+      "options": {
+        "A": "Slant \\(\\phi\\)",
+        "B": "Tilt \\(\\tau\\)",
+        "C": "Both slant and tilt",
+        "D": "Neither; it requires 3D coordinates"
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Differentiate between slant and tilt in surface orientation estimation from texture.",
+      "slide_refs": [5]
+    },
+    {
+      "id": "pkg2_mcq5",
+      "question": "Under the assumptions of shape from shading with known light source direction \\(\\mathbf{L}\\) and unit albedo, the equation \\(I = \\cos \\theta_i\\) implies that:",
+      "options": {
+        "A": "Surface orientation is uniquely determined from intensity alone.",
+        "B": "Additional constraints (e.g., integrability, smoothness) are required to recover the surface.",
+        "C": "Only convex surfaces can be reconstructed.",
+        "D": "The light source must be at infinity."
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Recognize the ill-posed nature of shape from shading and the need for regularization.",
+      "slide_refs": [7]
+    },
+    {
+      "id": "pkg2_mcq6",
+      "question": "In a 3D affine transformation represented in homogeneous coordinates, the bottom row of the 4×4 transformation matrix is:",
+      "options": {
+        "A": "[1 0 0 0]",
+        "B": "[0 1 0 0]",
+        "C": "[0 0 1 0]",
+        "D": "[0 0 0 1]"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "Recall the structure of homogeneous coordinates for 3D affine transformations.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg2_mcq7",
+      "question": "A rigid 3D transformation consists of rotation and translation. How many degrees of freedom does it have?",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "12"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "Determine the degrees of freedom in rigid body motion.",
+      "slide_refs": [9]
+    },
+    {
+      "id": "pkg2_mcq8",
+      "question": "The rotation matrix \\(R_x(\\psi)\\) for rotation by angle \\(\\psi\\) about the x-axis is:",
+      "options": {
+        "A": "\\(\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & \\cos\\psi & -\\sin\\psi \\\\ 0 & \\sin\\psi & \\cos\\psi \\end{bmatrix}\\)",
+        "B": "\\(\\begin{bmatrix} \\cos\\psi & 0 & \\sin\\psi \\\\ 0 & 1 & 0 \\\\ -\\sin\\psi & 0 & \\cos\\psi \\end{bmatrix}\\)",
+        "C": "\\(\\begin{bmatrix} \\cos\\psi & -\\sin\\psi & 0 \\\\ \\sin\\psi & \\cos\\psi & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}\\)",
+        "D": "\\(\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & \\cos\\psi & \\sin\\psi \\\\ 0 & -\\sin\\psi & \\cos\\psi \\end{bmatrix}\\)"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Recall the standard Euler rotation matrix for rotation about the x-axis.",
+      "slide_refs": [11]
+    },
+    {
+      "id": "pkg2_mcq9",
+      "question": "Which of the following is a limitation of the Euler angle representation for 3D rotations?",
+      "options": {
+        "A": "It uses more than 3 parameters.",
+        "B": "It suffers from gimbal lock.",
+        "C": "It cannot represent arbitrary rotations.",
+        "D": "It is not orthogonal."
+      },
+      "correct_option": "B",
+      "difficulty": "medium",
+      "learning_objective": "Understand the drawbacks of Euler angles in rotation representation.",
+      "slide_refs": [12]
+    },
+    {
+      "id": "pkg2_mcq10",
+      "question": "In structured light 3D reconstruction, shadows can reveal surface shape because:",
+      "options": {
+        "A": "They indicate regions of self-occlusion.",
+        "B": "They bend according to the surface normal.",
+        "C": "They are independent of lighting direction.",
+        "D": "They only appear under diffuse lighting."
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Explain how structured illumination aids in depth perception.",
+      "slide_refs": [4]
+    }
+  ],
+  "essay": {
+    "id": "pkg2_essay1",
+    "prompt": "Discuss the challenges and assumptions in recovering 3D shape from shading using a single image under the Lambertian reflectance model. Explain the role of the brightness equation \\(I = \\mathbf{N} \\cdot \\mathbf{L}\\), why it is underconstrained, and how additional priors such as smoothness, integrability, or boundary conditions are used to regularize the solution. Include practical limitations and real-world violations of the model.",
+    "expected_keywords": [
+      "shape from shading",
+      "Lambertian",
+      "brightness equation",
+      "I = N · L",
+      "underconstrained",
+      "integrability",
+      "smoothness",
+      "boundary conditions",
+      "albedo variation",
+      "cast shadows",
+      "specular reflections",
+      "unknown lighting"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "shape from shading",
+          "weight": 8,
+          "description": "Clearly defines the goal: recover surface normals or depth from intensity variations."
+        },
+        {
+          "keyword": "Lambertian",
+          "weight": 8,
+          "description": "States assumption of diffuse reflection with constant albedo."
+        },
+        {
+          "keyword": "brightness equation",
+          "weight": 8,
+          "description": "Presents \\(I = \\mathbf{N} \\cdot \\mathbf{L}\\) or \\(I = \\cos \\theta_i\\) correctly."
+        },
+        {
+          "keyword": "I = N · L",
+          "weight": 8,
+          "description": "Explains that intensity depends on dot product of normal and light direction."
+        },
+        {
+          "keyword": "underconstrained",
+          "weight": 10,
+          "description": "Shows that one equation per pixel is insufficient to solve for two normal components."
+        },
+        {
+          "keyword": "integrability",
+          "weight": 12,
+          "description": "Discusses need for normal field to be integrable into a consistent surface."
+        },
+        {
+          "keyword": "smoothness",
+          "weight": 10,
+          "description": "Mentions regularization via minimizing changes in depth or normals."
+        },
+        {
+          "keyword": "boundary conditions",
+          "weight": 8,
+          "description": "Notes importance of known depths or normals at occluding boundaries."
+        },
+        {
+          "keyword": "albedo variation",
+          "weight": 8,
+          "description": "Identifies violation when surface reflectance is not uniform."
+        },
+        {
+          "keyword": "cast shadows",
+          "weight": 8,
+          "description": "Recognizes that self-shadowing breaks the simple model."
+        },
+        {
+          "keyword": "specular reflections",
+          "weight": 6,
+          "description": "Acknowledges specular highlights invalidate diffuse assumption."
+        },
+        {
+          "keyword": "unknown lighting",
+          "weight": 6,
+          "description": "Points out difficulty when light direction is not known."
+        }
+      ],
+      "grading_notes": "Award partial credit for intuitive explanations even if mathematical details are missing. Deduct for confusing shape from shading with stereo or structured light. Require at least two regularization methods for full marks on constraints."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

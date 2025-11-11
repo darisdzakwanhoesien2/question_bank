@@ -1,0 +1,23 @@
+# --- Core Application ---
+streamlit==1.39.0
+openai>=1.50.0
+
+# --- PDF Parsing ---
+PyMuPDF==1.24.10
+
+# --- Data Handling & Validation ---
+pandas==2.2.3
+numpy==1.26.4
+jsonschema==4.23.0
+
+# --- Environment Management ---
+python-dotenv==1.0.1
+
+# --- Utilities ---
+tqdm==4.66.5
+pathlib==1.0.1
+requests==2.32.3
+
+# --- Optional (for advanced grading/analysis) ---
+matplotlib==3.9.2
+plotly==5.24.1

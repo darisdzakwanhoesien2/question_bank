@@ -1,70 +1,84 @@
 https://chatgpt.com/c/69121bc5-b4cc-832d-b2a5-c1522b656433
 https://chatgpt.com/g/g-6912cc3039d48191bd184701da3ba844-question-bank-generator/c/6912cd36-3c88-8328-81b6-a923aa2d02d5
+Grok works for non-vision tasks: https://grok.com/c/6cad1efa-f963-4132-b4fc-62419c1c3cf8
 
-test_simulator_app/
+test_question_bank_app/
 │
-├── app.py
+├── app.py                              # Streamlit frontend (select package/test mode/run)
 │
 ├── config/
-│   ├── settings.yaml
-│   ├── subjects.yaml
+│   ├── settings.yaml                   # General app configuration (paths, user roles, weights)
+│   ├── prompts/
+│   │   ├── generate_questions.txt      # The master question generation prompt
+│   │   ├── rubric_guidelines.txt       # Defines rubric weighting standards
+│   │   └── metadata_schema.json        # Defines JSON schema for validation
+│   ├── evaluation.yaml                 # Global scoring weights, difficulty scaling, essay-to-total ratio
 │
 ├── database/
-│   ├── math/
+│   ├── numerical_linear_algebra/
 │   │   ├── package_1/
-│   │   │   ├── mcq/
-│   │   │   │   ├── questions.json
-│   │   │   │   ├── metadata.json
-│   │   │   ├── essay/
-│   │   │   │   ├── questions.json
-│   │   │   │   ├── rubric.json
-│   │   │
+│   │   │   ├── source.pdf
+│   │   │   ├── package.json            # Master combined file (MCQ + essay + rubric + metadata)
+│   │   │   └── metadata.json           # Auto-generated metadata (e.g., title, topics, keywords)
 │   │   ├── package_2/
-│   │   │   ├── mcq/
-│   │   │   │   ├── questions.json
-│   │   │   ├── essay/
-│   │   │   │   ├── questions.json
-│   │   │   │   ├── rubric.json
+│   │   │   ├── source.pdf
+│   │   │   ├── package.json
+│   │   │   └── metadata.json
+│   │   ├── ...
+│   │   └── combined/
+│   │       ├── combined_mcqs.json
+│   │       ├── combined_essays.json
+│   │       └── combined_metadata.json
 │   │
-│   │   └── combined/
-│   │       ├── combined_mcq.json        # auto-generated across all packages
-│   │       ├── combined_essay.json
-│   │       ├── combined_rubric.json
-│
-│   ├── physics/
+│   ├── data_mining_ethics/
 │   │   ├── package_1/
-│   │   ├── package_2/
+│   │   │   ├── towards_data_mining_lecture_2_slides.pdf
+│   │   │   ├── package.json
+│   │   │   └── metadata.json
 │   │   └── combined/
-│   │       ├── combined_mcq.json
-│   │       ├── combined_essay.json
+│   │       ├── combined_mcqs.json
+│   │       └── combined_essays.json
+│   │
+│   └── registry.json                   # Lists all available subjects, packages, and metadata
 │
-│   ├── chemistry/
-│   │   ├── package_1/
-│   │   └── combined/
-│   │       ├── combined_mcq.json
-│   │       ├── combined_essay.json
+├── generators/
+│   ├── generate_package.py              # Reads PDF → sends to LLM → creates JSON output
+│   ├── merge_packages.py                # Combines multiple package JSONs into a single combined file
+│   ├── validate_schema.py               # Validates generated JSON against metadata_schema.json
+│   ├── extract_text.py                  # PDF-to-text parser (PyMuPDF or PDFPlumber)
+│   └── utils.py                         # Helper functions for IO, metadata tagging, keyword extraction
 │
-│   └── index.json                       # optional registry of all subjects and packages
-│
-├── modules/
-│   ├── data_loader.py                   # Loads/merges questions per subject
-│   ├── test_builder.py                  # Builds test sessions
-│   ├── grading.py                       # Grades MCQs & essays
-│   ├── utils.py
+├── evaluation/
+│   ├── essay_grader.py                  # Grades essay responses based on rubric keywords
+│   ├── mcq_evaluator.py                 # Checks MCQ answers, computes total score
+│   └── feedback_generator.py            # Generates human-readable feedback from rubric performance
 │
 ├── pages/
-│   ├── 1_Home.py
-│   ├── 2_Select_Package.py              # choose subject + package + mode
-│   ├── 3_Take_Test.py
-│   ├── 4_Review_Results.py
-│   ├── 5_Admin_Panel.py
-│
-├── results/
-│   ├── user_scores.json
+│   ├── 1_Home.py                        # Welcome + subject selection
+│   ├── 2_Take_Test.py                   # Test interface (MCQ/Essay)
+│   ├── 3_Results.py                     # Results view with rubric explanation
+│   └── 4_Admin_Panel.py                 # Upload PDFs, generate question JSONs
 │
 ├── assets/
 │   ├── logo.png
 │   ├── styles.css
+│   └── icons/
+│
+├── results/
+│   ├── user_submissions/
+│   │   ├── <user_id>_<timestamp>.json   # Stores user answers + auto-grading output
+│   ├── analytics/
+│   │   └── question_performance.json    # Aggregates difficulty and discrimination metrics
+│
+├── schemas/
+│   ├── package_schema.json              # JSON Schema for validating generated package.json
+│   ├── essay_rubric_schema.json         # JSON Schema for rubric fields
+│   └── mcq_schema.json                  # JSON Schema for MCQ validation
+│
+├── logs/
+│   ├── generation_log.txt
+│   └── grading_log.txt
 │
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .env

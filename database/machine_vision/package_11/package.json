@@ -1,0 +1,125 @@
+{
+  "package_id": "pkg1",
+  "source": "11-3D_reconstruction-00.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg1_mcq1",
+      "question": "In the homogeneous coordinate representation of 3D affine transformations, the transformation matrix mapping a point \\(P = (x, y, z)\\) to \\(P' = (x', y', z')\\) is a 4×4 matrix with the bottom row fixed as:",
+      "options": {
+        "A": "[1 0 0 0]",
+        "B": "[0 1 0 0]",
+        "C": "[0 0 1 0]",
+        "D": "[0 0 0 1]"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "Recall the structure of the 4×4 affine transformation matrix in homogeneous coordinates.",
+      "slide_refs": [11]
+    },
+    {
+      "id": "pkg1_mcq2",
+      "question": "A rigid 3D transformation consists of rotation followed by translation. How many degrees of freedom does it have, and what is the minimum number of point correspondences required to estimate it uniquely?",
+      "options": {
+        "A": "6 degrees of freedom; at least 3 point correspondences",
+        "B": "6 degrees of freedom; at least 4 point correspondences",
+        "C": "7 degrees of freedom; at least 3 point correspondences",
+        "D": "12 degrees of freedom; at least 6 point correspondences"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Identify the degrees of freedom of rigid transformation and the minimum correspondences for pose estimation.",
+      "slide_refs": [12, 13, 34]
+    },
+    {
+      "id": "pkg1_mcq3",
+      "question": "Given a calibrated camera with known intrinsic matrix \\(K\\), the projection equation can be simplified using normalized image coordinates. Which matrix represents the simplified projection model \\(M\\) when \\(f = 1\\) and principal point \\((c_0, r_0) = (0, 0)\\)?",
+      "options": {
+        "A": "\\(M = \\begin{bmatrix} K & 0 \\end{bmatrix} [R \\; t]\\)",
+        "B": "\\(M = [R \\; t]\\)",
+        "C": "\\(M = K [R \\; t]\\)",
+        "D": "\\(M = [I \\; 0] [R \\; t]\\)"
+      },
+      "correct_option": "B",
+      "difficulty": "hard",
+      "learning_objective": "Derive the projection matrix under normalized image coordinates for a calibrated camera.",
+      "slide_refs": [24]
+    }
+  ],
+  "essay": {
+    "id": "pkg1_essay1",
+    "prompt": "Explain the Perspective-3-Point (P3P) problem in the context of absolute pose estimation for a calibrated camera. Describe the geometric formulation, the role of the three point correspondences, and how the problem can be converted into estimating the 3D locations of the points. Discuss the number of possible solutions and practical considerations for disambiguation.",
+    "expected_keywords": [
+      "P3P",
+      "absolute pose",
+      "calibrated camera",
+      "three point correspondences",
+      "unit vectors",
+      "distances d_ij",
+      "triangulation",
+      "up to four solutions",
+      "fourth point",
+      "RANSAC"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "P3P",
+          "weight": 10,
+          "description": "Clearly states that P3P solves for camera pose using three 3D-to-2D correspondences."
+        },
+        {
+          "keyword": "absolute pose",
+          "weight": 10,
+          "description": "Defines absolute pose as estimating rotation R and translation t relative to world frame."
+        },
+        {
+          "keyword": "calibrated camera",
+          "weight": 10,
+          "description": "Mentions that intrinsic parameters K are known, enabling normalized coordinates."
+        },
+        {
+          "keyword": "three point correspondences",
+          "weight": 10,
+          "description": "Describes 3D points P_i and their 2D projections Q_i in the image."
+        },
+        {
+          "keyword": "unit vectors",
+          "weight": 10,
+          "description": "Explains back-projection rays as unit vectors q_i from camera center."
+        },
+        {
+          "keyword": "distances d_ij",
+          "weight": 10,
+          "description": "Shows computation of distances d_ij between 3D points using cosine law on known 2D angles."
+        },
+        {
+          "keyword": "triangulation",
+          "weight": 15,
+          "description": "Details conversion to solving for 3D point depths along rays (up to four solutions)."
+        },
+        {
+          "keyword": "up to four solutions",
+          "weight": 10,
+          "description": "Discusses the algebraic result yielding up to four valid pose configurations."
+        },
+        {
+          "keyword": "fourth point",
+          "weight": 10,
+          "description": "Explains disambiguation using an additional correspondence or cheirality check."
+        },
+        {
+          "keyword": "RANSAC",
+          "weight": 5,
+          "description": "Mentions robust estimation in presence of outliers using RANSAC with P3P."
+        }
+      ],
+      "grading_notes": "Award partial credit for correct geometric intuition even if algebraic details are incomplete. Deduct points for confusing absolute vs. relative pose or calibrated vs. uncalibrated settings."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-11-11T08:15:04.664732",
+  "subject": "machine_vision",
+  "package_id": "package_11",
+  "mcq_score": 1,
+  "mcq_total": 3,
+  "essay_score": 0,
+  "essay_total": 100,
+  "final_score": 16.666666666666664,
+  "matched_keywords": [],
+  "user_answers": {
+    "pkg1_mcq1": "A",
+    "pkg1_mcq2": "A",
+    "pkg1_mcq3": "C"
+  },
+  "user_essay": "Test"
+}
