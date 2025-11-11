@@ -7,7 +7,18 @@
     {
       "id": "pkg26_essay1",
       "prompt": "A rectangle is deformed as observed in the figure. It is known that the coordinates of the points deform through a function of the form: x' = ax + by, y' = cx² + dy. (a) How many degrees of freedom does the transformation have? How many point correspondences are needed to estimate the parameters? (b) Derive the equations to estimate the transformation parameters from a set of point correspondences. Hint: the transformation can be estimated linearly through a system of the form Ax = b.",
-      "expected_keywords": ["degrees of freedom", "4", "point correspondences", "2", "linear system", "Ax=b", "least squares", "quadratic term", "nonlinear transformation", "parameter estimation"],
+      "expected_keywords": [
+        "degrees of freedom",
+        "4",
+        "point correspondences",
+        "2",
+        "linear system",
+        "Ax=b",
+        "least squares",
+        "quadratic term",
+        "nonlinear transformation",
+        "parameter estimation"
+      ],
       "rubric": {
         "total_points": 100,
         "criteria": [
@@ -38,7 +49,15 @@
     {
       "id": "pkg26_essay2",
       "prompt": "Using the following measured points before (p) and after (p') deformation, recover the parameters a, b, c, d, while assuming that there is no noise in the measurements. p = [0 2.00 4.00 6.00 8.00 10.00 10.00 8.00 6.00 4.00 2.00 0; 1 1.00 1.00 1.00 1.00 1.00 2.00 2.00 2.00 2.00 2.00 2], p' = [2 4.00 6.00 8.00 10.00 12.00 14.00 12.00 10.00 8.00 6.00 4; 1 1.04 1.16 1.36 1.64 2.00 3.00 2.64 2.36 2.16 2.04 2]. How would your solution be different if there was noise in the measurements?",
-      "expected_keywords": ["overdetermined system", "least squares", "pseudoinverse", "normal equations", "robust estimation", "RANSAC", "outlier rejection"],
+      "expected_keywords": [
+        "overdetermined system",
+        "least squares",
+        "pseudoinverse",
+        "normal equations",
+        "robust estimation",
+        "RANSAC",
+        "outlier rejection"
+      ],
       "rubric": {
         "total_points": 100,
         "criteria": [
@@ -69,7 +88,16 @@
     {
       "id": "pkg26_essay3",
       "prompt": "Two pinhole cameras observe a 3D point P = (X, Y, Z)^T from two different viewpoints. The camera projection matrices are C = [[1 0 0 0], [0 1 0 0], [0 0 1 0]] and C' = [[1 0 0 1], [0 0 -1 1], [0 1 0 1]]. The coordinates of the 2D point in the first and second image are p = (-1/2, 1/2)^T and p' = (0, -1/2)^T, respectively. (a) Compute the 3D coordinates X, Y and Z. (Hint: Form a linear system of equations using the projection matrices and homogeneous coordinates.) (b) The essential matrix between the views is E = [[0 1 1], [1 -1 0], [-1 0 -1]]. Find the epipolar line in the second image that corresponds to the point p in the first image. Show that the point p' lies on that epipolar line. (c) How can the epipolar constraint be utilized in stereo imaging?",
-      "expected_keywords": ["triangulation", "homogeneous coordinates", "projection equations", "epipolar line", "epipolar constraint", "disparity search", "correspondence problem", "essential matrix"],
+      "expected_keywords": [
+        "triangulation",
+        "homogeneous coordinates",
+        "projection equations",
+        "epipolar line",
+        "epipolar constraint",
+        "disparity search",
+        "correspondence problem",
+        "essential matrix"
+      ],
       "rubric": {
         "total_points": 100,
         "criteria": [
@@ -100,7 +128,19 @@
     {
       "id": "pkg26_essay4",
       "prompt": "Let us consider three grayscale image patches. The first two represent texture classes 1 and 2. The third belongs to an unknown class. Classify the unknown sample using: 1. Roberts gradient masks (no padding, valid pixels only), 2. Mean filter responses as feature vectors, 3. Euclidean distance to find closest class. Then, describe in detail a procedure based on Local Binary Patterns (LBP) for solving this texture classification problem. What problem is related to the given image patches?",
-      "expected_keywords": ["Roberts cross", "gradient magnitude", "mean response", "Euclidean distance", "LBP", "circular neighborhood", "uniform patterns", "histogram", "rotation invariance", "small sample size", "border effects"],
+      "expected_keywords": [
+        "Roberts cross",
+        "gradient magnitude",
+        "mean response",
+        "Euclidean distance",
+        "LBP",
+        "circular neighborhood",
+        "uniform patterns",
+        "histogram",
+        "rotation invariance",
+        "small sample size",
+        "border effects"
+      ],
       "rubric": {
         "total_points": 100,
         "criteria": [
@@ -126,7 +166,15 @@
     {
       "id": "pkg26_essay5",
       "prompt": "Given two consecutive frames of imagery with intensity function f(x,y,t), consider pixels with spatial coordinates (3,4) and (4,4) marked at t and t+Δt respectively. Here we assume that the origin is in the upper-left corner so that f(3,4,t) = 7 and f(4,4,t+Δt) = 3. (a) Use the 3x3 Prewitt masks to estimate the spatial derivatives ∂f/∂x and ∂f/∂y at the points (3,4,t) and (4,4,t+Δt). (b) Estimate the temporal derivative ∂f/∂t at the position (3,4,t) and (4,4,t+Δt).",
-      "expected_keywords": ["Prewitt operator", "convolution", "spatial gradient", "finite difference", "temporal derivative", "optical flow constraint", "aperture problem"],
+      "expected_keywords": [
+        "Prewitt operator",
+        "convolution",
+        "spatial gradient",
+        "finite difference",
+        "temporal derivative",
+        "optical flow constraint",
+        "aperture problem"
+      ],
       "rubric": {
         "total_points": 100,
         "criteria": [
@@ -152,7 +200,18 @@
     {
       "id": "pkg26_essay6",
       "prompt": "A rectangle with corners A = (-1,1), B = (1,1), C = (1,-1), D = (-1,-1) undergoes an affine transformation and the corners are observed at A' = (1,2), B' = (3,2), C' = (-1,0), D' = (-3,0). Calculate the affine transformation using the least squares method. Then, explain when one should use a homography instead of an affine model. In what scenarios is a homography more expressive and flexible? When should algorithms use one over the other?",
-      "expected_keywords": ["affine matrix", "6 parameters", "least squares", "overdetermined", "homography", "8 dof", "projective", "parallel lines", "vanishing point", "planar scene"],
+      "expected_keywords": [
+        "affine matrix",
+        "6 parameters",
+        "least squares",
+        "overdetermined",
+        "homography",
+        "8 dof",
+        "projective",
+        "parallel lines",
+        "vanishing point",
+        "planar scene"
+      ],
       "rubric": {
         "total_points": 100,
         "criteria": [
