@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List
-from openai import OpenAI
+# from openai import OpenAI  # Temporarily disabled to avoid Streamlit Cloud import error
 
 # -------------------------------
 # CONFIGURATION
@@ -16,8 +16,8 @@ PROMPT_FILE = BASE_DIR / "config" / "prompts" / "generate_questions.txt"
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
-# Load API key
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# --- Temporarily disable OpenAI client creation ---
+# client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.set_page_config(page_title="Question Bank Generator & Test Simulator", layout="wide")
 st.title("📘 Question Bank Generator & Test Simulator")
@@ -28,45 +28,52 @@ st.title("📘 Question Bank Generator & Test Simulator")
 
 def load_prompt() -> str:
     """Load generation prompt template."""
-    with open(PROMPT_FILE, "r", encoding="utf-8") as f:
-        return f.read()
+    if os.path.exists(PROMPT_FILE):
+        with open(PROMPT_FILE, "r", encoding="utf-8") as f:
+            return f.read()
+    else:
+        return "Prompt file not found."
 
 def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, level: str, subject: str) -> Dict:
-    """Send PDF text to GPT to generate structured JSON."""
+    """Dummy version when OpenAI is unavailable."""
     import fitz  # PyMuPDF
     doc = fitz.open(pdf_path)
     text = ""
     for page in doc:
         text += page.get_text("text")
 
-    system_prompt = load_prompt()
-    user_prompt = f"""
-Input: {source}
-Package number: {package_id}
-Subject: {subject}
-Level: {level}
-PDF Content:
-{text[:10000]}  # truncated to first 10k chars for efficiency
-"""
-
-    with st.spinner("Generating question package via GPT... ⏳"):
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=0.4
-        )
-
-    raw_output = response.choices[0].message.content.strip()
-    try:
-        data = json.loads(raw_output)
-    except Exception:
-        st.error("❌ Invalid JSON format returned from the model.")
-        return {}
-
-    return data
+    st.warning("⚠️ OpenAI generation temporarily disabled. Returning placeholder JSON.")
+    return {
+        "package_id": package_id,
+        "source": source,
+        "level": level,
+        "mcqs": [
+            {
+                "id": f"{package_id}_mcq1",
+                "question": f"Example question for {subject}",
+                "options": {"A": "Option A", "B": "Option B", "C": "Option C", "D": "Option D"},
+                "correct_option": "A",
+                "difficulty": "easy",
+                "learning_objective": "Placeholder objective",
+                "slide_refs": [1, 2, 3]
+            }
+        ],
+        "essay": {
+            "id": f"{package_id}_essay1",
+            "prompt": f"Write an essay about {subject} (placeholder prompt).",
+            "expected_keywords": ["example", "placeholder", "essay"],
+            "rubric": {
+                "total_points": 100,
+                "criteria": [
+                    {"keyword": "example", "weight": 40, "description": "Mentions example concept"},
+                    {"keyword": "placeholder", "weight": 40, "description": "Mentions placeholder concept"},
+                    {"keyword": "essay", "weight": 20, "description": "Mentions essay concept"}
+                ],
+                "grading_notes": "This is a placeholder rubric."
+            }
+        },
+        "notes_for_integration": {"formatting": "JSON-only output for demo"}
+    }
 
 def save_json(data: Dict, subject: str, package_id: str):
     """Save generated JSON file to database folder."""
@@ -87,7 +94,7 @@ def grade_mcq(mcq_data, user_answers):
     """Compute MCQ score."""
     total, correct = len(mcq_data), 0
     for q in mcq_data:
-        if user_answers.get(q["id"]) == q["correct_option"]:
+        if user_answers.get(q["id"]) == q.get("correct_option"):
             correct += 1
     return correct, total
 
@@ -95,7 +102,7 @@ def grade_essay(essay_data, user_text):
     """Keyword-based essay scoring."""
     score = 0
     matched = []
-    rubric = essay_data["rubric"]
+    rubric = essay_data.get("rubric", {"criteria": [], "total_points": 100})
     for crit in rubric["criteria"]:
         if crit["keyword"].lower() in user_text.lower():
             score += crit["weight"]
@@ -124,7 +131,7 @@ if mode == "🏗️ Generate Question Bank":
         with open(pdf_path, "wb") as f:
             f.write(pdf_file.getvalue())
 
-        if st.button("🚀 Generate Questions"):
+        if st.button("🚀 Generate Questions (Demo Mode)"):
             result = generate_questions_from_pdf(
                 pdf_path=str(pdf_path),
                 package_id=package_id,
@@ -163,11 +170,9 @@ elif mode == "🧩 Take Test":
                 user_mcq_answers = {}
                 for q in package["mcqs"]:
                     st.markdown(f"**{q['question']}**")
-                    user_mcq_answers[q["id"]] = st.radio(
-                        "Choose answer:",
-                        list(q["options"].keys()),
-                        key=q["id"]
-                    )
+                    options_formatted = [f"{key}. {value}" for key, value in q["options"].items()]
+                    selected = st.radio("Choose answer:", options_formatted, key=q["id"])
+                    user_mcq_answers[q["id"]] = selected.split(".")[0].strip()
 
                 # --- Essay Section ---
                 st.markdown("### Essay Question")
@@ -175,11 +180,9 @@ elif mode == "🧩 Take Test":
                 st.write(essay["prompt"])
                 user_essay = st.text_area("Your essay response:", height=250)
 
-                # --- Submit Button ---
                 if st.button("Submit Answers"):
                     mcq_correct, mcq_total = grade_mcq(package["mcqs"], user_mcq_answers)
                     essay_score, essay_total, matched = grade_essay(essay, user_essay)
-
                     total_score = (mcq_correct / mcq_total) * 50 + (essay_score / essay_total) * 50
 
                     st.success(f"MCQ: {mcq_correct}/{mcq_total}")
@@ -187,7 +190,6 @@ elif mode == "🧩 Take Test":
                     st.info(f"Matched Keywords: {', '.join(matched)}")
                     st.metric("Final Score", f"{total_score:.1f} / 100")
 
-                    # Save results
                     result_data = {
                         "timestamp": datetime.now().isoformat(),
                         "subject": subject,
