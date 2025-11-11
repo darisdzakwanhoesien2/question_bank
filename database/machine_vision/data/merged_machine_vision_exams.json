@@ -1,0 +1,757 @@
+{
+  "merged_source": "Machine Vision Exams Compilation (2014–2020)",
+  "level": "advanced_undergraduate",
+  "packages": [
+    "unknown",
+    "pkg31",
+    "pkg30",
+    "pkg29",
+    "pkg28"
+  ],
+  "mcqs": [],
+  "essay": [
+    {
+      "id": "pkg31_essay1",
+      "prompt": "(a) Using homogeneous coordinates, write the matrix form of the following 2D transformations: pure translation, pure rotation, similarity (translation + rotation + scale), affine, and homography. How many degrees of freedom does each transformation have? How many 2D point correspondences are needed to estimate each?",
+      "expected_keywords": [
+        "homogeneous coordinates",
+        "translation matrix",
+        "rotation matrix",
+        "similarity transformation",
+        "affine transformation",
+        "homography",
+        "degrees of freedom",
+        "point correspondences",
+        "linear equations"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "matrix forms",
+            "weight": 40,
+            "description": "Correctly writes each transformation in homogeneous matrix form (3x3 for 2D transformations)."
+          },
+          {
+            "keyword": "degrees of freedom",
+            "weight": 30,
+            "description": "Identifies degrees of freedom for each transformation (translation=2, rotation=1, similarity=4, affine=6, homography=8)."
+          },
+          {
+            "keyword": "point correspondences",
+            "weight": 20,
+            "description": "States number of point correspondences required to estimate each transformation (translation=1, rotation=2, similarity=2, affine=3, homography=4)."
+          },
+          {
+            "keyword": "clarity",
+            "weight": 10,
+            "description": "Neat matrix notation and correct use of homogeneous coordinates."
+          }
+        ],
+        "grading_notes": "Full credit for correct matrix representation and corresponding degrees of freedom. Partial credit for correct forms with minor omissions."
+      }
+    },
+    {
+      "id": "pkg31_essay2",
+      "prompt": "(b) A rectangle with corners A = (−1,1), B = (1,1), C = (1,−1), and D = (−1,−1) undergoes a transformation and the corners are observed at A′ = (1,3), B′ = (3,3), C′ = (−2,1), and D′ = (−6,1). The affine transformation does not perfectly explain the observations, but we assume the transformation is affine and noisy. Estimate the optimal affine transformation using the least squares method.",
+      "expected_keywords": [
+        "affine transformation",
+        "least squares estimation",
+        "homogeneous coordinates",
+        "overdetermined system",
+        "Ax=b",
+        "pseudoinverse",
+        "normal equations",
+        "noise",
+        "parameter estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "affine model setup",
+            "weight": 40,
+            "description": "Forms the affine transformation equations in homogeneous coordinates and constructs the system Ax=b."
+          },
+          {
+            "keyword": "least squares solution",
+            "weight": 40,
+            "description": "Uses least squares or pseudoinverse to estimate transformation parameters minimizing reprojection error."
+          },
+          {
+            "keyword": "interpretation",
+            "weight": 20,
+            "description": "Explains the impact of noise and justifies the use of least squares as optimal for Gaussian noise."
+          }
+        ],
+        "grading_notes": "Partial credit for correct system setup without derivation. Full credit requires explicit least-squares formulation or solution steps."
+      }
+    },
+    {
+      "id": "pkg31_essay3",
+      "prompt": "(c) An affine transformation is the most flexible transformation that is linear in both homogeneous and inhomogeneous coordinates. When represented by a matrix (in homogeneous coordinates), how many elements does the matrix have? How many degrees of freedom does an affine transformation have? How many 2D point matches are necessary to estimate it?",
+      "expected_keywords": [
+        "affine matrix",
+        "3x3 matrix",
+        "six degrees of freedom",
+        "2D point correspondences",
+        "minimum points",
+        "linear independence"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "matrix elements",
+            "weight": 40,
+            "description": "States that the affine matrix has 9 elements in homogeneous form, but one scale factor is redundant."
+          },
+          {
+            "keyword": "degrees of freedom",
+            "weight": 30,
+            "description": "Correctly identifies 6 degrees of freedom for 2D affine transformations."
+          },
+          {
+            "keyword": "point matches",
+            "weight": 30,
+            "description": "Explains that 3 non-collinear 2D point correspondences are needed to estimate the affine transformation."
+          }
+        ],
+        "grading_notes": "Partial credit for missing one of the three quantitative answers (elements, DoF, or points). Full credit for correct reasoning with supporting explanation."
+      }
+    },
+    {
+      "id": "pkg30_essay1",
+      "prompt": "Triangulation using 1D cameras. The projection function for a 1D camera is m ∝ P x, where m = [m, 1]^T (pixel in homogeneous coords), x = [x, y, 1]^T (2D world point in homogeneous coords) and P is a 2×3 projection matrix. (a) Given two cameras P1 and P2 and their measurements m1 and m2 of an unknown point x, derive the constraints on x in the form A x = b (A is 2×2, b is 2×1). Express A and b in terms of P1, P2 and the measurements. (b) Given P1 = [[1,2,0],[2,1,0]] and P2 = [[1,2,3],[4,2,0]] and measurements m1 = 1.25 and m2 = 1, triangulate the point x (solve for x and y). (c) A point is often observed in many images: is there an advantage to estimating the point’s position by considering all images simultaneously? Justify. (d) Many points are observed in an image: is there an advantage to estimating all points jointly instead of independently? Justify.",
+      "expected_keywords": [
+        "triangulation",
+        "homogeneous coordinates",
+        "projection matrix",
+        "linear constraint",
+        "Ax=b",
+        "overdetermined system",
+        "least squares",
+        "bundle adjustment",
+        "multi-view",
+        "robust estimation",
+        "joint estimation",
+        "covariance",
+        "optimal estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "derivation Ax=b",
+            "weight": 40,
+            "description": "Correct derivation of A and b from the rows of P1,P2 and measured m1,m2, producing a 2×2 linear system for (x,y)."
+          },
+          {
+            "keyword": "numerical triangulation",
+            "weight": 30,
+            "description": "Correct solution of the provided numeric example (substituting P1,P2,m1,m2 into derived system and solving for x,y)."
+          },
+          {
+            "keyword": "multi-view advantage",
+            "weight": 15,
+            "description": "Explains benefits of using many images simultaneously (reduces noise, overdetermined -> least-squares, improved accuracy, outlier handling)."
+          },
+          {
+            "keyword": "joint estimation of many points",
+            "weight": 15,
+            "description": "Explains advantages of joint estimation (bundle adjustment, enforces consistency, uses image/pose covariances) and notes computational trade-offs."
+          }
+        ],
+        "grading_notes": "Partial credit for correct setup with minor algebraic errors. For (b) accept exact numeric solution or equivalent least-squares result. Award extra credit for mentioning covariance, weighting, or robust methods (e.g., RANSAC) when discussing multi-view or joint estimation."
+      }
+    },
+    {
+      "id": "pkg29_essay1",
+      "prompt": "Describe an algorithm to segment the seashells from the image. How can morphological operations help to improve segmentation?",
+      "expected_keywords": [
+        "image segmentation",
+        "thresholding",
+        "background subtraction",
+        "binary mask",
+        "morphological operations",
+        "erosion",
+        "dilation",
+        "opening",
+        "closing",
+        "connected components",
+        "noise removal"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "segmentation algorithm",
+            "weight": 40,
+            "description": "Proposes an algorithm for segmenting non-overlapping shells on a contrasting background using thresholding or color separation."
+          },
+          {
+            "keyword": "morphological operations",
+            "weight": 40,
+            "description": "Explains how morphological filtering (erosion, dilation, opening, closing) improves segmentation quality and removes noise."
+          },
+          {
+            "keyword": "clarity and application",
+            "weight": 20,
+            "description": "Provides a clear, step-by-step explanation with reasoning for each operation."
+          }
+        ],
+        "grading_notes": "Partial credit for mentioning morphological operations without explaining their effect. Full credit for integrating them effectively into the segmentation pipeline."
+      }
+    },
+    {
+      "id": "pkg29_essay2",
+      "prompt": "It has been decided that only texture will be used to classify the seashells. You may use either filter banks, Local Binary Patterns (LBP), or co-occurrence matrices to extract texture properties. Given a segmented image, describe an algorithm to classify a seashell. Where do the concepts of feature vector, distance function, and classifier fit in your algorithm?",
+      "expected_keywords": [
+        "texture features",
+        "filter banks",
+        "Gabor filters",
+        "LBP",
+        "gray-level co-occurrence matrix",
+        "feature vector",
+        "distance function",
+        "Euclidean distance",
+        "classifier",
+        "training",
+        "k-nearest neighbour",
+        "support vector machine"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "texture extraction",
+            "weight": 30,
+            "description": "Describes texture feature extraction using one of the suggested methods and explains its relevance."
+          },
+          {
+            "keyword": "feature vector and distance",
+            "weight": 35,
+            "description": "Explains how texture features are formed into a feature vector and compared using a distance metric."
+          },
+          {
+            "keyword": "classifier integration",
+            "weight": 25,
+            "description": "Describes how a classifier (e.g., k-NN or SVM) uses these feature vectors for training and prediction."
+          },
+          {
+            "keyword": "clarity of process",
+            "weight": 10,
+            "description": "Logical structure and clear algorithmic flow from input to classification output."
+          }
+        ],
+        "grading_notes": "Full credit requires integration of all three concepts—feature extraction, distance measurement, and classification—in a coherent algorithmic pipeline."
+      }
+    },
+    {
+      "id": "pkg29_essay3",
+      "prompt": "The system should be extended to include shape features. What shape features could be useful for classifying the shells? How should one combine them with the texture features of the previous step? How should the algorithm be adapted to classify using both texture and shape?",
+      "expected_keywords": [
+        "shape features",
+        "contour descriptors",
+        "moments",
+        "Hu moments",
+        "aspect ratio",
+        "Fourier descriptors",
+        "texture-shape fusion",
+        "feature-level fusion",
+        "normalization",
+        "weighted combination",
+        "classifier adaptation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "shape descriptors",
+            "weight": 35,
+            "description": "Identifies relevant shape features and explains how they capture geometric differences between shells."
+          },
+          {
+            "keyword": "feature fusion",
+            "weight": 35,
+            "description": "Describes how to combine texture and shape features via concatenation, normalization, or weighting."
+          },
+          {
+            "keyword": "algorithm adaptation",
+            "weight": 20,
+            "description": "Proposes classifier or feature scaling modifications to integrate multimodal data."
+          },
+          {
+            "keyword": "explanation clarity",
+            "weight": 10,
+            "description": "Provides a well-organized, conceptually sound discussion of combining multiple feature types."
+          }
+        ],
+        "grading_notes": "Award partial credit for identifying correct shape features without discussing integration. Full credit for coherent fusion strategy and algorithmic justification."
+      }
+    },
+    {
+      "id": "pkg28_essay1",
+      "prompt": "Briefly explain the following terms: (a) Optical flow (b) SIFT (c) Histogram (d) K-nearest neighbour classification (e) HSV color space.",
+      "expected_keywords": [
+        "optical flow",
+        "motion estimation",
+        "SIFT",
+        "keypoints",
+        "histogram",
+        "feature distribution",
+        "k-nearest neighbour",
+        "classification",
+        "HSV color space",
+        "hue",
+        "saturation",
+        "value"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "optical flow",
+            "weight": 20,
+            "description": "Defines optical flow as apparent pixel motion between frames and explains its role in motion estimation."
+          },
+          {
+            "keyword": "SIFT",
+            "weight": 20,
+            "description": "Explains Scale-Invariant Feature Transform for keypoint detection and descriptor matching."
+          },
+          {
+            "keyword": "histogram",
+            "weight": 20,
+            "description": "Describes histograms as statistical distributions of intensity or color values in an image."
+          },
+          {
+            "keyword": "k-nearest neighbour",
+            "weight": 20,
+            "description": "Describes KNN as a distance-based classifier using feature similarity."
+          },
+          {
+            "keyword": "HSV color space",
+            "weight": 20,
+            "description": "Explains the components of hue, saturation, and value and their perceptual significance."
+          }
+        ],
+        "grading_notes": "Award partial credit for accurate but incomplete definitions. Full credit requires both definition and context of use in computer vision."
+      }
+    },
+    {
+      "id": "pkg28_essay2",
+      "prompt": "Describe the main principles of the following and give one example of their usage: (a) Hough transform (b) RANSAC (c) Mahalanobis distance.",
+      "expected_keywords": [
+        "Hough transform",
+        "parametric space",
+        "line detection",
+        "RANSAC",
+        "robust estimation",
+        "outliers",
+        "Mahalanobis distance",
+        "covariance",
+        "multivariate distance",
+        "feature matching"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "Hough transform",
+            "weight": 30,
+            "description": "Describes parameter space voting for detecting geometric shapes such as lines or circles."
+          },
+          {
+            "keyword": "RANSAC",
+            "weight": 35,
+            "description": "Explains Random Sample Consensus as a method for model estimation in the presence of outliers."
+          },
+          {
+            "keyword": "Mahalanobis distance",
+            "weight": 25,
+            "description": "Defines Mahalanobis distance as a covariance-scaled metric for multivariate data comparison."
+          },
+          {
+            "keyword": "examples and clarity",
+            "weight": 10,
+            "description": "Provides clear examples demonstrating real-world usage of each concept."
+          }
+        ],
+        "grading_notes": "Full credit requires a clear example for each method. Partial credit for correct principles without examples."
+      }
+    },
+    {
+      "id": "pkg31_essay1",
+      "prompt": "(a) Using homogeneous coordinates, write the matrix form of the following 2D transformations: pure translation, pure rotation, similarity (translation + rotation + scale), affine, and homography. How many degrees of freedom does each transformation have? How many 2D point correspondences are needed to estimate each?",
+      "expected_keywords": [
+        "homogeneous coordinates",
+        "translation matrix",
+        "rotation matrix",
+        "similarity transformation",
+        "affine transformation",
+        "homography",
+        "degrees of freedom",
+        "point correspondences",
+        "linear equations"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "matrix forms",
+            "weight": 40,
+            "description": "Correctly writes each transformation in homogeneous matrix form (3x3 for 2D transformations)."
+          },
+          {
+            "keyword": "degrees of freedom",
+            "weight": 30,
+            "description": "Identifies degrees of freedom for each transformation (translation=2, rotation=1, similarity=4, affine=6, homography=8)."
+          },
+          {
+            "keyword": "point correspondences",
+            "weight": 20,
+            "description": "States number of point correspondences required to estimate each transformation (translation=1, rotation=2, similarity=2, affine=3, homography=4)."
+          },
+          {
+            "keyword": "clarity",
+            "weight": 10,
+            "description": "Neat matrix notation and correct use of homogeneous coordinates."
+          }
+        ],
+        "grading_notes": "Full credit for correct matrix representation and corresponding degrees of freedom. Partial credit for correct forms with minor omissions."
+      }
+    },
+    {
+      "id": "pkg31_essay2",
+      "prompt": "(b) A rectangle with corners A = (−1,1), B = (1,1), C = (1,−1), and D = (−1,−1) undergoes a transformation and the corners are observed at A′ = (1,3), B′ = (3,3), C′ = (−2,1), and D′ = (−6,1). The affine transformation does not perfectly explain the observations, but we assume the transformation is affine and noisy. Estimate the optimal affine transformation using the least squares method.",
+      "expected_keywords": [
+        "affine transformation",
+        "least squares estimation",
+        "homogeneous coordinates",
+        "overdetermined system",
+        "Ax=b",
+        "pseudoinverse",
+        "normal equations",
+        "noise",
+        "parameter estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "affine model setup",
+            "weight": 40,
+            "description": "Forms the affine transformation equations in homogeneous coordinates and constructs the system Ax=b."
+          },
+          {
+            "keyword": "least squares solution",
+            "weight": 40,
+            "description": "Uses least squares or pseudoinverse to estimate transformation parameters minimizing reprojection error."
+          },
+          {
+            "keyword": "interpretation",
+            "weight": 20,
+            "description": "Explains the impact of noise and justifies the use of least squares as optimal for Gaussian noise."
+          }
+        ],
+        "grading_notes": "Partial credit for correct system setup without derivation. Full credit requires explicit least-squares formulation or solution steps."
+      }
+    },
+    {
+      "id": "pkg31_essay3",
+      "prompt": "(c) An affine transformation is the most flexible transformation that is linear in both homogeneous and inhomogeneous coordinates. When represented by a matrix (in homogeneous coordinates), how many elements does the matrix have? How many degrees of freedom does an affine transformation have? How many 2D point matches are necessary to estimate it?",
+      "expected_keywords": [
+        "affine matrix",
+        "3x3 matrix",
+        "six degrees of freedom",
+        "2D point correspondences",
+        "minimum points",
+        "linear independence"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "matrix elements",
+            "weight": 40,
+            "description": "States that the affine matrix has 9 elements in homogeneous form, but one scale factor is redundant."
+          },
+          {
+            "keyword": "degrees of freedom",
+            "weight": 30,
+            "description": "Correctly identifies 6 degrees of freedom for 2D affine transformations."
+          },
+          {
+            "keyword": "point matches",
+            "weight": 30,
+            "description": "Explains that 3 non-collinear 2D point correspondences are needed to estimate the affine transformation."
+          }
+        ],
+        "grading_notes": "Partial credit for missing one of the three quantitative answers (elements, DoF, or points). Full credit for correct reasoning with supporting explanation."
+      }
+    },
+    {
+      "id": "pkg30_essay1",
+      "prompt": "Triangulation using 1D cameras. The projection function for a 1D camera is m ∝ P x, where m = [m, 1]^T (pixel in homogeneous coords), x = [x, y, 1]^T (2D world point in homogeneous coords) and P is a 2×3 projection matrix. (a) Given two cameras P1 and P2 and their measurements m1 and m2 of an unknown point x, derive the constraints on x in the form A x = b (A is 2×2, b is 2×1). Express A and b in terms of P1, P2 and the measurements. (b) Given P1 = [[1,2,0],[2,1,0]] and P2 = [[1,2,3],[4,2,0]] and measurements m1 = 1.25 and m2 = 1, triangulate the point x (solve for x and y). (c) A point is often observed in many images: is there an advantage to estimating the point’s position by considering all images simultaneously? Justify. (d) Many points are observed in an image: is there an advantage to estimating all points jointly instead of independently? Justify.",
+      "expected_keywords": [
+        "triangulation",
+        "homogeneous coordinates",
+        "projection matrix",
+        "linear constraint",
+        "Ax=b",
+        "overdetermined system",
+        "least squares",
+        "bundle adjustment",
+        "multi-view",
+        "robust estimation",
+        "joint estimation",
+        "covariance",
+        "optimal estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "derivation Ax=b",
+            "weight": 40,
+            "description": "Correct derivation of A and b from the rows of P1,P2 and measured m1,m2, producing a 2×2 linear system for (x,y)."
+          },
+          {
+            "keyword": "numerical triangulation",
+            "weight": 30,
+            "description": "Correct solution of the provided numeric example (substituting P1,P2,m1,m2 into derived system and solving for x,y)."
+          },
+          {
+            "keyword": "multi-view advantage",
+            "weight": 15,
+            "description": "Explains benefits of using many images simultaneously (reduces noise, overdetermined -> least-squares, improved accuracy, outlier handling)."
+          },
+          {
+            "keyword": "joint estimation of many points",
+            "weight": 15,
+            "description": "Explains advantages of joint estimation (bundle adjustment, enforces consistency, uses image/pose covariances) and notes computational trade-offs."
+          }
+        ],
+        "grading_notes": "Partial credit for correct setup with minor algebraic errors. For (b) accept exact numeric solution or equivalent least-squares result. Award extra credit for mentioning covariance, weighting, or robust methods (e.g., RANSAC) when discussing multi-view or joint estimation."
+      }
+    },
+    {
+      "id": "pkg29_essay1",
+      "prompt": "Describe an algorithm to segment the seashells from the image. How can morphological operations help to improve segmentation?",
+      "expected_keywords": [
+        "image segmentation",
+        "thresholding",
+        "background subtraction",
+        "binary mask",
+        "morphological operations",
+        "erosion",
+        "dilation",
+        "opening",
+        "closing",
+        "connected components",
+        "noise removal"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "segmentation algorithm",
+            "weight": 40,
+            "description": "Proposes an algorithm for segmenting non-overlapping shells on a contrasting background using thresholding or color separation."
+          },
+          {
+            "keyword": "morphological operations",
+            "weight": 40,
+            "description": "Explains how morphological filtering (erosion, dilation, opening, closing) improves segmentation quality and removes noise."
+          },
+          {
+            "keyword": "clarity and application",
+            "weight": 20,
+            "description": "Provides a clear, step-by-step explanation with reasoning for each operation."
+          }
+        ],
+        "grading_notes": "Partial credit for mentioning morphological operations without explaining their effect. Full credit for integrating them effectively into the segmentation pipeline."
+      }
+    },
+    {
+      "id": "pkg29_essay2",
+      "prompt": "It has been decided that only texture will be used to classify the seashells. You may use either filter banks, Local Binary Patterns (LBP), or co-occurrence matrices to extract texture properties. Given a segmented image, describe an algorithm to classify a seashell. Where do the concepts of feature vector, distance function, and classifier fit in your algorithm?",
+      "expected_keywords": [
+        "texture features",
+        "filter banks",
+        "Gabor filters",
+        "LBP",
+        "gray-level co-occurrence matrix",
+        "feature vector",
+        "distance function",
+        "Euclidean distance",
+        "classifier",
+        "training",
+        "k-nearest neighbour",
+        "support vector machine"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "texture extraction",
+            "weight": 30,
+            "description": "Describes texture feature extraction using one of the suggested methods and explains its relevance."
+          },
+          {
+            "keyword": "feature vector and distance",
+            "weight": 35,
+            "description": "Explains how texture features are formed into a feature vector and compared using a distance metric."
+          },
+          {
+            "keyword": "classifier integration",
+            "weight": 25,
+            "description": "Describes how a classifier (e.g., k-NN or SVM) uses these feature vectors for training and prediction."
+          },
+          {
+            "keyword": "clarity of process",
+            "weight": 10,
+            "description": "Logical structure and clear algorithmic flow from input to classification output."
+          }
+        ],
+        "grading_notes": "Full credit requires integration of all three concepts—feature extraction, distance measurement, and classification—in a coherent algorithmic pipeline."
+      }
+    },
+    {
+      "id": "pkg29_essay3",
+      "prompt": "The system should be extended to include shape features. What shape features could be useful for classifying the shells? How should one combine them with the texture features of the previous step? How should the algorithm be adapted to classify using both texture and shape?",
+      "expected_keywords": [
+        "shape features",
+        "contour descriptors",
+        "moments",
+        "Hu moments",
+        "aspect ratio",
+        "Fourier descriptors",
+        "texture-shape fusion",
+        "feature-level fusion",
+        "normalization",
+        "weighted combination",
+        "classifier adaptation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "shape descriptors",
+            "weight": 35,
+            "description": "Identifies relevant shape features and explains how they capture geometric differences between shells."
+          },
+          {
+            "keyword": "feature fusion",
+            "weight": 35,
+            "description": "Describes how to combine texture and shape features via concatenation, normalization, or weighting."
+          },
+          {
+            "keyword": "algorithm adaptation",
+            "weight": 20,
+            "description": "Proposes classifier or feature scaling modifications to integrate multimodal data."
+          },
+          {
+            "keyword": "explanation clarity",
+            "weight": 10,
+            "description": "Provides a well-organized, conceptually sound discussion of combining multiple feature types."
+          }
+        ],
+        "grading_notes": "Award partial credit for identifying correct shape features without discussing integration. Full credit for coherent fusion strategy and algorithmic justification."
+      }
+    },
+    {
+      "id": "pkg28_essay1",
+      "prompt": "Briefly explain the following terms: (a) Optical flow (b) SIFT (c) Histogram (d) K-nearest neighbour classification (e) HSV color space.",
+      "expected_keywords": [
+        "optical flow",
+        "motion estimation",
+        "SIFT",
+        "keypoints",
+        "histogram",
+        "feature distribution",
+        "k-nearest neighbour",
+        "classification",
+        "HSV color space",
+        "hue",
+        "saturation",
+        "value"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "optical flow",
+            "weight": 20,
+            "description": "Defines optical flow as apparent pixel motion between frames and explains its role in motion estimation."
+          },
+          {
+            "keyword": "SIFT",
+            "weight": 20,
+            "description": "Explains Scale-Invariant Feature Transform for keypoint detection and descriptor matching."
+          },
+          {
+            "keyword": "histogram",
+            "weight": 20,
+            "description": "Describes histograms as statistical distributions of intensity or color values in an image."
+          },
+          {
+            "keyword": "k-nearest neighbour",
+            "weight": 20,
+            "description": "Describes KNN as a distance-based classifier using feature similarity."
+          },
+          {
+            "keyword": "HSV color space",
+            "weight": 20,
+            "description": "Explains the components of hue, saturation, and value and their perceptual significance."
+          }
+        ],
+        "grading_notes": "Award partial credit for accurate but incomplete definitions. Full credit requires both definition and context of use in computer vision."
+      }
+    },
+    {
+      "id": "pkg28_essay2",
+      "prompt": "Describe the main principles of the following and give one example of their usage: (a) Hough transform (b) RANSAC (c) Mahalanobis distance.",
+      "expected_keywords": [
+        "Hough transform",
+        "parametric space",
+        "line detection",
+        "RANSAC",
+        "robust estimation",
+        "outliers",
+        "Mahalanobis distance",
+        "covariance",
+        "multivariate distance",
+        "feature matching"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "Hough transform",
+            "weight": 30,
+            "description": "Describes parameter space voting for detecting geometric shapes such as lines or circles."
+          },
+          {
+            "keyword": "RANSAC",
+            "weight": 35,
+            "description": "Explains Random Sample Consensus as a method for model estimation in the presence of outliers."
+          },
+          {
+            "keyword": "Mahalanobis distance",
+            "weight": 25,
+            "description": "Defines Mahalanobis distance as a covariance-scaled metric for multivariate data comparison."
+          },
+          {
+            "keyword": "examples and clarity",
+            "weight": 10,
+            "description": "Provides clear examples demonstrating real-world usage of each concept."
+          }
+        ],
+        "grading_notes": "Full credit requires a clear example for each method. Partial credit for correct principles without examples."
+      }
+    }
+  ],
+  "notes": "Merged automatically using Question Bank Generator"
+}

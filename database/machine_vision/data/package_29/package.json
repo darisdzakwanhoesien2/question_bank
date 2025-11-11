@@ -1,0 +1,137 @@
+{
+  "package_id": "pkg29",
+  "source": "Machine Vision Exam – May 2015",
+  "level": "advanced_undergraduate",
+  "mcqs": [],
+  "essay": [
+    {
+      "id": "pkg29_essay1",
+      "prompt": "Describe an algorithm to segment the seashells from the image. How can morphological operations help to improve segmentation?",
+      "expected_keywords": [
+        "image segmentation",
+        "thresholding",
+        "background subtraction",
+        "binary mask",
+        "morphological operations",
+        "erosion",
+        "dilation",
+        "opening",
+        "closing",
+        "connected components",
+        "noise removal"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "segmentation algorithm",
+            "weight": 40,
+            "description": "Proposes an algorithm for segmenting non-overlapping shells on a contrasting background using thresholding or color separation."
+          },
+          {
+            "keyword": "morphological operations",
+            "weight": 40,
+            "description": "Explains how morphological filtering (erosion, dilation, opening, closing) improves segmentation quality and removes noise."
+          },
+          {
+            "keyword": "clarity and application",
+            "weight": 20,
+            "description": "Provides a clear, step-by-step explanation with reasoning for each operation."
+          }
+        ],
+        "grading_notes": "Partial credit for mentioning morphological operations without explaining their effect. Full credit for integrating them effectively into the segmentation pipeline."
+      }
+    },
+    {
+      "id": "pkg29_essay2",
+      "prompt": "It has been decided that only texture will be used to classify the seashells. You may use either filter banks, Local Binary Patterns (LBP), or co-occurrence matrices to extract texture properties. Given a segmented image, describe an algorithm to classify a seashell. Where do the concepts of feature vector, distance function, and classifier fit in your algorithm?",
+      "expected_keywords": [
+        "texture features",
+        "filter banks",
+        "Gabor filters",
+        "LBP",
+        "gray-level co-occurrence matrix",
+        "feature vector",
+        "distance function",
+        "Euclidean distance",
+        "classifier",
+        "training",
+        "k-nearest neighbour",
+        "support vector machine"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "texture extraction",
+            "weight": 30,
+            "description": "Describes texture feature extraction using one of the suggested methods and explains its relevance."
+          },
+          {
+            "keyword": "feature vector and distance",
+            "weight": 35,
+            "description": "Explains how texture features are formed into a feature vector and compared using a distance metric."
+          },
+          {
+            "keyword": "classifier integration",
+            "weight": 25,
+            "description": "Describes how a classifier (e.g., k-NN or SVM) uses these feature vectors for training and prediction."
+          },
+          {
+            "keyword": "clarity of process",
+            "weight": 10,
+            "description": "Logical structure and clear algorithmic flow from input to classification output."
+          }
+        ],
+        "grading_notes": "Full credit requires integration of all three concepts—feature extraction, distance measurement, and classification—in a coherent algorithmic pipeline."
+      }
+    },
+    {
+      "id": "pkg29_essay3",
+      "prompt": "The system should be extended to include shape features. What shape features could be useful for classifying the shells? How should one combine them with the texture features of the previous step? How should the algorithm be adapted to classify using both texture and shape?",
+      "expected_keywords": [
+        "shape features",
+        "contour descriptors",
+        "moments",
+        "Hu moments",
+        "aspect ratio",
+        "Fourier descriptors",
+        "texture-shape fusion",
+        "feature-level fusion",
+        "normalization",
+        "weighted combination",
+        "classifier adaptation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "shape descriptors",
+            "weight": 35,
+            "description": "Identifies relevant shape features and explains how they capture geometric differences between shells."
+          },
+          {
+            "keyword": "feature fusion",
+            "weight": 35,
+            "description": "Describes how to combine texture and shape features via concatenation, normalization, or weighting."
+          },
+          {
+            "keyword": "algorithm adaptation",
+            "weight": 20,
+            "description": "Proposes classifier or feature scaling modifications to integrate multimodal data."
+          },
+          {
+            "keyword": "explanation clarity",
+            "weight": 10,
+            "description": "Provides a well-organized, conceptually sound discussion of combining multiple feature types."
+          }
+        ],
+        "grading_notes": "Award partial credit for identifying correct shape features without discussing integration. Full credit for coherent fusion strategy and algorithmic justification."
+      }
+    }
+  ],
+  "notes_for_integration": {
+    "formatting": "JSON-only structured output for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

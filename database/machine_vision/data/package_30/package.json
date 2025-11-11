@@ -1,0 +1,57 @@
+{
+"package_id": "pkg30",
+"source": "Machine Vision Exam – May 2015",
+"level": "advanced_undergraduate",
+"mcqs": [],
+"essay": [
+{
+"id": "pkg30_essay1",
+"prompt": "Triangulation using 1D cameras. The projection function for a 1D camera is m ∝ P x, where m = [m, 1]^T (pixel in homogeneous coords), x = [x, y, 1]^T (2D world point in homogeneous coords) and P is a 2×3 projection matrix. (a) Given two cameras P1 and P2 and their measurements m1 and m2 of an unknown point x, derive the constraints on x in the form A x = b (A is 2×2, b is 2×1). Express A and b in terms of P1, P2 and the measurements. (b) Given P1 = [[1,2,0],[2,1,0]] and P2 = [[1,2,3],[4,2,0]] and measurements m1 = 1.25 and m2 = 1, triangulate the point x (solve for x and y). (c) A point is often observed in many images: is there an advantage to estimating the point’s position by considering all images simultaneously? Justify. (d) Many points are observed in an image: is there an advantage to estimating all points jointly instead of independently? Justify.",
+"expected_keywords": [
+"triangulation",
+"homogeneous coordinates",
+"projection matrix",
+"linear constraint",
+"Ax=b",
+"overdetermined system",
+"least squares",
+"bundle adjustment",
+"multi-view",
+"robust estimation",
+"joint estimation",
+"covariance",
+"optimal estimation"
+],
+"rubric": {
+"total_points": 100,
+"criteria": [
+{
+"keyword": "derivation Ax=b",
+"weight": 40,
+"description": "Correct derivation of A and b from the rows of P1,P2 and measured m1,m2, producing a 2×2 linear system for (x,y)."
+},
+{
+"keyword": "numerical triangulation",
+"weight": 30,
+"description": "Correct solution of the provided numeric example (substituting P1,P2,m1,m2 into derived system and solving for x,y)."
+},
+{
+"keyword": "multi-view advantage",
+"weight": 15,
+"description": "Explains benefits of using many images simultaneously (reduces noise, overdetermined -> least-squares, improved accuracy, outlier handling)."
+},
+{
+"keyword": "joint estimation of many points",
+"weight": 15,
+"description": "Explains advantages of joint estimation (bundle adjustment, enforces consistency, uses image/pose covariances) and notes computational trade-offs."
+}
+],
+"grading_notes": "Partial credit for correct setup with minor algebraic errors. For (b) accept exact numeric solution or equivalent least-squares result. Award extra credit for mentioning covariance, weighting, or robust methods (e.g., RANSAC) when discussing multi-view or joint estimation."
+}
+}
+],
+"notes_for_integration": {
+"formatting": "JSON-only structured output for automated ingestion.",
+"contact": "Question Bank Generator"
+}
+}

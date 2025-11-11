@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List
-# from openai import OpenAI  # Uncomment this line once OpenAI is installed
+# from openai import OpenAI  # Uncomment when ready to use GPT generation
 
 # -------------------------------
 # CONFIGURATION
@@ -34,46 +34,14 @@ def load_prompt() -> str:
         return f.read()
 
 def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, level: str, subject: str) -> Dict:
-    """Simulated version of GPT generation (OpenAI commented out)."""
+    """Simulated version of GPT-based question generation."""
     import fitz  # PyMuPDF
     doc = fitz.open(pdf_path)
     text = ""
     for page in doc:
         text += page.get_text("text")
 
-    # -------------------------------
-    # OpenAI generation (disabled)
-    # -------------------------------
-    # system_prompt = load_prompt()
-    # user_prompt = f"""
-    # Input: {source}
-    # Package number: {package_id}
-    # Subject: {subject}
-    # Level: {level}
-    # PDF Content:
-    # {text[:10000]}
-    # """
-    #
-    # with st.spinner("Generating question package via GPT... ⏳"):
-    #     response = client.chat.completions.create(
-    #         model="gpt-4",
-    #         messages=[
-    #             {"role": "system", "content": system_prompt},
-    #             {"role": "user", "content": user_prompt}
-    #         ],
-    #         temperature=0.4
-    #     )
-    #
-    # raw_output = response.choices[0].message.content.strip()
-    # try:
-    #     data = json.loads(raw_output)
-    # except Exception:
-    #     st.error("❌ Invalid JSON format returned from the model.")
-    #     return {}
-
-    # -------------------------------
-    # Fallback placeholder generation
-    # -------------------------------
+    # Placeholder simulation (GPT disabled)
     st.warning("⚠️ GPT generation is currently disabled. Using a sample placeholder instead.")
     return {
         "package_id": package_id,
@@ -95,20 +63,22 @@ def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, lev
                 "slide_refs": [1, 2]
             }
         ],
-        "essay": {
-            "id": f"{package_id}_essay1",
-            "prompt": f"Write an essay discussing key ideas of {subject}.",
-            "expected_keywords": ["example", "placeholder", "essay"],
-            "rubric": {
-                "total_points": 100,
-                "criteria": [
-                    {"keyword": "example", "weight": 40, "description": "Mentions example concept"},
-                    {"keyword": "placeholder", "weight": 40, "description": "Mentions placeholder concept"},
-                    {"keyword": "essay", "weight": 20, "description": "Mentions essay structure"}
-                ],
-                "grading_notes": "This is a placeholder rubric until OpenAI is re-enabled."
+        "essay": [
+            {
+                "id": f"{package_id}_essay1",
+                "prompt": f"Write an essay discussing key ideas of {subject}.",
+                "expected_keywords": ["example", "placeholder", "essay"],
+                "rubric": {
+                    "total_points": 100,
+                    "criteria": [
+                        {"keyword": "example", "weight": 40, "description": "Mentions example concept"},
+                        {"keyword": "placeholder", "weight": 40, "description": "Mentions placeholder concept"},
+                        {"keyword": "essay", "weight": 20, "description": "Mentions essay structure"}
+                    ],
+                    "grading_notes": "This is a placeholder rubric until OpenAI is re-enabled."
+                }
             }
-        }
+        ]
     }
 
 def save_json(data: Dict, subject: str, package_id: str):
@@ -124,7 +94,7 @@ def load_packages(subject: str) -> List[str]:
     subject_dir = DB_DIR / subject
     if not subject_dir.exists():
         return []
-    return [pkg for pkg in os.listdir(subject_dir) if pkg.startswith("package_")]
+    return [pkg for pkg in os.listdir(subject_dir) if not pkg.startswith('.')]
 
 def grade_mcq(mcq_data, user_answers):
     """Compute MCQ score."""
@@ -156,10 +126,9 @@ mode = st.sidebar.radio("Select Mode", ["🏗️ Generate Question Bank", "🧩 
 if mode == "🏗️ Generate Question Bank":
     st.header("📄 Generate Question Bank from PDF")
 
-    subject = st.text_input("Subject name (e.g., data_mining_ethics):")
+    subject = st.text_input("Subject name (e.g., machine_vision):")
     level = st.selectbox("Select difficulty level:", ["introductory", "undergraduate", "advanced_undergraduate", "graduate"])
-    package_id = st.text_input("Package ID (e.g., package_1):")
-
+    package_id = st.text_input("Package ID (e.g., pkg26):")
     pdf_file = st.file_uploader("Upload PDF file", type=["pdf"])
 
     if pdf_file and subject and package_id:
@@ -191,9 +160,11 @@ elif mode == "🧩 Take Test":
     else:
         subject = st.selectbox("Select subject:", subjects)
         packages = load_packages(subject)
+
         if packages:
             package_id = st.selectbox("Select package:", packages)
             package_file = DB_DIR / subject / package_id / "package.json"
+
             if package_file.exists():
                 with open(package_file, "r", encoding="utf-8") as f:
                     package = json.load(f)
@@ -202,47 +173,81 @@ elif mode == "🧩 Take Test":
                 st.markdown(f"**Level:** {package['level']}")
 
                 # --- MCQ Section ---
-                st.markdown("### Multiple Choice Questions")
-                user_mcq_answers = {}
-                for q in package["mcqs"]:
-                    st.markdown(f"**{q['question']}**")
-                    options_formatted = [f"{key}. {value}" for key, value in q["options"].items()]
-                    selected = st.radio("Choose answer:", options_formatted, key=q["id"])
-                    user_mcq_answers[q["id"]] = selected.split(".")[0].strip()
+                if package["mcqs"]:
+                    st.markdown("### Multiple Choice Questions")
+                    user_mcq_answers = {}
+                    for q in package["mcqs"]:
+                        with st.expander(f"Q: {q['question']}"):
+                            options_formatted = [f"{key}. {value}" for key, value in q["options"].items()]
+                            selected = st.radio("Choose answer:", options_formatted, key=q["id"])
+                            user_mcq_answers[q["id"]] = selected.split(".")[0].strip()
+                else:
+                    st.info("No MCQs available in this package.")
 
                 # --- Essay Section ---
-                st.markdown("### Essay Question")
-                essay = package["essay"]
-                st.write(essay["prompt"])
-                user_essay = st.text_area("Your essay response:", height=250)
+                st.markdown("### Essay Question(s)")
+                essays = package.get("essay", [])
+
+                # Handle single essay object case
+                if isinstance(essays, dict):
+                    essays = [essays]
+
+                user_essay_answers = {}
+
+                for idx, essay in enumerate(essays, start=1):
+                    with st.expander(f"Essay {idx}: {essay['id']}"):
+                        st.write(essay["prompt"])
+                        response_key = f"essay_response_{idx}"
+                        user_essay_answers[essay["id"]] = st.text_area(
+                            f"Your response for Essay {idx}:",
+                            key=response_key,
+                            height=250
+                        )
 
                 if st.button("Submit Answers"):
-                    mcq_correct, mcq_total = grade_mcq(package["mcqs"], user_mcq_answers)
-                    essay_score, essay_total, matched = grade_essay(essay, user_essay)
-                    total_score = (mcq_correct / mcq_total) * 50 + (essay_score / essay_total) * 50
+                    # --- Grade MCQs ---
+                    mcq_correct, mcq_total = grade_mcq(package.get("mcqs", []), user_mcq_answers)
+
+                    # --- Grade Essays ---
+                    total_essay_score = 0
+                    total_possible = 0
+                    all_matched = []
+
+                    for essay in essays:
+                        user_text = user_essay_answers.get(essay["id"], "")
+                        essay_score, essay_total, matched = grade_essay(essay, user_text)
+                        total_essay_score += essay_score
+                        total_possible += essay_total
+                        all_matched.extend(matched)
+                        st.info(f"Essay {essay['id']}: {essay_score}/{essay_total} ({', '.join(matched) if matched else 'No matches'})")
+
+                    # Normalize essay score
+                    essay_percent = (total_essay_score / total_possible) if total_possible else 0
+                    total_score = ((mcq_correct / mcq_total) * 50 + essay_percent * 50) if mcq_total else essay_percent * 100
 
                     st.success(f"MCQ: {mcq_correct}/{mcq_total}")
-                    st.success(f"Essay: {essay_score}/{essay_total}")
-                    st.info(f"Matched Keywords: {', '.join(matched) if matched else 'None'}")
+                    st.success(f"Essay Total: {total_essay_score}/{total_possible}")
                     st.metric("Final Score", f"{total_score:.1f} / 100")
 
-                    # Save results
+                    # --- Save Results ---
                     result_data = {
                         "timestamp": datetime.now().isoformat(),
                         "subject": subject,
                         "package_id": package_id,
                         "mcq_score": mcq_correct,
                         "mcq_total": mcq_total,
-                        "essay_score": essay_score,
-                        "essay_total": essay_total,
+                        "essay_score": total_essay_score,
+                        "essay_total": total_possible,
                         "final_score": total_score,
-                        "matched_keywords": matched,
+                        "matched_keywords": all_matched,
                         "user_answers": user_mcq_answers,
-                        "user_essay": user_essay
+                        "user_essay_answers": user_essay_answers
                     }
                     out_file = RESULTS_DIR / f"{subject}_{package_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
                     with open(out_file, "w", encoding="utf-8") as f:
                         json.dump(result_data, f, indent=2)
                     st.success(f"✅ Results saved to {out_file}")
+            else:
+                st.error("❌ Selected package file not found.")
         else:
             st.warning("⚠️ No packages found for this subject.")

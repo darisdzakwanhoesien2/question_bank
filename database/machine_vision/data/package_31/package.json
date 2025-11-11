@@ -1,0 +1,122 @@
+{
+  "package_id": "pkg31",
+  "source": "Machine Vision Exam – May 2015",
+  "level": "advanced_undergraduate",
+  "mcqs": [],
+  "essay": [
+    {
+      "id": "pkg31_essay1",
+      "prompt": "(a) Using homogeneous coordinates, write the matrix form of the following 2D transformations: pure translation, pure rotation, similarity (translation + rotation + scale), affine, and homography. How many degrees of freedom does each transformation have? How many 2D point correspondences are needed to estimate each?",
+      "expected_keywords": [
+        "homogeneous coordinates",
+        "translation matrix",
+        "rotation matrix",
+        "similarity transformation",
+        "affine transformation",
+        "homography",
+        "degrees of freedom",
+        "point correspondences",
+        "linear equations"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "matrix forms",
+            "weight": 40,
+            "description": "Correctly writes each transformation in homogeneous matrix form (3x3 for 2D transformations)."
+          },
+          {
+            "keyword": "degrees of freedom",
+            "weight": 30,
+            "description": "Identifies degrees of freedom for each transformation (translation=2, rotation=1, similarity=4, affine=6, homography=8)."
+          },
+          {
+            "keyword": "point correspondences",
+            "weight": 20,
+            "description": "States number of point correspondences required to estimate each transformation (translation=1, rotation=2, similarity=2, affine=3, homography=4)."
+          },
+          {
+            "keyword": "clarity",
+            "weight": 10,
+            "description": "Neat matrix notation and correct use of homogeneous coordinates."
+          }
+        ],
+        "grading_notes": "Full credit for correct matrix representation and corresponding degrees of freedom. Partial credit for correct forms with minor omissions."
+      }
+    },
+    {
+      "id": "pkg31_essay2",
+      "prompt": "(b) A rectangle with corners A = (−1,1), B = (1,1), C = (1,−1), and D = (−1,−1) undergoes a transformation and the corners are observed at A′ = (1,3), B′ = (3,3), C′ = (−2,1), and D′ = (−6,1). The affine transformation does not perfectly explain the observations, but we assume the transformation is affine and noisy. Estimate the optimal affine transformation using the least squares method.",
+      "expected_keywords": [
+        "affine transformation",
+        "least squares estimation",
+        "homogeneous coordinates",
+        "overdetermined system",
+        "Ax=b",
+        "pseudoinverse",
+        "normal equations",
+        "noise",
+        "parameter estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "affine model setup",
+            "weight": 40,
+            "description": "Forms the affine transformation equations in homogeneous coordinates and constructs the system Ax=b."
+          },
+          {
+            "keyword": "least squares solution",
+            "weight": 40,
+            "description": "Uses least squares or pseudoinverse to estimate transformation parameters minimizing reprojection error."
+          },
+          {
+            "keyword": "interpretation",
+            "weight": 20,
+            "description": "Explains the impact of noise and justifies the use of least squares as optimal for Gaussian noise."
+          }
+        ],
+        "grading_notes": "Partial credit for correct system setup without derivation. Full credit requires explicit least-squares formulation or solution steps."
+      }
+    },
+    {
+      "id": "pkg31_essay3",
+      "prompt": "(c) An affine transformation is the most flexible transformation that is linear in both homogeneous and inhomogeneous coordinates. When represented by a matrix (in homogeneous coordinates), how many elements does the matrix have? How many degrees of freedom does an affine transformation have? How many 2D point matches are necessary to estimate it?",
+      "expected_keywords": [
+        "affine matrix",
+        "3x3 matrix",
+        "six degrees of freedom",
+        "2D point correspondences",
+        "minimum points",
+        "linear independence"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "matrix elements",
+            "weight": 40,
+            "description": "States that the affine matrix has 9 elements in homogeneous form, but one scale factor is redundant."
+          },
+          {
+            "keyword": "degrees of freedom",
+            "weight": 30,
+            "description": "Correctly identifies 6 degrees of freedom for 2D affine transformations."
+          },
+          {
+            "keyword": "point matches",
+            "weight": 30,
+            "description": "Explains that 3 non-collinear 2D point correspondences are needed to estimate the affine transformation."
+          }
+        ],
+        "grading_notes": "Partial credit for missing one of the three quantitative answers (elements, DoF, or points). Full credit for correct reasoning with supporting explanation."
+      }
+    }
+  ],
+  "notes_for_integration": {
+    "formatting": "JSON-only structured output for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}
