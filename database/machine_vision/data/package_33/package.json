@@ -1,0 +1,197 @@
+{
+  "package_id": "pkg33",
+  "source": "Machine Vision Exam – Compilation of Mixed Topics (2014–2020)",
+  "level": "advanced_undergraduate",
+  "mcqs": [],
+  "essay": [
+    {
+      "id": "pkg33_essay1",
+      "prompt": "Briefly explain the following terms: (a) Radial distortion (b) RGB color space (c) Image histogram (d) Feature descriptor (e) The aperture problem (f) Structure-from-motion (g) Time-of-flight camera (h) Metamers (i) Connected component labeling (j) Local descriptor (k) Motion parallax (l) Epipolar line (m) Diffuse reflection (n) Confusion matrix (o) Unsupervised learning.",
+      "expected_keywords": [
+        "radial distortion",
+        "lens distortion",
+        "RGB color model",
+        "histogram",
+        "feature descriptor",
+        "SIFT",
+        "aperture problem",
+        "structure-from-motion",
+        "time-of-flight camera",
+        "metamers",
+        "connected components",
+        "local descriptor",
+        "motion parallax",
+        "epipolar line",
+        "diffuse reflection",
+        "confusion matrix",
+        "unsupervised learning"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "definitions", "weight": 60, "description": "Provides correct and concise definitions for each concept listed." },
+          { "keyword": "examples", "weight": 25, "description": "Includes relevant examples or applications for at least half the terms." },
+          { "keyword": "clarity", "weight": 15, "description": "Uses clear and precise language in explanations." }
+        ],
+        "grading_notes": "Full credit requires accurate explanations for all terms; partial credit for correct subset."
+      }
+    },
+    {
+      "id": "pkg33_essay2",
+      "prompt": "Describe the main principles of the following and give one example of their usage: (a) K-means clustering (b) Bag of words for object recognition or image classification (c) Harris corner detector (d) Photometric stereo (e) The epipolar constraint (f) Optical flow.",
+      "expected_keywords": [
+        "K-means clustering",
+        "unsupervised learning",
+        "centroid update",
+        "bag of visual words",
+        "feature quantization",
+        "Harris corner",
+        "gradient covariance",
+        "photometric stereo",
+        "surface normals",
+        "epipolar constraint",
+        "stereo correspondence",
+        "optical flow",
+        "motion estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "principles", "weight": 50, "description": "Explains the core mathematical or algorithmic principles of each method." },
+          { "keyword": "examples", "weight": 30, "description": "Provides a practical computer vision application for each method." },
+          { "keyword": "connections", "weight": 20, "description": "Identifies relationships or differences between methods (e.g., clustering vs. matching)." }
+        ],
+        "grading_notes": "Award partial credit for correct definitions without examples. Full credit requires understanding of usage and context."
+      }
+    },
+    {
+      "id": "pkg33_essay3",
+      "prompt": "Stereo vision: (a) Derive equations for the 3D coordinates of a point p observed with coordinates (x_l, y) in the left camera and disparity d = x_l − x_r, assuming cameras separated by baseline b and focal length f. (b) Compute z_p for d = 1 cm, b = 6 cm, and f = 1 cm. (c) Explain how determining disparity is similar to and different from finding matches for optical flow.",
+      "expected_keywords": [
+        "stereo vision",
+        "triangulation",
+        "disparity",
+        "depth estimation",
+        "z = f*b/d",
+        "baseline",
+        "epipolar geometry",
+        "optical flow",
+        "correspondence problem",
+        "matching"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "triangulation derivation", "weight": 40, "description": "Correctly derives depth (z = f*b/d) and corresponding x,y expressions." },
+          { "keyword": "numerical computation", "weight": 25, "description": "Accurately computes z_p = 6 cm using given parameters." },
+          { "keyword": "conceptual comparison", "weight": 35, "description": "Explains the analogy and distinction between disparity estimation and optical flow matching." }
+        ],
+        "grading_notes": "Partial credit for correctly deriving z without computing numerically. Full credit for both math and conceptual clarity."
+      }
+    },
+    {
+      "id": "pkg33_essay4",
+      "prompt": "Texture analysis: (a) Explain the basic principle of the Local Binary Pattern (LBP) operator and describe a method for automatic texture recognition based on LBP features. (b) Given feature vectors v = [r, g, b, t1, t2, t3] containing color and texture components, explain how to compare two feature vectors when color and texture have different units or scales.",
+      "expected_keywords": [
+        "LBP",
+        "local binary pattern",
+        "thresholding",
+        "histogram of patterns",
+        "texture classification",
+        "feature vector",
+        "color-texture fusion",
+        "normalization",
+        "distance metric",
+        "feature scaling"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "LBP explanation", "weight": 40, "description": "Describes how LBP encodes local texture based on binary thresholding around neighbors." },
+          { "keyword": "texture recognition", "weight": 30, "description": "Outlines LBP histogram computation and classifier use for texture classification." },
+          { "keyword": "feature comparison", "weight": 30, "description": "Explains normalization or weighted distance methods for combining color and texture features." }
+        ],
+        "grading_notes": "Partial credit for LBP explanation alone. Full credit for integration of texture and color features."
+      }
+    },
+    {
+      "id": "pkg33_essay5",
+      "prompt": "Texture classification from grayscale image patches: (a) Classify the unknown sample using Roberts gradient masks, mean filter responses, and Euclidean distance to the nearest known class. (b) Describe a Local Binary Pattern (LBP)-based procedure for the same problem and explain any challenges related to the given image patches.",
+      "expected_keywords": [
+        "Roberts gradient",
+        "filter response",
+        "mean feature vector",
+        "Euclidean distance",
+        "texture classification",
+        "LBP",
+        "rotation invariance",
+        "histogram comparison",
+        "small patch size",
+        "border effects"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "Roberts classification", "weight": 45, "description": "Explains how to compute gradient responses, feature means, and class similarity." },
+          { "keyword": "LBP procedure", "weight": 35, "description": "Describes LBP encoding, histogram creation, and comparison approach." },
+          { "keyword": "limitations", "weight": 20, "description": "Identifies issues like limited patch size, border effects, or lack of rotation invariance." }
+        ],
+        "grading_notes": "Full credit for clear explanation of both methods and limitations."
+      }
+    },
+    {
+      "id": "pkg33_essay6",
+      "prompt": "2D transformations: (a) Using homogeneous coordinates, write the matrix form of pure translation, rotation, similarity (RST), affine, and homography transformations. State the minimum number of 2D point correspondences needed to estimate each. (b) A rectangle with corners A = (−1,1), B = (1,1), C = (1,−1), D = (−1,−1) undergoes a similarity transformation (RST) and is observed at A′ = (1,0), B′ = (1,4), C′ = (5,4), D′ = (5,0). Determine the transformation parameters. (c) Assume the points undergo a general affine transformation with random noise. Describe a detailed procedure for estimating the parameters using least squares.",
+      "expected_keywords": [
+        "homogeneous coordinates",
+        "translation matrix",
+        "rotation matrix",
+        "similarity transform",
+        "affine transform",
+        "homography",
+        "least squares",
+        "overdetermined system",
+        "point correspondences",
+        "parameter estimation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "matrix forms", "weight": 35, "description": "Writes correct 3x3 homogeneous matrices for each transformation type." },
+          { "keyword": "RST estimation", "weight": 30, "description": "Computes translation, rotation, and scale parameters for given rectangle." },
+          { "keyword": "affine least squares", "weight": 35, "description": "Describes setup of Ax=b and least-squares estimation for noisy data." }
+        ],
+        "grading_notes": "Partial credit for listing transformations without matrix form. Full credit for derivations and estimation method."
+      }
+    },
+    {
+      "id": "pkg33_essay7",
+      "prompt": "Nonlinear 2D transformation: A rectangle is deformed such that x′ = ax + by and y′ = c x² + dy. (a) Determine the number of degrees of freedom and required point correspondences. (b) Derive the equations to estimate transformation parameters from point correspondences, showing that it can be expressed linearly as Ax = b. (c) Given measured points p and p′ (no noise), recover parameters a, b, c, d. Explain how the approach would differ if noise were present in the measurements.",
+      "expected_keywords": [
+        "nonlinear transformation",
+        "quadratic term",
+        "degrees of freedom",
+        "point correspondences",
+        "linear system",
+        "Ax=b",
+        "least squares",
+        "pseudoinverse",
+        "robust estimation",
+        "noise"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          { "keyword": "DOF and correspondences", "weight": 25, "description": "Identifies four parameters (a,b,c,d) and two point correspondences required." },
+          { "keyword": "equation derivation", "weight": 45, "description": "Derives linear equations relating measurements and parameters." },
+          { "keyword": "noise handling", "weight": 30, "description": "Explains how least squares or robust estimation handles noisy data." }
+        ],
+        "grading_notes": "Partial credit for correct DOF or partial derivation. Full credit for both derivation and noise discussion."
+      }
+    }
+  ],
+  "notes_for_integration": {
+    "formatting": "JSON-only structured output for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

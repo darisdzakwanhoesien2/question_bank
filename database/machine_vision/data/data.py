@@ -41,6 +41,5 @@ def merge_exam_packages(input_folder, output_file):
     print(f"Merged {len(merged_data['packages'])} packages into {output_file}")
     print(f"Total essays: {len(merged_data['essay'])}")
     print(f"Total MCQs: {len(merged_data['mcqs'])}")
-    
 # ✅ Run this
 merge_exam_packages(".", "merged_machine_vision_exams.json")

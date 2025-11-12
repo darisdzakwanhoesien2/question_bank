@@ -34,35 +34,20 @@ def load_prompt() -> str:
         return f.read()
 
 def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, level: str, subject: str) -> Dict:
-    """Simulated version of GPT-based question generation."""
+    """Simulated version of GPT-based question generation (placeholder)."""
     import fitz  # PyMuPDF
     doc = fitz.open(pdf_path)
     text = ""
     for page in doc:
         text += page.get_text("text")
 
-    # Placeholder simulation (GPT disabled)
+    # Placeholder generation (OpenAI disabled)
     st.warning("⚠️ GPT generation is currently disabled. Using a sample placeholder instead.")
     return {
         "package_id": package_id,
         "source": source,
         "level": level,
-        "mcqs": [
-            {
-                "id": f"{package_id}_mcq1",
-                "question": f"Example MCQ question for {subject}.",
-                "options": {
-                    "A": "Example Option A",
-                    "B": "Example Option B",
-                    "C": "Example Option C",
-                    "D": "Example Option D"
-                },
-                "correct_option": "A",
-                "difficulty": "easy",
-                "learning_objective": "Understand example placeholder question",
-                "slide_refs": [1, 2]
-            }
-        ],
+        "mcqs": [],
         "essay": [
             {
                 "id": f"{package_id}_essay1",
@@ -76,6 +61,20 @@ def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, lev
                         {"keyword": "essay", "weight": 20, "description": "Mentions essay structure"}
                     ],
                     "grading_notes": "This is a placeholder rubric until OpenAI is re-enabled."
+                }
+            },
+            {
+                "id": f"{package_id}_essay2",
+                "prompt": f"Explain the importance of theoretical understanding in {subject}.",
+                "expected_keywords": ["theory", "understanding", "concept"],
+                "rubric": {
+                    "total_points": 100,
+                    "criteria": [
+                        {"keyword": "theory", "weight": 40, "description": "Mentions theoretical aspects"},
+                        {"keyword": "understanding", "weight": 30, "description": "Shows comprehension"},
+                        {"keyword": "concept", "weight": 30, "description": "Explains key concepts"}
+                    ],
+                    "grading_notes": "Placeholder rubric for essay 2."
                 }
             }
         ]
@@ -173,27 +172,25 @@ elif mode == "🧩 Take Test":
                 st.markdown(f"**Level:** {package['level']}")
 
                 # --- MCQ Section ---
-                if package["mcqs"]:
+                user_mcq_answers = {}
+                mcqs = package.get("mcqs", [])
+                if mcqs:
                     st.markdown("### Multiple Choice Questions")
-                    user_mcq_answers = {}
-                    for q in package["mcqs"]:
+                    for q in mcqs:
                         with st.expander(f"Q: {q['question']}"):
                             options_formatted = [f"{key}. {value}" for key, value in q["options"].items()]
                             selected = st.radio("Choose answer:", options_formatted, key=q["id"])
                             user_mcq_answers[q["id"]] = selected.split(".")[0].strip()
                 else:
-                    st.info("No MCQs available in this package.")
+                    st.info("📘 This package contains only essay questions (no MCQs).")
 
                 # --- Essay Section ---
                 st.markdown("### Essay Question(s)")
                 essays = package.get("essay", [])
-
-                # Handle single essay object case
                 if isinstance(essays, dict):
                     essays = [essays]
 
                 user_essay_answers = {}
-
                 for idx, essay in enumerate(essays, start=1):
                     with st.expander(f"Essay {idx}: {essay['id']}"):
                         st.write(essay["prompt"])
@@ -204,9 +201,13 @@ elif mode == "🧩 Take Test":
                             height=250
                         )
 
+                # --- Submit and Grade ---
                 if st.button("Submit Answers"):
                     # --- Grade MCQs ---
-                    mcq_correct, mcq_total = grade_mcq(package.get("mcqs", []), user_mcq_answers)
+                    if mcqs:
+                        mcq_correct, mcq_total = grade_mcq(mcqs, user_mcq_answers)
+                    else:
+                        mcq_correct, mcq_total = 0, 0
 
                     # --- Grade Essays ---
                     total_essay_score = 0
@@ -221,10 +222,15 @@ elif mode == "🧩 Take Test":
                         all_matched.extend(matched)
                         st.info(f"Essay {essay['id']}: {essay_score}/{essay_total} ({', '.join(matched) if matched else 'No matches'})")
 
-                    # Normalize essay score
-                    essay_percent = (total_essay_score / total_possible) if total_possible else 0
-                    total_score = ((mcq_correct / mcq_total) * 50 + essay_percent * 50) if mcq_total else essay_percent * 100
+                    # --- Compute Total Score ---
+                    essay_percent = total_essay_score / total_possible if total_possible else 0
+                    if mcq_total > 0:
+                        mcq_percent = mcq_correct / mcq_total
+                        total_score = (mcq_percent * 50) + (essay_percent * 50)
+                    else:
+                        total_score = essay_percent * 100
 
+                    # --- Display Results ---
                     st.success(f"MCQ: {mcq_correct}/{mcq_total}")
                     st.success(f"Essay Total: {total_essay_score}/{total_possible}")
                     st.metric("Final Score", f"{total_score:.1f} / 100")
@@ -247,6 +253,7 @@ elif mode == "🧩 Take Test":
                     with open(out_file, "w", encoding="utf-8") as f:
                         json.dump(result_data, f, indent=2)
                     st.success(f"✅ Results saved to {out_file}")
+
             else:
                 st.error("❌ Selected package file not found.")
         else:

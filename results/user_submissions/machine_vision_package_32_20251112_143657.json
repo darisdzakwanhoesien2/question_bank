@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-11-12T14:36:57.376281",
+  "subject": "machine_vision",
+  "package_id": "package_32",
+  "mcq_score": 0,
+  "mcq_total": 0,
+  "essay_score": 0,
+  "essay_total": 1800,
+  "final_score": 0.0,
+  "matched_keywords": [],
+  "user_answers": {},
+  "user_essay_answers": {
+    "pkg31_essay1": "",
+    "pkg31_essay2": "",
+    "pkg31_essay3": "",
+    "pkg30_essay1": "",
+    "pkg29_essay1": "",
+    "pkg29_essay2": "",
+    "pkg29_essay3": "",
+    "pkg28_essay1": "",
+    "pkg28_essay2": ""
+  }
+}
