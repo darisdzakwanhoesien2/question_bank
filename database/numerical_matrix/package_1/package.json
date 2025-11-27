@@ -1,0 +1,77 @@
+{
+  "package_id": "ACM_2024_Midterms",
+  "source": "Historical_Exam_Questions",
+  "level": "Advanced_Undergraduate",
+  "mcqs": [
+    {
+      "id": "Q1_SVD_RANK1",
+      "question": "If matrix $A = \\begin{bmatrix} 2 & 2 \\\\ -1 & 1 \\end{bmatrix}$ has singular values $\\sigma_1 = 2\\sqrt{2}$ and $\\sigma_2 = \\sqrt{2}$, and its right singular vector corresponding to $\\sigma_1$ is $v_1 = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}$, which statement is true about the best rank-1 approximation of A?",
+      "options": {
+        "A": "The rank-1 approximation is proportional to $v_2 v_2^*$.",
+        "B": "The best rank-1 approximation is given by $\\sigma_2 u_2 v_2^*$.",
+        "C": "The approximation uses the largest singular value, $\\sigma_1$.",
+        "D": "The approximation minimizes the Frobenius norm of the residual, which is zero.",
+        "Correct_Option": "C"
+      },
+      "correct_option": "C",
+      "difficulty": "Medium",
+      "learning_objective": "Identify the key components used in the construction of the best rank-k approximation of a matrix using SVD.",
+      "slide_refs": "1st_mid_term_2017 Q1, 1st_mid_term_2018 Q1, 1st_mid_term_2022 Q1"
+    },
+    {
+      "id": "Q2_LU_LFACTOR",
+      "question": "In the partially pivoted LU factorization $PA = LU$, the matrix $L$ (Lower triangular) is formed by the inverse of the product of permuted Gauss transforms. What is the fundamental property of the elements of $L$ when partial pivoting is used?",
+      "options": {
+        "A": "All diagonal elements of $L$ must be zero.",
+        "B": "All off-diagonal elements of $L$ have absolute values greater than 1.",
+        "C": "The maximum absolute value of any element in $L$ is exactly $n$.",
+        "D": "All elements of $L$ on or below the diagonal have absolute values less than or equal to 1."
+      },
+      "correct_option": "D",
+      "difficulty": "Easy",
+      "learning_objective": "Recall the properties of the L factor resulting from Gaussian elimination with partial pivoting.",
+      "slide_refs": "Problem Set 3, Problem 15 (Implicit context derived from LU problems)"
+    },
+    {
+      "id": "Q3_POWER_METHOD",
+      "question": "Why is the Power Method expected to converge toward the largest eigenvalue $\\lambda_1$ of a diagonalizable matrix $A$?",
+      "options": {
+        "A": "It relies on the Schur decomposition, which isolates the smallest eigenvalue.",
+        "B": "Convergence is guaranteed only if $A$ is Hermitian and positive definite.",
+        "C": "Convergence depends on $\\lambda_1$ being strictly larger in absolute value than any other eigenvalue.",
+        "D": "The method is equivalent to the Arnoldi iteration at step $j=1$ and therefore always converges quickly."
+      },
+      "correct_option": "C",
+      "difficulty": "Medium",
+      "learning_objective": "Explain the necessary condition (dominating eigenvalue) for the convergence of the Power Method.",
+      "slide_refs": "2nd_midterm_2018 Q2, 2nd_midterm_2019 Q2, 2nd_midterm_2021 Q3"
+    }
+  ],
+  "essay": {
+    "id": "E1_SYLVESTER_SCHUR",
+    "prompt": "The Sylvester equation is given by $AX - XB = C$. Assume $A$ and $B$ are $n \\times n$ matrices. Carefully explain the steps required to solve this equation efficiently by utilizing the Schur decomposition of $A$ and $B$. State the resulting simplified system and explain how the solution $X$ is recovered.",
+    "expected_keywords": [
+      "Schur decomposition",
+      "Triangular matrix",
+      "Unitary matrix",
+      "Back-substitution",
+      "Column-wise order",
+      "Similarity transformation"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        "Correctly define the Schur decompositions $A = Q_1 T Q_1^*$ and $B = Q_2 S Q_2^*$ (or similar forms, using triangular matrices). (20 points)",
+        "Perform the substitution into $AX - XB = C$ to obtain the modified system $TY - YS = D$. (20 points)",
+        "Correctly define the transformed matrices $Y = Q_1^* X Q_2$ and $D = Q_1^* C Q_2$. (20 points)",
+        "Explain that the elements of $Y$ can be solved sequentially (e.g., column-wise) due to the triangular structure of $T$ and $S$. (20 points)",
+        "Correctly state the final recovery step $X = Q_1 Y Q_2^*$. (20 points)"
+      ],
+      "grading_notes": "Points should be docked if the student attempts to use diagonalization without explicitly addressing why the Schur form is preferred for general matrices, although the use of diagonalization was also presented as a method in the sources."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

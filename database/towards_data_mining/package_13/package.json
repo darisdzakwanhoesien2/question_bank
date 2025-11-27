@@ -1,0 +1,111 @@
+{
+  "package_id": "pkg29",
+  "source": "521156S_lopputentti_09122019.pdf",
+  "level": "advanced_undergraduate",
+  "essay": {
+    "id": "pkg29_essay1",
+    "prompt": "Answer **all five** questions below. Each question is worth **6 points** (total 30 points). Use concepts directly from the 2019 'Towards Data Mining' exam. Answers must be clear, technically accurate, and concise.\n\n**1. Term Definitions (6 × 1p = 6p)**\nDefine each term briefly in the context of data mining and machine learning:\n   a. Artificial data\n   b. Randomized controlled trial (RCT)\n   c. Data management\n   d. Validation set\n   e. Data normalization\n   f. Predictive model\n\n**2. Relational Databases & SQL (2p + 4 × 1p = 6p)**\nUsing the **Old McDonald’s Farm** database below:\n\n   **Caretaker**\n   | caretakerId | firstName | lastName | age |\n   |-------------|-----------|----------|-----|\n   | 1           | Amos      | McDonald | 79  |\n   | 2           | Betty     | McDonald | 76  |\n\n   **Animal**\n   | animalId | caretakerId | type    | headCount | pricePerHead |\n   |----------|-------------|---------|-----------|--------------|\n   | 1        | 1           | cow     | 40        | 1000         |\n   | 2        | 1           | pig     | 60        | 400          |\n   | 3        | 2           | sheep   | 30        | 550          |\n   | 4        | 2           | chicken | 500       | 10           |\n\n   a. Explain **data modeling** and give **two examples** of why relational databases are used to create a data model when designing a database (2p).\n   b. For each SQL query, write the **exact result** and **intent** (1p each):\n      i.   `SELECT firstName, lastName FROM Caretaker ORDER BY age DESC;`\n      ii.  `SELECT * FROM Animal WHERE pricePerHead BETWEEN 300 AND 600;`\n      iii. `SELECT animalKind FROM Animal A INNER JOIN Caretaker C ON A.caretakerId = C.caretakerId WHERE firstName = 'Betty';`\n      iv.  `SELECT MIN(pricePerHead) FROM Animal WHERE headCount < 50;`\n\n**3. Missing Data Analysis (2p + 2p + 2p = 6p)**\nUsing **Table 1** (dataset with missing values):\n\n   | Row | Height | Weight | Gender |\n   |-----|--------|--------|--------|\n   | 1   | 175 cm | –      | Male   |\n   | 2   | 158 cm | 60 kg  | Female |\n   | 3   | 169 cm | 83 kg  | –      |\n   | 4   | –      | 65 kg  | Female |\n   | 5   | 172 cm | –      | –      |\n   | 6   | 160 cm | 63 kg  | Male   |\n   | 7   | –      | 73 kg  | Male   |\n   | 8   | 161 cm | –      | Female |\n\n   a. Explain **listwise deletion** (complete case analysis) and **pairwise deletion** (available case analysis). When is each used? (2p)\n   b. Using data from Table 1, list the rows used for the following analyses using **both** listwise and pairwise deletion. You do **not** need to calculate the analysis results (2p):\n      i.   Average height of female subjects\n      ii.  Average weight of all subjects\n   c. Explain the idea of **multiple imputation (MI)** briefly. What is the **main advantage** of MI over other imputation methods? (2p)\n\n**4. Data Collection & Ethics (3p + 3p = 6p)**\n   a. Describe the **ethical aspects and risks** needed to account for when collecting data from humans (3p).\n   b. You have collected data from 300 persons: 25 of them have cancer and 275 do not. Therefore, your data set is **imbalanced**. Explain **one sampling method** that can be used to balance the data set (3p).\n\n**5. Data Pre-processing (2p + 4p = 6p)**\n   a. Explain the **steps of the knowledge discovery process** (2p).\n   b. What are the **types of data reduction**? Describe with examples. Why is data reduction needed? (4p)",
+    "expected_keywords": [
+      "artificial data",
+      "RCT",
+      "data management",
+      "validation set",
+      "data normalization",
+      "predictive model",
+      "data modeling",
+      "SQL execution",
+      "listwise deletion",
+      "pairwise deletion",
+      "multiple imputation",
+      "ethical data collection",
+      "imbalanced sampling",
+      "knowledge discovery",
+      "data reduction"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "artificial data",
+          "weight": 6,
+          "description": "Synthetically generated data for testing"
+        },
+        {
+          "keyword": "RCT",
+          "weight": 6,
+          "description": "Random assignment to treatment/control"
+        },
+        {
+          "keyword": "data management",
+          "weight": 6,
+          "description": "Storage, retrieval, maintenance, security"
+        },
+        {
+          "keyword": "validation set",
+          "weight": 6,
+          "description": "Used for tuning and preventing overfitting"
+        },
+        {
+          "keyword": "data normalization",
+          "weight": 6,
+          "description": "Scaling features to same range"
+        },
+        {
+          "keyword": "predictive model",
+          "weight": 6,
+          "description": "Predicts output from input features"
+        },
+        {
+          "keyword": "data modeling",
+          "weight": 8,
+          "description": "Logical structure + 2 reasons for relational DBs"
+        },
+        {
+          "keyword": "SQL execution",
+          "weight": 12,
+          "description": "All 4 queries: correct output + intent"
+        },
+        {
+          "keyword": "listwise deletion",
+          "weight": 6,
+          "description": "Remove rows with any missing value"
+        },
+        {
+          "keyword": "pairwise deletion",
+          "weight": 6,
+          "description": "Use available pairs for each statistic"
+        },
+        {
+          "keyword": "multiple imputation",
+          "weight": 8,
+          "description": "MI idea + main advantage (uncertainty)"
+        },
+        {
+          "keyword": "ethical data collection",
+          "weight": 8,
+          "description": "Consent, anonymity, risk of harm, etc."
+        },
+        {
+          "keyword": "imbalanced sampling",
+          "weight": 8,
+          "description": "Oversampling minority or undersampling majority"
+        },
+        {
+          "keyword": "knowledge discovery",
+          "weight": 6,
+          "description": "Steps: selection, preprocessing, transformation, mining, evaluation"
+        },
+        {
+          "keyword": "data reduction",
+          "weight": 8,
+          "description": "Dimensionality, numerosity, compression + examples + need"
+        }
+      ],
+      "grading_notes": "Each question = 6 points. Partial credit for partial correctness. Require exact SQL outputs, correct row lists for deletion, and precise technical terms. Total scaled to 100 for rubric alignment."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

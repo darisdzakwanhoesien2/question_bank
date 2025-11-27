@@ -1,6 +1,8 @@
 https://chatgpt.com/c/69121bc5-b4cc-832d-b2a5-c1522b656433
 https://chatgpt.com/g/g-6912cc3039d48191bd184701da3ba844-question-bank-generator/c/6912cd36-3c88-8328-81b6-a923aa2d02d5
 Grok works for non-vision tasks: https://grok.com/c/6cad1efa-f963-4132-b4fc-62419c1c3cf8
+Towards Data Mining Question Generative: https://grok.com/c/e2b5edfe-60d0-4d97-aee8-27dfdc6e4f2f 
+
 
 test_question_bank_app/
 │

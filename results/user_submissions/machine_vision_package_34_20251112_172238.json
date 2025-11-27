@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-11-12T17:22:38.225746",
+  "subject": "machine_vision",
+  "package_id": "package_34",
+  "mcq_score": 0,
+  "mcq_total": 0,
+  "essay_score": 0,
+  "essay_total": 500,
+  "final_score": 0.0,
+  "matched_keywords": [],
+  "user_answers": {},
+  "user_essay_answers": {
+    "pkg33_essay1": "1. Epipolar Constraint: geometric relationship stating that a point in one image must lie on a specific line (the epipolar line) in the other image when both views observe the same 3D point. Derived from camera projection matrices and the essential matrix, simplifies stereo correspondence search.\n2. Decision tree\n3. HSV Colour space, which represents colour representations in terms of hue, saturation, and value, better aligns with human colour perception, which is used in segmentation and tracking tasks because hue can be more stable under illumination variations.\n4. Radial distortion:  A lens distortion where straight lines appear curved due to nonlinear magnification that varies with distance from the image center. Description: Commonly corrected during camera calibration using polynomial or division models to improve geometric accuracy\n5. SIFT descriptor: A feature detection and description algorithm that identifies keypoints and computes descriptors invariant to scale, rotation, and partial illumination changes. SIFT builds a scale-space using Difference-of-Gaussians, detects local extrema, and forms gradient-based descriptors robust to geometric and photometric transformations.",
+    "pkg33_essay2": "",
+    "pkg33_essay3": "",
+    "pkg33_essay4": "",
+    "pkg33_essay5": ""
+  }
+}

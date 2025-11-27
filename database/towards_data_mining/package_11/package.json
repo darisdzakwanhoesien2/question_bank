@@ -1,0 +1,87 @@
+{
+  "package_id": "pkg27",
+  "source": "521156S_lopputentti_09122019.pdf",
+  "level": "advanced_undergraduate",
+  "essay": {
+    "id": "pkg27_essay1",
+    "prompt": "Answer **all five** questions below. Each is worth **6 points** (total 30 points). Provide clear, concise, and technically accurate answers using concepts from the exam.\n\n**1. Term Definitions (6 × 1p = 6p)**\nDefine each term briefly in the context of data mining and machine learning:\n   a. Artificial data\n   b. Randomized controlled trial (RCT)\n   c. Data management\n   d. Validation set\n   e. Data normalization\n   f. Predictive model\n\n**2. Relational Databases & SQL (6p)**\nUsing the **Old McDonald’s Farm** database:\n\n   **Caretaker**\n   | caretakerId | firstName | lastName | age |\n   |-------------|-----------|----------|-----|\n   | 1           | Amos      | McDonald | 79  |\n   | 2           | Betty     | McDonald | 76  |\n\n   **Animal**\n   | animalId | caretakerId | type    | headCount | pricePerHead |\n   |----------|-------------|---------|-----------|--------------|\n   | 1        | 1           | cow     | 40        | 1000         |\n   | 2        | 1           | pig     | 60        | 400          |\n   | 3        | 2           | sheep   | 30        | 550          |\n   | 4        | 2           | chicken | 500       | 10           |\n\n   a. Explain **data modeling** and why we use relational databases (2p).\n   b. For each SQL query, write the **exact result** and **intent** (1p each):\n      i.   `SELECT firstName, lastName FROM Caretaker ORDER BY age DESC;`\n      ii.  `SELECT * FROM Animal WHERE pricePerHead BETWEEN 300 AND 600;`\n      iii. `SELECT animalKind FROM Animal A INNER JOIN Caretaker C ON A.caretakerId = C.caretakerId WHERE firstName = 'Betty';`\n      iv.  `SELECT MIN(pricePerHead) FROM Animal WHERE headCount < 50;`\n\n**3. Missing Value Imputation (6p)**\nChoose **three** methods from: mean, regression, stochastic regression, multiple imputation.\n   a. For each, write the **mathematical form** of how the imputed value is generated (1p each).\n   b. Explain **one advantage** and **one disadvantage** of each (1p each).\n\n**4. Data Collection & Bias (6p)**\n   a. Explain **three ways** data collection can go wrong (e.g., selection bias, non-response) (3p).\n   b. You collected data from 300 people: 25 have cancer, 275 do not. Your dataset is **imbalanced**. Suggest **one sampling method** to balance it and justify (3p).\n\n**5. Data Normalization (6p)**\n   a. Why is **data normalization needed** before training predictive models? (2p)\n   b. Describe **min-max** and **z-score** normalization using the formulas below (1p each):\n      \\[ v' = \\frac{v - v_{\\min}}{v_{\\max} - v_{\\min}} \\quad ; \\quad v' = \\frac{v - \\mu}{\\sigma} \\]\n   c. Explain how each affects: **mean**, **variance**, **extreme values**, and **distribution shape** (2p).",
+    "expected_keywords": [
+      "artificial data",
+      "RCT",
+      "data management",
+      "validation set",
+      "data normalization",
+      "predictive model",
+      "data modeling",
+      "SQL result",
+      "imputation formula",
+      "imbalance sampling",
+      "normalization effect"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "artificial data",
+          "weight": 6,
+          "description": "Synthetically generated for testing or augmentation"
+        },
+        {
+          "keyword": "RCT",
+          "weight": 6,
+          "description": "Random assignment to treatment/control groups"
+        },
+        {
+          "keyword": "data management",
+          "weight": 6,
+          "description": "Storage, retrieval, integrity, security"
+        },
+        {
+          "keyword": "validation set",
+          "weight": 6,
+          "description": "Used for hyperparameter tuning and overfitting prevention"
+        },
+        {
+          "keyword": "data normalization",
+          "weight": 6,
+          "description": "Scaling features to comparable ranges"
+        },
+        {
+          "keyword": "predictive model",
+          "weight": 6,
+          "description": "Maps inputs to predicted outputs"
+        },
+        {
+          "keyword": "data modeling",
+          "weight": 10,
+          "description": "Logical structure of entities and relationships"
+        },
+        {
+          "keyword": "SQL result",
+          "weight": 20,
+          "description": "All 4 queries: correct output + intent"
+        },
+        {
+          "keyword": "imputation formula",
+          "weight": 15,
+          "description": "3 methods with correct mathematical form"
+        },
+        {
+          "keyword": "imbalance sampling",
+          "weight": 10,
+          "description": "Oversampling minority or undersampling majority"
+        },
+        {
+          "keyword": "normalization effect",
+          "weight": 15,
+          "description": "Impact on mean, var, outliers, shape"
+        }
+      ],
+      "grading_notes": "Each question = 6 points. Partial credit for partial correctness. Require exact SQL outputs and mathematical notation. Bonus synthesis not required."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

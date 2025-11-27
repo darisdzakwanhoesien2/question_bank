@@ -1,0 +1,300 @@
+{
+  "package_id": "pkg33",
+  "source": "Machine Vision Exams Compilation (2014-2020) - Essay Questions",
+  "merged_source": "Machine Vision Exams Compilation (2014–2020)",
+  "level": "advanced_undergraduate",
+  "packages": [
+    "pkg32",
+    "pkg31",
+    "pkg30",
+    "pkg29",
+    "pkg28"
+  ],
+  "mcqs": [],
+  "essay": [
+    {
+      "id": "pkg33_essay1",
+      "prompt": "Machine Vision, exam 6.5.2019\n\n1. Briefly explain the following terms (6 p):\n   (a) The epipolar constraint\n   (b) Decision tree\n   (c) HSV color space\n   (d) Radial distortion\n   (e) SIFT descriptor\n   (f) Diffuse reflection\n\n2. Describe the main principles of the following and give one example of their usage (2 p each):\n   (a) Background subtraction\n   (b) Random sample consensus (RANSAC)\n   (c) Structure from motion\n   (d) Local binary patterns (LBP)\n\n3. Stereo\n   Figure 1 presents a stereo system with two parallel pinhole cameras separated by a baseline b, so that the centers of the cameras are c₁ = (0, 0, 0) and c₂ = (b, 0, 0). Both cameras have the same focal length f. If a point is observed with coordinates (x₁, y) in the left camera and a disparity d, where d = x₁ − x₂, write the equations to determine the 3D coordinates of the point p.\n   (a) (2 p)\n   (b) Assume that d = 2 cm, b = 6 cm and f = 1 cm. Compute z_p. (1 p)\n   (c) To determine the disparity, the same point must be located in both images. How is this process similar to finding the necessary matches for optical flow? How is it different? (1 p)",
+      "expected_keywords": [
+        "epipolar constraint",
+        "decision tree",
+        "HSV color space",
+        "radial distortion",
+        "SIFT descriptor",
+        "diffuse reflection",
+        "background subtraction",
+        "RANSAC",
+        "structure from motion",
+        "local binary patterns",
+        "stereo vision",
+        "baseline",
+        "disparity",
+        "triangulation",
+        "similar triangles",
+        "correspondence problem",
+        "optical flow"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "term definitions",
+            "weight": 40,
+            "description": "Accurate and concise definitions for all six terms (1 point each in original exam, scaled proportionally)."
+          },
+          {
+            "keyword": "method principles + examples",
+            "weight": 30,
+            "description": "Clear explanation of principles and one relevant example for each of background subtraction, RANSAC, SfM, and LBP (2 points each in original, scaled)."
+          },
+          {
+            "keyword": "stereo triangulation derivation",
+            "weight": 15,
+            "description": "Correct derivation of 3D coordinates using similar triangles or projection equations."
+          },
+          {
+            "keyword": "numerical computation",
+            "weight": 10,
+            "description": "Correct computation of z_p given d=2 cm, b=6 cm, f=1 cm."
+          },
+          {
+            "keyword": "correspondence comparison",
+            "weight": 5,
+            "description": "Insightful comparison between stereo matching and optical flow correspondence."
+          }
+        ],
+        "grading_notes": "Award partial credit for correct principles without examples. Full credit requires both depth in definition and application context. For stereo part, accept equivalent formulations using projection matrices."
+      }
+    },
+    {
+      "id": "pkg33_essay2",
+      "prompt": "Machine Vision, exam 25.05.2016\n\n1. Briefly explain the following terms (6 p):\n   (a) Interest point\n   (b) Radial distortion\n   (c) HSV color space\n   (d) The aperture problem\n   (e) Confusion matrix\n   (f) Unsupervised learning\n\n2. Describe the main principles of the following methods and give one example of their usage (2 p each):\n   (a) Convolutional neural network (for image classification)\n   (b) Harris corner detector\n\n3. Classification\n   (a) Describe the components of a system that uses the LBP transform to classify the texture of an image. (3 p)\n   (b) A distance function must be selected when comparing feature vectors for classification purposes. If the choice is between an Euclidean distance and a Mahalanobis distance, when is one better than the other? What are the advantages of using the Mahalanobis distance over using the Euclidean? What are the disadvantages? (2 p)\n\n4. Transformations\n   (a) A rectangle with corners A = (−1,1), B = (1,1), C = (1,−1), and D = (−1,−1) undergoes an affine transform and the corners are observed at A′ = (1,2), B′ = (3,2), C′ = (−1,0), and D′ = (−3,0) respectively. Calculate the affine transformation. Hint: use the least squares method. (2 p)\n   (b) A homography has more degrees of freedom than an affine transformation and is therefore more expressive and flexible. In fact, a homography can represent all possible affine transformations. Is there a reason then to use an affine model instead of a homography? When should algorithms use one over the other? (2 p)",
+      "expected_keywords": [
+        "interest point",
+        "radial distortion",
+        "HSV color space",
+        "aperture problem",
+        "confusion matrix",
+        "unsupervised learning",
+        "convolutional neural network",
+        "CNN",
+        "Harris corner detector",
+        "LBP",
+        "texture classification",
+        "Mahalanobis distance",
+        "Euclidean distance",
+        "covariance",
+        "affine transformation",
+        "least squares",
+        "homography",
+        "degrees of freedom",
+        "model selection"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "term definitions",
+            "weight": 35,
+            "description": "Clear and accurate definitions for all six terms."
+          },
+          {
+            "keyword": "CNN & Harris principles",
+            "weight": 20,
+            "description": "Correct explanation of core mechanisms and one practical use case for each."
+          },
+          {
+            "keyword": "LBP classification system",
+            "weight": 15,
+            "description": "Detailed description of LBP pipeline: extraction, histogram, comparison, classification."
+          },
+          {
+            "keyword": "distance metric comparison",
+            "weight": 15,
+            "description": "Thorough comparison of Euclidean vs Mahalanobis, including advantages (covariance awareness) and disadvantages (computational cost, need for covariance estimate)."
+          },
+          {
+            "keyword": "affine estimation",
+            "weight": 10,
+            "description": "Correct setup and solution of least-squares system for affine parameters."
+          },
+          {
+            "keyword": "affine vs homography",
+            "weight": 5,
+            "description": "Reasoned discussion on when to prefer affine (e.g., planar parallelism, fewer parameters, stability)."
+          }
+        ],
+        "grading_notes": "Partial credit for correct system setup in affine estimation without full solution. Full credit requires insight into trade-offs in model selection."
+      }
+    },
+    {
+      "id": "pkg33_essay3",
+      "prompt": "Machine Vision, exam 9.3.2020\n\n1. Briefly explain the following terms (6 p):\n   (a) Depth of field\n   (b) HSV color space\n   (c) Diffuse reflection\n   (d) Confusion matrix\n   (e) Local descriptor\n   (f) Perspective-3-point (P3P) problem\n\n2. Describe the main principles of the following and give one example of their usage (2 p each):\n   (a) Image segmentation\n   (b) Optical flow\n   (c) Structure from motion\n\n3. Stereo imaging\n   Two pinhole cameras observe a 3D point P = (X, Y, Z)^T from two different viewpoints. The camera projection matrices are\n   C = [[1,0,0,0], [0,1,0,0], [0,0,1,0]]   C' = [[1,0,0,1], [0,0,-1,1], [0,1,0,1]]\n   The coordinates of the 2D point in the first and second image are p = (−½, ½)^T and p' = (0, −½)^T, respectively.\n   (a) Compute the 3D coordinates X, Y and Z. (Hint: Form a linear system of equations using the projection matrices and homogeneous coordinates. You can find the solution by hand.) (3 p)\n   (b) The essential matrix between the views is E = [[0,1,1], [1,-1,0], [-1,0,-1]]. Find the epipolar line in the second image that corresponds to the point p in the first image. Show that the point p' lies on that epipolar line. (2 p)\n   (c) How the epipolar constraint can be utilized in stereo imaging. (1 p)",
+      "expected_keywords": [
+        "depth of field",
+        "HSV color space",
+        "diffuse reflection",
+        "confusion matrix",
+        "local descriptor",
+        "P3P problem",
+        "image segmentation",
+        "optical flow",
+        "structure from motion",
+        "triangulation",
+        "projection matrix",
+        "essential matrix",
+        "epipolar line",
+        "epipolar constraint",
+        "stereo correspondence"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "term definitions",
+            "weight": 35,
+            "description": "Accurate definitions covering key aspects of all six terms."
+          },
+          {
+            "keyword": "method principles",
+            "weight": 20,
+            "description": "Clear principles and one practical example for segmentation, optical flow, and SfM."
+          },
+          {
+            "keyword": "triangulation solution",
+            "weight": 20,
+            "description": "Correct linear system setup and solution for 3D point from two views."
+          },
+          {
+            "keyword": "epipolar geometry",
+            "weight": 15,
+            "description": "Correct computation of epipolar line using E · p = 0 and verification that p' lies on it."
+          },
+          {
+            "keyword": "epipolar utilization",
+            "weight": 10,
+            "description": "Explanation of how epipolar constraint reduces search space in stereo matching."
+          }
+        ],
+        "grading_notes": "Accept alternative triangulation methods if mathematically sound. Full credit for epipolar line requires correct use of essential matrix."
+      }
+    },
+    {
+      "id": "pkg33_essay4",
+      "prompt": "Machine Vision, exam May 2015\n\n1. Briefly explain the following terms (6 p):\n   (a) Optical flow\n   (b) SIFT\n   (c) Histogram\n   (d) K-nearest neighbour classification\n   (e) HSV color space\n\n2. Describe the main principles of the following and give one example of their usage (2 p each):\n   (a) Hough transform\n   (b) RANSAC\n   (c) Mahalanobis distance\n\n3. Classification\n   Consider a seashell classification system. The input images contain several seashells arranged on a black background (see Fig. 1). The shells don't overlap and have a clear contrast with the known background color. The system should segment the seashells and assign a class label according to their type. The classes of seashells are known beforehand and the system can be trained with many images of known labels.\n   (a) Describe an algorithm to segment the seashells from the image. How can morphological operations help to improve segmentation? (2 p)\n   (b) It has been decided that only texture will be used to classify the seashells. You may use either filter banks, LBP, or co-occurrence matrices to extract the texture properties of an area. Given a segmented image, describe an algorithm to classify a seashell. Where do the concepts of feature vector, distance function, and classifier fit in your algorithm? (2 p)\n   (c) The system should be extended to include shape features. What shape features could be useful for classifying the shells of Fig. 1? How should one combine them with the texture features of the previous step? How should the algorithm be adapted to classify using texture and shape? (2 p)",
+      "expected_keywords": [
+        "optical flow",
+        "SIFT",
+        "histogram",
+        "k-nearest neighbour",
+        "HSV color space",
+        "Hough transform",
+        "RANSAC",
+        "Mahalanobis distance",
+        "segmentation",
+        "thresholding",
+        "morphological operations",
+        "erosion",
+        "dilation",
+        "texture classification",
+        "LBP",
+        "filter banks",
+        "co-occurrence matrix",
+        "feature vector",
+        "distance function",
+        "classifier",
+        "shape features",
+        "moments",
+        "contour",
+        "feature fusion"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "term definitions",
+            "weight": 30,
+            "description": "Clear and correct definitions for all five terms."
+          },
+          {
+            "keyword": "method principles + examples",
+            "weight": 25,
+            "description": "Accurate principles and one relevant example for Hough, RANSAC, and Mahalanobis."
+          },
+          {
+            "keyword": "segmentation algorithm",
+            "weight": 15,
+            "description": "Effective thresholding-based segmentation with justification for morphological post-processing."
+          },
+          {
+            "keyword": "texture classification pipeline",
+            "weight": 15,
+            "description": "Complete pipeline: texture extraction → feature vector → distance → classifier."
+          },
+          {
+            "keyword": "shape integration",
+            "weight": 15,
+            "description": "Suitable shape descriptors and coherent fusion strategy with texture features."
+          }
+        ],
+        "grading_notes": "Full credit requires end-to-end reasoning from input image to final classification label. Partial credit for strong individual components."
+      }
+    },
+    {
+      "id": "pkg33_essay5",
+      "prompt": "Machine Vision, exam 4.11.2019\n\n1. Briefly explain the following terms (6 p):\n   (a) Confusion matrix\n   (b) HSV color space\n   (c) Pinhole model\n   (d) Feature descriptor\n   (e) Chromatic aberration\n   (f) Structure-from-motion\n\n2. Describe the main principles of the following and give one example of their usage (2 p each):\n   (a) Optical flow\n   (b) Otsu’s method\n   (c) K-means clustering\n\n3. Texture\n   Let us consider the following three grayscale image patches. The first two represent texture classes 1 and 2. The third one belongs to an unknown class.\n   Class 1: [[4,1,1],[5,1,1],[3,4,5]]   Class 2: [[1,3,2],[0,2,2],[0,5,4]]   Unknown: [[5,2,5],[2,2,6],[6,4,4]]\n   (a) Classify the unknown sample to either of the classes based on the following approach:\n      1. Calculate filter responses using the Roberts gradient masks: [[0,1],[-1,0]] and [[1,0],[0,-1]]. No padding is needed (use only valid pixels).\n      2. Create feature vectors using the mean values of the filter responses.\n      3. Use Euclidean distance as a similarity measure to find the closest sample. (3 p)\n   (b) Describe in detail a procedure based on LBP for solving this texture classification problem. You don’t need to calculate the actual result. What problem is related to the given image patches? (3 p)",
+      "expected_keywords": [
+        "confusion matrix",
+        "HSV color space",
+        "pinhole model",
+        "feature descriptor",
+        "chromatic aberration",
+        "structure from motion",
+        "optical flow",
+        "Otsu thresholding",
+        "k-means clustering",
+        "Roberts cross",
+        "gradient magnitude",
+        "mean feature vector",
+        "Euclidean distance",
+        "LBP",
+        "local binary patterns",
+        "texture classification",
+        "border effect",
+        "small patch size"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "term definitions",
+            "weight": 30,
+            "description": "Accurate and concise explanations for all six terms."
+          },
+          {
+            "keyword": "method principles",
+            "weight": 20,
+            "description": "Clear principles and one example for optical flow, Otsu, and k-means."
+          },
+          {
+            "keyword": "Roberts filter classification",
+            "weight": 25,
+            "description": "Correct application of Roberts masks, mean feature computation, and Euclidean distance classification."
+          },
+          {
+            "keyword": "LBP procedure",
+            "weight": 20,
+            "description": "Detailed LBP-based classification pipeline and identification of small patch/border issues."
+          },
+          {
+            "keyword": "clarity and correctness",
+            "weight": 5,
+            "description": "Well-structured response with proper use of notation and reasoning."
+          }
+        ],
+        "grading_notes": "Partial credit for correct filter responses without classification. Full credit in LBP part requires recognition of limitations with small patches."
+      }
+    }
+  ],
+  "notes": "Merged and deduplicated from Machine Vision exam images (6.5.2019, 25.05.2016, 9.3.2020, May 2015, 4.11.2019). Structured into essay format with rubrics and expected keywords."
+}

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-11-12T16:33:38.124482",
+  "subject": "machine_vision",
+  "package_id": "package_32",
+  "mcq_score": 0,
+  "mcq_total": 0,
+  "essay_score": 210,
+  "essay_total": 1800,
+  "final_score": 11.666666666666666,
+  "matched_keywords": [
+    "optical flow",
+    "SIFT",
+    "Hough transform",
+    "RANSAC",
+    "optical flow",
+    "SIFT",
+    "Hough transform",
+    "RANSAC"
+  ],
+  "user_answers": {},
+  "user_essay_answers": {
+    "pkg31_essay1": "",
+    "pkg31_essay2": "",
+    "pkg31_essay3": "",
+    "pkg30_essay1": "",
+    "pkg29_essay1": "",
+    "pkg29_essay2": "Filter banks methods apply a set of linear filters (e.g., Gabor, wavelet) tuned to different frequencies and orientations to decompose texture into frequency-scale components. They model texture in the frequency domain, capturing multi-scale and multi-orientation patterns inspired by human visual cortex.\n\nLocal Binary Patterns (LBP) is a texture descriptor that encodes the local spatial pattern of pixel intensities into binary codes based on neighbor comparisons. This provides a rotation- and grayscale-invariant way to represent texture; it\u2019s lightweight and robust, making it popular for real-time classification.",
+    "pkg29_essay3": "",
+    "pkg28_essay1": "Optical flow is the dense 2D vector field representing the apparent motion of brightness patterns between two consecutive image frames, assigning a displacement vector to each pixel, It models local image changes under the brightness constancy assumption and is used to estimate scene motion, segment moving objects, and support higher-level video analysis.\n\nSIFT talks about feature detection and description algorithm that identifies keypoints and computes descriptors invariant to scale, rotation, and partial illumination changes, builds a scale-space using Difference-of-Gaussians, detects local extrema, and forms gradient-based descriptors robust to geometric and photometric transformations.\n\nK-means is an unsupervised learning algorithm that partitions data into K clusters by minimising within-cluster variance, to group similar pixels, features, or image patches, serving as a basis for segmentation and visual vocabulary creation.\n\nHSV Colour Space is color representation model that describe colors in terms of  hue, saturation, and value, which better aligns with human color perception, that are used in segmentation and tracking tasks because hue can be more stable under illumination variations.",
+    "pkg28_essay2": "Hough transform feature extraction technique used to detect parametric shapes such as lines, circles, or ellipses in images, which maps image edge points into a parameter space where shapes correspond to peaks, enabling robust detection despite noise or occlusion\n\nRandom Sample Consensus (RANSAC) is an iterative algorithm to estimate model parameters from data containing outliers (which makes it robust to outliers) by repeatedly sampling minimal subsets and testing consensus ommonly used in fitting geometric models such as lines, planes, or homographies.\n\n"
+  }
+}

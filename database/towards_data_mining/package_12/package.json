@@ -1,0 +1,81 @@
+{
+  "package_id": "pkg28",
+  "source": "Lopputentti 2017.pdf",
+  "level": "advanced_undergraduate",
+  "essay": {
+    "id": "pkg28_essay1",
+    "prompt": "Answer **all five** questions below. Each question is worth **6 points** (total 30 points). Use concepts directly from the 2017 'Towards Data Mining' exam. Answers must be clear, technically accurate, and concise.\n\n**1. Term Definitions (6 × 1p = 6p)**\nDefine each term briefly in the context of data mining and machine learning:\n   a. Predictive model\n   b. Data pollution\n   c. Numerosity reduction\n   d. Accuracy paradox\n   e. Validation set\n   f. Missing not at random (MNAR) missingness mechanism\n\n**2. Information Privacy in Data Mining (3 × 2p = 6p)**\n   a. Explain the concept of *information privacy* and how it differs from classical privacy (2p).\n   b. How is data mining a potential threat to information privacy? Give one example (2p).\n   c. Name **two** strategies to protect information privacy during data mining and briefly explain how each works (2p).\n\n**3. Data Collection Strategy (2p + 4p = 6p)**\nYou want to collect data from 100 persons about shopping habits.\n   a. How should you choose the persons to ensure the model generalizes to the entire population? (2p)\n   b. Design a complete **data collection plan** including: sampling method, sample size justification, and at least two bias mitigation techniques (4p).\n\n**4. Ensuring Model Generalizability (3 × 2p = 6p)**\nHow would you divide a dataset into training and testing sets to ensure model generalizability in the following scenarios?\n   a. The dataset is small.\n   b. Some variables are time-dependent.\n   c. The data comes from multiple individuals.\n\n**5. Data Quality Characteristics (6p)**\nList and explain **all** characteristics that define *data quality*. For each characteristic, provide **one concrete example** of how its absence can harm a predictive model.",
+    "expected_keywords": [
+      "predictive model",
+      "data pollution",
+      "numerosity reduction",
+      "accuracy paradox",
+      "validation set",
+      "MNAR",
+      "information privacy",
+      "data collection plan",
+      "generalization split",
+      "data quality"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "predictive model",
+          "weight": 10,
+          "description": "Maps input features to predicted output"
+        },
+        {
+          "keyword": "data pollution",
+          "weight": 10,
+          "description": "Irrelevant, incorrect, or noisy data"
+        },
+        {
+          "keyword": "numerosity reduction",
+          "weight": 10,
+          "description": "Reducing data volume while preserving info (e.g., sampling)"
+        },
+        {
+          "keyword": "accuracy paradox",
+          "weight": 10,
+          "description": "High accuracy from imbalanced classes, not true performance"
+        },
+        {
+          "keyword": "validation set",
+          "weight": 10,
+          "description": "Used for hyperparameter tuning and overfitting detection"
+        },
+        {
+          "keyword": "MNAR",
+          "weight": 10,
+          "description": "Missingness depends on the missing value itself"
+        },
+        {
+          "keyword": "information privacy",
+          "weight": 15,
+          "description": "Protection against inference of sensitive info from public data"
+        },
+        {
+          "keyword": "data collection plan",
+          "weight": 15,
+          "description": "Sampling method, n=100 justification, bias controls"
+        },
+        {
+          "keyword": "generalization split",
+          "weight": 10,
+          "description": "k-fold CV (small), time-based, leave-one-subject-out"
+        },
+        {
+          "keyword": "data quality",
+          "weight": 10,
+          "description": "Accuracy, completeness, consistency, timeliness, relevance + examples"
+        }
+      ],
+      "grading_notes": "Each main question = 6 points. Partial credit for partial correctness. Require precise definitions, practical examples, and clear reasoning. Total scaled to 100 for rubric alignment."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "package_id": "pkg25",
+  "source": "2019-11-07 Lopputentti.pdf",
+  "level": "advanced_undergraduate",
+  "mcqs": [
+    {
+      "id": "pkg25_mcq1",
+      "question": "Artificial data refers to:",
+      "options": {
+        "A": "Data generated synthetically for testing",
+        "B": "Real-world collected observations",
+        "C": "Noisy sensor measurements",
+        "D": "Labeled training examples"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Artificial data.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq2",
+      "question": "A randomized controlled trial (RCT) is:",
+      "options": {
+        "A": "An experiment with random assignment to groups",
+        "B": "A data mining algorithm",
+        "C": "A type of database schema",
+        "D": "A normalization technique"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "RCT definition.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq3",
+      "question": "Data management involves:",
+      "options": {
+        "A": "Storage, retrieval, and maintenance of data",
+        "B": "Only data collection",
+        "C": "Only data visualization",
+        "D": "Only model training"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Data management.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq4",
+      "question": "A validation set is used to:",
+      "options": {
+        "A": "Tune hyperparameters and prevent overfitting",
+        "B": "Train the final model",
+        "C": "Generate synthetic data",
+        "D": "Normalize features"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Validation set.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq5",
+      "question": "A predictive model is used to:",
+      "options": {
+        "A": "Estimate unknown values from known inputs",
+        "B": "Store relational data",
+        "C": "Design database schemas",
+        "D": "Collect survey responses"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "Predictive model.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq6",
+      "question": "In relational databases, a data model is:",
+      "options": {
+        "A": "A logical structure representing entities and relationships",
+        "B": "A machine learning algorithm",
+        "C": "A data collection tool",
+        "D": "A normalization formula"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "Data modeling.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq7",
+      "question": "The SQL query 'SELECT MIN(pricePerHead) FROM Animal WHERE headCount < 50;' returns:",
+      "options": {
+        "A": "The lowest price per head for animals with fewer than 50 heads",
+        "B": "The total number of animals",
+        "C": "The average price",
+        "D": "The highest head count"
+      },
+      "correct_option": "A",
+      "difficulty": "medium",
+      "learning_objective": "SQL aggregation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq8",
+      "question": "Mean imputation replaces missing values with:",
+      "options": {
+        "A": "The average of observed values in the feature",
+        "B": "Zero",
+        "C": "The median of all data",
+        "D": "A random sample"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Mean imputation.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq9",
+      "question": "Min-max normalization maps values to:",
+      "options": {
+        "A": "[0,1] using v' = (v - v_min)/(v_max - v_min)",
+        "B": "Standard normal distribution",
+        "C": "Log scale",
+        "D": "Rank order"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Min-max norm.",
+      "slide_refs": [1]
+    },
+    {
+      "id": "pkg25_mcq10",
+      "question": "Z-score normalization uses:",
+      "options": {
+        "A": "v' = (v - mean(v))/std(v)",
+        "B": "v' = v / max(v)",
+        "C": "v' = log(v)",
+        "D": "v' = v - min(v)"
+      },
+      "correct_option": "A",
+      "difficulty": "hard",
+      "learning_objective": "Z-score norm.",
+      "slide_refs": [1]
+    }
+  ],
+  "essay": {
+    "id": "pkg25_essay1",
+    "prompt": "Consider a dataset with missing values in a numerical feature. (1) Set up the mean imputation formula and compute the imputed value for a missing entry given mean = 50. (2) Apply min-max normalization to the feature with observed range [10, 90]; show the normalized value of the imputed point. (3) Verify both steps preserve the feature's range and explain why normalization is necessary before training a predictive model.",
+    "expected_keywords": [
+      "mean imputation",
+      "imputed value",
+      "min-max formula",
+      "normalized value",
+      "range preservation",
+      "verification",
+      "model training",
+      "scale sensitivity"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "mean imputation",
+          "weight": 15,
+          "description": "Formula: v_imp = mean(observed)"
+        },
+        {
+          "keyword": "imputed value",
+          "weight": 15,
+          "description": "v_imp = 50"
+        },
+        {
+          "keyword": "min-max formula",
+          "weight": 15,
+          "description": "v' = (v - 10)/(90 - 10)"
+        },
+        {
+          "keyword": "normalized value",
+          "weight": 15,
+          "description": "v'_imp = (50 - 10)/80 = 0.5"
+        },
+        {
+          "keyword": "range preservation",
+          "weight": 10,
+          "description": "All values in [0,1]"
+        },
+        {
+          "keyword": "verification",
+          "weight": 10,
+          "description": "Check bounds and computation"
+        },
+        {
+          "keyword": "model training",
+          "weight": 10,
+          "description": "Prevents feature dominance"
+        },
+        {
+          "keyword": "scale sensitivity",
+          "weight": 10,
+          "description": "Distance-based learners"
+        }
+      ],
+      "grading_notes": "Require math solutions. Partial for calculation errors."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}

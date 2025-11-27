@@ -1,0 +1,213 @@
+{
+  "package_id": "pkg26",
+  "source": "521156S_lopputentti_09122019.pdf",
+  "merged_source": "Towards Data Mining - Final Exam (09.12.2019)",
+  "level": "advanced_undergraduate",
+  "packages": [
+    "521156S",
+    "data_mining",
+    "missing_data",
+    "ethics",
+    "preprocessing"
+  ],
+  "mcqs": [],
+  "essay": [
+    {
+      "id": "pkg26_essay1",
+      "prompt": "1. Explain terms briefly.\n   a. Open data (1p)\n   b. Contextual outlier (1p)\n   c. Data model (1p)\n   d. Accuracy paradox (1p)\n   e. Variable construction (1p)\n   f. Cross-validation (1p)",
+      "expected_keywords": [
+        "open data",
+        "contextual outlier",
+        "data model",
+        "accuracy paradox",
+        "variable construction",
+        "cross-validation",
+        "definition",
+        "example"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "correct definitions",
+            "weight": 70,
+            "description": "Each term is correctly defined with appropriate context in data mining."
+          },
+          {
+            "keyword": "examples or clarity",
+            "weight": 20,
+            "description": "Provides brief but relevant examples or clarifications where applicable."
+          },
+          {
+            "keyword": "completeness",
+            "weight": 10,
+            "description": "All six terms are addressed."
+          }
+        ],
+        "grading_notes": "1 point per correct term (6p total). Partial credit for partially correct definitions. Full credit requires concise, accurate, and context-aware answers."
+      }
+    },
+    {
+      "id": "pkg26_essay2",
+      "prompt": "2. Missing data\n   a. Explain the terms list wise deletion (also called complete case analysis) and pair wise deletion (also called available case analysis). (2p)\n   b. Using data from Table 1, list the rows used for the following analyses using both list wise and pair wise deletion. You do not need to calculate the analysis results. (1p)\n      i. Average height of female subjects\n      ii. Average weight of all subjects\n   c. Explain the idea of multiple imputation (MI) briefly. What is the main advantage of MI over other imputation methods? (3p)\n\nTable 1: Data set with missing values.\n| Row | Height | Weight | Gender |\n|-----|--------|--------|--------|\n| 1   | 175 cm | -      | Male   |\n| 2   | 158 cm | 60 kg  | Female |\n| 3   | 169 cm | 83 kg  | -      |\n| 4   | -      | 65 kg  | Female |\n| 5   | 172 cm | -      | -      |\n| 6   | 160 cm | 63 kg  | Male   |\n| 7   | -      | 73 kg  | Male   |\n| 8   | 161 cm | -      | Female |",
+      "expected_keywords": [
+        "list wise deletion",
+        "complete case analysis",
+        "pair wise deletion",
+        "available case analysis",
+        "multiple imputation",
+        "MI",
+        "preserves variability",
+        "uncertainty",
+        "missing at random",
+        "Table 1 analysis"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "definitions (a)",
+            "weight": 35,
+            "description": "Correct explanation of list wise and pair wise deletion with key differences."
+          },
+          {
+            "keyword": "table application (b)",
+            "weight": 25,
+            "description": "Correctly identifies rows used under both deletion strategies for both averages."
+          },
+          {
+            "keyword": "multiple imputation (c)",
+            "weight": 30,
+            "description": "Explains MI mechanism and highlights preservation of variance/uncertainty as key advantage."
+          },
+          {
+            "keyword": "accuracy in table use",
+            "weight": 10,
+            "description": "No errors in row selection logic."
+          }
+        ],
+        "grading_notes": "Full credit: (a) 2p, (b) 1p (0.5 per correct row set), (c) 3p. Partial credit for correct concept but wrong rows or incomplete MI explanation."
+      }
+    },
+    {
+      "id": "pkg26_essay3",
+      "prompt": "3. Ethics and openness in data mining\n   a. Explain the concepts of anonymity and consent and their relevance to the ethics of data mining. (3p)\n   b. Explain the concept of open data. What kind of constraints does the definition of openness allow? What are the main benefits of open data from the perspective of an individual data miner and from that of society as a whole? (3p)",
+      "expected_keywords": [
+        "anonymity",
+        "consent",
+        "informed consent",
+        "re-identification risk",
+        "open data",
+        "FAIR principles",
+        "reuse",
+        "transparency",
+        "reproducibility",
+        "public good",
+        "innovation"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "anonymity & consent",
+            "weight": 50,
+            "description": "Clear explanation of both concepts and ethical implications in data mining."
+          },
+          {
+            "keyword": "open data definition & constraints",
+            "weight": 25,
+            "description": "Defines open data (e.g., free access, reusable) and allowable restrictions (licensing, format)."
+          },
+          {
+            "keyword": "benefits (individual & society)",
+            "weight": 25,
+            "description": "Identifies personal (reuse, collaboration) and societal (transparency, innovation) benefits."
+          }
+        ],
+        "grading_notes": "3p for (a), 3p for (b). Full credit requires balanced discussion of ethics and practicality."
+      }
+    },
+    {
+      "id": "pkg26_essay4",
+      "prompt": "4. Data pre-processing\n   a. Explain the steps of knowledge discovery process. (2p)\n   b. What are the types of data reduction? Describe with examples. Why is data reduction needed? (4p)",
+      "expected_keywords": [
+        "KDD process",
+        "CRISP-DM",
+        "data selection",
+        "preprocessing",
+        "transformation",
+        "mining",
+        "evaluation",
+        "data reduction",
+        "dimensionality reduction",
+        "PCA",
+        "numerosity reduction",
+        "binning",
+        "sampling",
+        "compression",
+        "efficiency",
+        "curse of dimensionality"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "KDD steps",
+            "weight": 30,
+            "description": "Lists and briefly describes main phases: selection, preprocessing, transformation, data mining, evaluation."
+          },
+          {
+            "keyword": "types of reduction",
+            "weight": 40,
+            "description": "Identifies dimensionality, numerosity, and compression reduction with examples."
+          },
+          {
+            "keyword": "purpose of reduction",
+            "weight": 30,
+            "description": "Explains need due to scalability, noise, curse of dimensionality, storage."
+          }
+        ],
+        "grading_notes": "2p for (a), 4p for (b). Accept CRISP-DM as alternative to KDD. Partial credit for missing one type or weak justification."
+      }
+    },
+    {
+      "id": "pkg26_essay5",
+      "prompt": "5. Data collection\n   a. Describe the ethical aspects and risks needed to take into account when collecting data from humans. (3p)\n   b. You have collected data from 300 persons: 25 of them have cancer and 275 do not have cancer. Therefore, your data set is imbalanced. Explain one sampling method that can be used to balance the data set. (3p)",
+      "expected_keywords": [
+        "privacy",
+        "informed consent",
+        "data minimization",
+        "bias",
+        "security",
+        "imbalanced data",
+        "oversampling",
+        "SMOTE",
+        "undersampling",
+        "random sampling",
+        "class imbalance"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "ethical aspects",
+            "weight": 50,
+            "description": "Covers consent, privacy, minimization, fairness, and security risks."
+          },
+          {
+            "keyword": "sampling method",
+            "weight": 40,
+            "description": "Describes one valid method (e.g., random undersampling, SMOTE, oversampling) with mechanism."
+          },
+          {
+            "keyword": "clarity & relevance",
+            "weight": 10,
+            "description": "Clear, concise, and directly addresses imbalance problem."
+          }
+        ],
+        "grading_notes": "3p each part. Full credit for SMOTE or random undersampling with brief how-to. Accept any standard method."
+      }
+    }
+  ],
+  "notes": "Exam: 521156S Towards Data Mining, Final Exam, 09.12.2019. Choose 4 out of 5 questions. Each question worth 6 points (total 24p, scaled to 100 in rubric). Table 1 included for Q2."
+}

@@ -1,0 +1,81 @@
+{
+  "package_id": "pkg26",
+  "source": "Lopputentti 2017.pdf",
+  "level": "advanced_undergraduate",
+  "essay": {
+    "id": "pkg26_essay1",
+    "prompt": "Answer the following comprehensive question based on the 2017 exam content (total 100 points):\n\n**1. Key Definitions (6 points)**\nExplain each term briefly in the context of data mining and machine learning:\n   a. Predictive model\n   b. Data pollution\n   c. Numerosity reduction\n   d. Accuracy paradox\n   e. Validation set\n   f. Missing not at random (MNAR) missingness mechanism\n\n**2. Information Privacy (6 points)**\n   a. Explain the concept of *information privacy* and how it differs from the classical notion of privacy.\n   b. How is data mining a potential threat to information privacy?\n   c. What can be done to protect information privacy in data mining?\n\n**3. Data Collection Strategy (6 points)**\nYou want to collect data from 100 persons about shopping habits.\n   a. How should you choose the persons to make a model that works for everyone?\n   b. Make a data collection plan (include sampling method, sample size justification, and bias mitigation).\n\n**4. Dataset Design for Generalization (6 points)**\nHow would you divide a dataset for training and testing to ensure model generalizability in the following cases?\n   a. The dataset available is small.\n   b. Some of the variables are time-dependent.\n   c. There is data from multiple individuals.\n\n**5. Data Quality (6 points)**\nWhat are the characteristics that define *data quality*? Provide examples for each.\n\n**Bonus Integration (10 points)**\nConnect concepts from questions 1–5: Explain how poor data quality (e.g., MNAR missingness) can lead to violations of information privacy, and how proper validation and numerosity reduction help mitigate both issues.",
+    "expected_keywords": [
+      "predictive model",
+      "data pollution",
+      "numerosity reduction",
+      "accuracy paradox",
+      "validation set",
+      "MNAR",
+      "information privacy",
+      "data collection plan",
+      "generalization",
+      "data quality"
+    ],
+    "rubric": {
+      "total_points": 100,
+      "criteria": [
+        {
+          "keyword": "predictive model",
+          "weight": 6,
+          "description": "Correct definition: model that predicts output from input features"
+        },
+        {
+          "keyword": "data pollution",
+          "weight": 6,
+          "description": "Incorrect, irrelevant, or noisy data degrading analysis"
+        },
+        {
+          "keyword": "numerosity reduction",
+          "weight": 6,
+          "description": "Reducing data volume while preserving information (e.g., sampling, aggregation)"
+        },
+        {
+          "keyword": "accuracy paradox",
+          "weight": 6,
+          "description": "High accuracy due to imbalanced classes, not good performance"
+        },
+        {
+          "keyword": "validation set",
+          "weight": 6,
+          "description": "Used to tune hyperparameters and estimate generalization"
+        },
+        {
+          "keyword": "MNAR",
+          "weight": 6,
+          "description": "Missingness depends on missing value itself; hardest to handle"
+        },
+        {
+          "keyword": "information privacy",
+          "weight": 12,
+          "description": "Protection against inference of sensitive info from published data"
+        },
+        {
+          "keyword": "data collection plan",
+          "weight": 12,
+          "description": "Stratified/random sampling, n=100 justification, bias controls"
+        },
+        {
+          "keyword": "generalization",
+          "weight": 15,
+          "description": "Cross-validation for small data, time-based split, leave-one-subject-out"
+        },
+        {
+          "keyword": "data quality",
+          "weight": 15,
+          "description": "Accuracy, completeness, consistency, timeliness, relevance"
+        }
+      ],
+      "grading_notes": "Each main question worth 6 points (1 per subpart). Bonus requires synthesis across concepts. Partial credit for partial correctness. Require clear, concise, technically accurate answers."
+    }
+  },
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion.",
+    "contact": "Question Bank Generator"
+  }
+}
