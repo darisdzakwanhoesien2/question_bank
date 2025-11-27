@@ -3,6 +3,10 @@ https://chatgpt.com/g/g-6912cc3039d48191bd184701da3ba844-question-bank-generator
 Grok works for non-vision tasks: https://grok.com/c/6cad1efa-f963-4132-b4fc-62419c1c3cf8
 Towards Data Mining Question Generative: https://grok.com/c/e2b5edfe-60d0-4d97-aee8-27dfdc6e4f2f 
 
+Source of Information: 
+https://notebooklm.google.com/notebook/5301d379-ffae-4675-966c-43086804816d
+Prompt MCQ, Essay and Mixed into NotebookLM: https://chatgpt.com/c/6928415a-ae84-832a-8d6e-694e3aece3fc
+
 
 test_question_bank_app/
 │

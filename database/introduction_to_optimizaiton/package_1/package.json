@@ -1,0 +1,128 @@
+{
+  "package_id": "OPTO-SYN-2024",
+  "source": "Combined Excerpts",
+  "level": "advanced_undergraduate",
+  "essay": [
+    {
+      "id": "OPTO-SYN-2024_essay1",
+      "prompt": "Analyze the trade-offs between Newton's method, the steepest descent method, and Quasi-Newton/Conjugate Gradient (CG) methods for solving unconstrained optimization problems. Focus your comparison on convergence speed (order $p$), computational cost per iteration, and how each method utilizes or approximates the objective function's second derivative information.",
+      "expected_keywords": [
+        "Newton's method",
+        "steepest descent",
+        "Quasi-Newton",
+        "Conjugate Gradient",
+        "Hessian",
+        "approximation",
+        "quadratic convergence",
+        "linear convergence",
+        "computational cost",
+        "Cholesky factorization",
+        "$B_k$",
+        "line search"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "Newton's Method Definition/Cost",
+            "weight": 15,
+            "description": "Defines Newton's method using the Hessian inverse ($nabla^2f(x_k))^{-1}$ and discusses the high cost of forming and solving the linear system (12), especially for large $n$."
+          },
+          {
+            "keyword": "Newton's Convergence Speed",
+            "weight": 10,
+            "description": "Identifies that Newton's method achieves fast, quadratic convergence ($p=2$), but only when close to the solution."
+          },
+          {
+            "keyword": "Steepest Descent Definition/Cost",
+            "weight": 10,
+            "description": "Defines steepest descent using $B_k = I$ and notes that steps are computationally cheap."
+          },
+          {
+            "keyword": "Steepest Descent Convergence Speed",
+            "weight": 15,
+            "description": "Explains that steepest descent converges linearly, potentially slowly if the condition number $kappa(Q)$ is large."
+          },
+          {
+            "keyword": "Quasi-Newton/CG Approach",
+            "weight": 20,
+            "description": "Explains that these methods choose $B_k$ (or implicitly use it, like CG) to approximate the Hessian, aiming for a balance between linear and quadratic convergence."
+          },
+          {
+            "keyword": "Hessian Approximation Detail (e.g., SR1/Secant)",
+            "weight": 15,
+            "description": "Details the strategy of approximating $nabla^2f(x_k)$ (or its inverse) cheaply via low-rank updates ($F_k$) or using the secant condition (17) in Quasi-Newton methods."
+          },
+          {
+            "keyword": "Role of Conjugate Gradient (CG)",
+            "weight": 15,
+            "description": "Mentions CG as a method potentially invoked to solve the Newton linear system (12) when $n$ is large or when dealing with quadratic objective functions (6)."
+          }
+        ],
+        "grading_notes": "The essay must compare the theoretical convergence rate ($p$) with the practical cost associated with Hessian calculation/inversion/approximation across all three method types."
+      }
+    },
+    {
+      "id": "OPTO-SYN-2024_essay2",
+      "prompt": "The Karush-Kuhn-Tucker (KKT) conditions are crucial first-order necessary conditions for constrained optimization. Analyze how KKT theory extends the simple unconstrained condition ($nabla f(x)=0$) by utilizing the Lagrangian function and Lagrange multipliers ($lambda$). Furthermore, synthesize how the Second-Order Sufficient Conditions (SOSC) refine the KKT solutions by employing the Critical Cone $mathcal{C}(x^*, lambda^*)$ and the Hessian of the Lagrangian $nabla_{xx}^2 mathcal{L}(x, lambda^*)$.",
+      "expected_keywords": [
+        "KKT conditions",
+        "Lagrangian function",
+        "Lagrange multipliers",
+        "necessary conditions",
+        "Second-Order Sufficient Conditions",
+        "Critical Cone $mathcal{C}(x^*, lambda^*)$",
+        "Hessian of the Lagrangian",
+        "active constraints",
+        "primal feasibility",
+        "complementarity condition",
+        "unconstrained minimization"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "Role of the Lagrangian (First Order)",
+            "weight": 15,
+            "description": "Explains that the KKT conditions require $nabla_x mathcal{L}(x, lambda) = 0$, balancing the objective function gradient $nabla f(x)$ against the active constraint gradients using Lagrange multipliers $lambda$."
+          },
+          {
+            "keyword": "Handling Inequality Constraints",
+            "weight": 15,
+            "description": "Discusses how the feasibility ($lambda ge 0$) and complementarity ($lambda_i c_i(x)=0$) conditions ensure that only active constraints affect the solution geometry."
+          },
+          {
+            "keyword": "KKT vs. Unconstrained FOC",
+            "weight": 10,
+            "description": "Clearly compares the constrained KKT necessary condition to the unconstrained $nabla f(x)=0$ condition, emphasizing that constraints dictate feasible movement directions."
+          },
+          {
+            "keyword": "LICQ Necessity",
+            "weight": 10,
+            "description": "Notes that a Constraint Qualification (like LICQ) is required to ensure that KKT conditions accurately represent the true necessary geometric conditions (ensuring $T_Omega(x) = mathcal{F}(x)$)."
+          },
+          {
+            "keyword": "Introduction of SOSC",
+            "weight": 10,
+            "description": "Explains that KKT points are merely candidates, and SOSC is needed to classify them when the first-order derivative (directional derivative) is zero in certain directions."
+          },
+          {
+            "keyword": "Definition/Role of Critical Cone $ mathcal{C}(x^*, lambda^*)$",
+            "weight": 20,
+            "description": "Defines the Critical Cone as the set of directions $w$ (within $mathcal{F}(x^*)$) where the objective function gradient is orthogonal ($nabla f(x^*)^T w = 0$) or where active constraints with positive multipliers are tangent, requiring $lambda^*_i B^T w = 0$."
+          },
+          {
+            "keyword": "Lagrangian Hessian in SOSC",
+            "weight": 20,
+            "description": "Details that the SOSC checks the sign (positive definiteness) of the Hessian of the Lagrangian $nabla_{xx}^2 mathcal{L}(x, lambda^*)$ restricted to the Critical Cone $mathcal{C}(x^*, lambda^*)$ to guarantee local minimality."
+          }
+        ],
+        "grading_notes": "The essay must demonstrate synthesis by showing how the KKT conditions identify the geometry of the solution space, and how the second-order analysis then focuses specifically on the 'ambiguous' directions defined by the Critical Cone where the first-order test fails to provide conclusive results."
+      }
+    }
+  ],
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion into assessment pipelines.",
+    "contact": "Question Bank Generator"
+  }
+}

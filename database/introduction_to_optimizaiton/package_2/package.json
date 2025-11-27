@@ -1,0 +1,175 @@
+{
+  "package_id": "OPTO-NOVEL-2024",
+  "source": "Combined Excerpts",
+  "level": "advanced_undergraduate",
+  "essay": [
+    {
+      "id": "OPTO-NOVEL-2024_essay1",
+      "prompt": "Analyze the structural differences between formulating and solving the dual problem for a Linear Program (LP) in the canonical form ($\\min c^Tx$ subject to $Ax \\le b$) versus a convex Quadratic Program (QP) with inequality constraints ($\\min \\frac{1}{2}x^TQx - b^Tx$ subject to $Cx-d \\le 0$). Explain how the characteristics of the primal objective function (linear vs. quadratic) dictate the resulting complexity and the method required to define the dual objective function $q(\\lambda)$.",
+      "expected_keywords": [
+        "Dual problem",
+        "Linear Program",
+        "Quadratic Programming",
+        "canonical form",
+        "convexity",
+        "Lagrangian",
+        "infimum",
+        "$A^T\\lambda = c$",
+        "$Qx = b - C^T\\lambda$",
+        "dual objective function $q(\\lambda)$",
+        "strong duality",
+        "inequality constraints"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "Primal/Dual Setup",
+            "weight": 10,
+            "description": "Correctly defines the Lagrangian $\\mathcal{L}(x, \\lambda)$ for both general cases."
+          },
+          {
+            "keyword": "QP Dual Function Derivation",
+            "weight": 20,
+            "description": "Shows how the QP dual function $q(\\lambda)$ is found by solving $\\nabla_x \\mathcal{L}=0$ (resulting in $x=Q^{-1}(\\dots)$) and substituting back into the Lagrangian."
+          },
+          {
+            "keyword": "LP Dual Function Derivation",
+            "weight": 20,
+            "description": "Shows how the LP dual function $q(\\lambda)$ is finite only when $c^T - \\lambda^T A = 0$ (or $A^T\\lambda=c$), resulting in the dual constraint."
+          },
+          {
+            "keyword": "Dual Problem Form (LP)",
+            "weight": 15,
+            "description": "States the resulting dual LP problem (max $\\lambda^T b$ subject to $A^T\\lambda=c$ and $\\lambda \\ge 0$). Discusses how the LP dual has linear constraints."
+          },
+          {
+            "keyword": "Dual Problem Form (QP)",
+            "weight": 15,
+            "description": "Describes the resulting dual QP problem (maximizing a concave quadratic function $q(\\lambda)$ subject to $\\lambda \\ge 0$) and notes it still retains inequality constraints."
+          },
+          {
+            "keyword": "Duality Complexity Comparison",
+            "weight": 20,
+            "description": "Synthesizes that for LP, the dual problem is often a complete structural transformation (potentially simpler to solve or analyze), whereas for QP, the dual objective function is derived explicitly but the resulting maximization problem still involves complex inequality constraints."
+          }
+        ],
+        "grading_notes": "The essay must highlight that the dual function for the LP is only finite if the gradient condition becomes a linear equality constraint ($A^T\\lambda=c$), while for the QP, the gradient condition provides an explicit (though complex) expression for $x$ in terms of $\\lambda$ which is then substituted into $\\mathcal{L}$ to define $q(\\lambda)$."
+      }
+    },
+    {
+      "id": "OPTO-NOVEL-2024_essay2",
+      "prompt": "Contrast the core methodologies of Line Search methods and Trust Region methods for solving unconstrained minimization problems. Analyze how each approach uses the local quadratic approximation $m_k(p)$ and discuss the fundamental difference in how they determine the step $p_k$ (direction and length), focusing on the iterative steps and the function $\\rho_k$ (Equation 53) in the Trust Region context.",
+      "expected_keywords": [
+        "Line search methods",
+        "Trust region methods",
+        "Quadratic approximation $m_k(p)$",
+        "Descent direction $p_k$",
+        "step length $\\alpha_k$",
+        "Trust-region radius $\\Delta_k$",
+        "simultaneously produce",
+        "comparison $\\rho_k$",
+        "KKT conditions",
+        "Newton's method",
+        "optimal descent"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "Line Search Methodology",
+            "weight": 15,
+            "description": "Describes line search as a two-step process: selecting a descent direction $p_k$, then solving a 1D minimization problem ($\\min_{\\alpha>0} f(x_k + \\alpha p_k)$) to find $\\alpha_k$."
+          },
+          {
+            "keyword": "Trust Region Methodology",
+            "weight": 15,
+            "description": "Describes the trust region approach as simultaneously determining direction and length by solving the constrained subproblem (min $m_k(p)$ subject to $||p|| \\le \\Delta_k$)."
+          },
+          {
+            "keyword": "Role of $m_k(p)$",
+            "weight": 10,
+            "description": "Explains that both methods use a local quadratic approximation $m_k(p)$ (based on Taylor's theorem and approximation $B_k$) near $x_k$."
+          },
+          {
+            "keyword": "Trust Region Subproblem Solution",
+            "weight": 15,
+            "description": "Details that solving the trust region subproblem (52) involves KKT conditions leading to solving $(B+2\\lambda I)p = -q$."
+          },
+          {
+            "keyword": "Step Acceptance Criterion ($\\rho_k$)",
+            "weight": 20,
+            "description": "Explains the role of the ratio $\\rho_k$ (Eq. 53) in comparing actual reduction vs. model reduction. Analyzes how $\\rho_k$ determines whether the step $p_k$ is accepted and how the radius $\\Delta_k$ is adjusted (shrink or expand)."
+          },
+          {
+            "keyword": "Efficiency and Cost Comparison",
+            "weight": 15,
+            "description": "Compares the iterative cost, noting that line search requires a 1D minimization/approximation, while trust region requires solving a constrained (but usually simpler) subproblem."
+          },
+          {
+            "keyword": "Krylov Subspace Connection",
+            "weight": 10,
+            "description": "Mentions that approximate solution of the Trust Region subproblem often involves Krylov subspace methods, like using $p \\in span\\{q, B^{-1}q\\}$."
+          }
+        ],
+        "grading_notes": "The essay must focus on the algorithmic differences in how the local model is used to compute the next iterate, specifically the distinct approaches to handling step length/constraint (one-dimensional search vs. trust radius KKT solution)."
+      }
+    },
+    {
+      "id": "OPTO-NOVEL-2024_essay3",
+      "prompt": "Justify why the Gauss-Newton method represents an efficient and reasonable approximation strategy for solving Nonlinear Least Squares problems, defined by minimizing $f(x) = \\frac{1}{2}\\sum r_j^2(x)$. Analyze the mathematical justification for dropping the $\\sum r_j(x)\\nabla^2 r_j(x)$ term from the true Hessian (Equation 24), and explain how this approximation still guarantees a descent direction $p_k$.",
+      "expected_keywords": [
+        "Nonlinear least squares",
+        "Residual functions $r_j(x)$",
+        "Hessian $\\nabla^2 f(x)$",
+        "Jacobian $J(x)$",
+        "Gauss-Newton method",
+        "Approximation $J(x)^T J(x)$",
+        "descent direction",
+        "Quasi-Newton",
+        "computational savings",
+        "gradient $\\nabla f(x)$"
+      ],
+      "rubric": {
+        "total_points": 100,
+        "criteria": [
+          {
+            "keyword": "NLLS Problem Formulation",
+            "weight": 10,
+            "description": "Defines the nonlinear least squares problem as minimizing $f(x) = \\frac{1}{2}\\sum r_j^2(x)$, converting a system of equations $r_j(x)=0$ into an optimization problem."
+          },
+          {
+            "keyword": "True Hessian Components",
+            "weight": 15,
+            "description": "Provides the complete expression for the Hessian $\\nabla^2 f(x) = J(x)^T J(x) + \\sum r_j(x)\\nabla^2 r_j(x)$ (Eq. 24)."
+          },
+          {
+            "keyword": "Gauss-Newton Approximation",
+            "weight": 20,
+            "description": "Explains that Gauss-Newton uses the approximation $B_k \\approx J(x)^T J(x)$ by dropping the second term, copying the structure of the linear least squares solution (where the second term is zero)."
+          },
+          {
+            "keyword": "Justification for Dropping Term",
+            "weight": 20,
+            "description": "Analyzes the reason for the simplification: the residual functions $r_j(x)$ are expected to be small near the minimum (approaching zero), minimizing the impact of the dropped term."
+          },
+          {
+            "keyword": "Descent Direction Proof",
+            "weight": 20,
+            "description": "Shows that the resulting direction $p_k$ is a guaranteed descent direction because $p_k^T \\nabla f(x_k) = -||J(x_k)p_k||^2$, which is non-positive."
+          },
+          {
+            "keyword": "Computational Benefit",
+            "weight": 15,
+            "description": "Discusses the primary computational advantage: computing $J(x_k)$ is necessary for the gradient $\\nabla f(x_k)$, and $J(x_k)$ alone is sufficient to form the approximation $B_k$, avoiding the costly calculation of second derivatives ($\\nabla^2 r_j(x)$)."
+          }
+        ],
+        "grading_notes": "The essay must focus on the specific mathematical simplification inherent to the least squares structure and why this approximation maintains validity (small residuals) and desirable algorithmic properties (descent direction)."
+      }
+    }
+  ],
+  "notes_for_integration": {
+    "formatting": "JSON-only output intended for automated ingestion into assessment pipelines.",
+    "contact": "Question Bank Generator"
+  }
+}
