@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_6680f4",
+      "question": "What is the purpose of the stereo rectification?",
+      "options": {
+        "A": "Computation of the fundamental matrix from point correspondences",
+        "B": "Aligns the image planes to make epipolar lines parallel",
+        "C": "Ensures that the fundamental matrix is identity",
+        "D": "Corrects perspective distortions between the stereo pair",
+        "E": "Converts disparity maps directly into depth maps"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_9ef1ac",
+      "question": "What is the effect of using short and long baselines in a stereo system?",
+      "options": {
+        "A": "Short: reduced processing time; Long: increased processing time",
+        "B": "Short: good accuracy; Long: improved depth range",
+        "C": "Short: poor accuracy; Long: loss of correspondences",
+        "D": "Short: increased resolution; Long: loss of fine details",
+        "E": "Short: increased disparity; Long: reduced disparity"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_c514e0",
+      "question": "What makes stereo matching easier in a simple stereo pair compared to a general image pair?",
+      "options": {
+        "A": "Using epipolar geometry to restrict correspondences to a single line",
+        "B": "Using color consistency constraints to match corresponding points",
+        "C": "Using energy minimization to ensure smoothness of the disparities",
+        "D": "Employing a hierarchical block-matching strategy to refine correspondences",
+        "E": "Using direct pixel-based block-matching along horizontal lines"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_7a5aed",
+      "question": "What happens to disparity in a simple stereo pair as the scene distance increases?",
+      "options": {
+        "A": "Disparity oscillates between two fixed values",
+        "B": "Disparity increases exponentially with depth",
+        "C": "Disparity stabilizes at a constant rate",
+        "D": "Disparity converges to zero",
+        "E": "Disparity becomes undefined"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_c718e3",
+      "question": "How does perspective scaling contribute to depth perception?",
+      "options": {
+        "A": "Farther objects appear smaller in size",
+        "B": "Closer objects appear sharper",
+        "C": "Farther objects appear more tilted",
+        "D": "Objects move faster when farther away",
+        "E": "Parallel lines spread apart on the horizon"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_df6aa0",
+      "question": "What is the purpose of the epipolar constraint in stereo matching?",
+      "options": {
+        "A": "Enables dense stereo matching without rectification",
+        "B": "Reduces the correspondence search along epipolar lines",
+        "C": "Ensures that all points lie within the same epipolar plane",
+        "D": "Enables direct depth computation using the fundamental matrix",
+        "E": "Simplifies the stereo calibration process by making it linear"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_9131a2",
+      "question": "Why does block matching fail in textureless regions; how does block size affect the disparity estimation results?",
+      "options": {
+        "A": "Matches become ambiguous; small blocks add noise, large blocks lose detail",
+        "B": "No matches are found; small blocks increase precision, large blocks add complexity",
+        "C": "Blocks cannot align; small blocks increase speed, large blocks reduce noise",
+        "D": "Matches are inconsistent; small blocks reduce disparity, large blocks increase computation time",
+        "E": "Due to processing errors; small blocks lose detail, large blocks increase ambiguity"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_aafe3c",
+      "question": "Why is shape from shading an ambiguous problem, and how can it be solved?",
+      "options": {
+        "A": "Single constraint per pixel; solved with normal sharing or smoothness constraints",
+        "B": "Excessive light sources; solved using light source averaging",
+        "C": "Surface variation; solved using multi-light source analysis",
+        "D": "Too many normals per pixel; solved using Gaussian smoothing",
+        "E": "Incomplete pixel constraints; solved using edge detection"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_a3a5ff",
+      "question": "How does energy minimization improve stereo matching?",
+      "options": {
+        "A": "It combines data and smoothness terms for coherent disparity maps",
+        "B": "It employs cross-correlation and epipolar geometry to disambiguate the disparities",
+        "C": "It reduces the computational complexity of disparity calculations",
+        "D": "It utilizes disparity extrapolation to disambiguate matches in textureless regions",
+        "E": "It automatically adjusts block sizes based on region characteristics"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_666c52",
+      "question": "How do you determine a 3D location from a point correspondence in a stereo system?",
+      "options": {
+        "A": "Perform triangulation using the camera's optical centers and intersecting rays",
+        "B": "Use the disparity in pixel intensity between the images to calculate depth",
+        "C": "Calculate the texture gradient distance between the points to estimate coordinates",
+        "D": "Apply shape from shading analysis on both images to determine depth",
+        "E": "Determine the intersection of the epipolar lines of the corresponding points"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

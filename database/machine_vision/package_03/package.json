@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_821120",
+      "question": "Why is edge detection typically not preferred for performing image segmentation?",
+      "options": {
+        "A": "Because edge detection can only identify horizontal and vertical edges, limiting its effectiveness in complex images",
+        "B": "Because edge detection requires excessive computational resources, making it impractical for real-time applications",
+        "C": "Because edge detection does not work well with grayscale images, which are commonly used in image segmentation",
+        "D": "Because edge detection algorithms are incompatible with most image file formats used in segmentation tasks",
+        "E": "Because edge detection often results in noisy and discontinuous boundaries, making it challenging to accurately segment images"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_7cc3b7",
+      "question": "In an image containing a perfect circle and a perfect square without any pixelization, what are their corresponding complexity (C\u2081) values, where  C\u2081 is defined as in the lecture material?",
+      "options": {
+        "A": "Circle: \u03c0 (\u22483.14), Square: 16",
+        "B": "Circle: 4\u03c0 (\u224812.6), Square: 8",
+        "C": "Circle: 2\u03c0 (\u22486.28), Square: 8",
+        "D": "Circle: 2\u03c0 (\u22486.28), Square: 4",
+        "E": "Circle: 4\u03c0 (\u224812.6), Square: 16"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_6d4af3",
+      "question": "Why is the RGB color space not ideal for performing color segmentation, and why is the normalized rg space considered a better alternative?",
+      "options": {
+        "A": "Because RGB cannot represent certain colors accurately, whereas the normalized rg space expands the range of colors that can be represented for better segmentation",
+        "B": "Because RGB components are highly correlated, making them less effective for segmentation, whereas the normalized rg space reduces the influence of illumination",
+        "C": "Because the color resolution in the RGB space is too low for segmentation, whereas rg space has higher resolution, making it more effective for color segmentation",
+        "D": "Because the RGB color space has too many dimensions, making computations slow, while the normalized rg space simplifies the process by reducing the number of dimensions",
+        "E": "Because RGB colors do not provide reliable information in low-light conditions, while rg space is invariant to brighness changes"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_f3dc9d",
+      "question": "Let us assume that two objects are erroneously connected in a binary image. What morphological operation could be used to disconnect them without changing the object sizes? How should the structuring element be chosen?",
+      "options": {
+        "A": "Erosion; the structuring element should be larger than the part where the two objects are touching each other",
+        "B": "Opening; the structuring element should be larger than the part where the two objects are touching each other",
+        "C": "Closing; the structuring element should be smaller than the part where the two objects are touching each other",
+        "D": "Opening; the structuring element should be smaller than the part where the two objects are touching each other",
+        "E": "Closing; the structuring element should be larger than the part where the two objects are touching each other"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_e9e66b",
+      "question": "Why is the centroid not an effective shape feature for recognizing objects?",
+      "options": {
+        "A": "Because the centroid is a three-dimensional measure, which is not suitable for two-dimensional image analysis",
+        "B": "Because the centroid can only be accurately determined for perfectly symmetrical objects, limiting its applicability",
+        "C": "Because calculating the centroid requires complex algorithms that are computationally intensive for real-time applications",
+        "D": "Because the centroid changes significantly with different lighting conditions, making it unreliable for consistent recognition",
+        "E": "Because the centroid only indicates the object's position and does not provide information about its shape or appearance"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d28f6c",
+      "question": "What is the purpose of connected component analysis? In what case it is unnecessary?",
+      "options": {
+        "A": "To identify and assign unique labels to individual objects; it is unnecessary when there are multiple objects in the image",
+        "B": "To apply color filters to different parts of the image; it is unnecessary when the image is already in grayscale",
+        "C": "To increase the contrast between objects and the background; it is unnecessary when the background is already distinct",
+        "D": "To apply color filters to different parts of the image; it is unnecessary when objects have uniform color",
+        "E": "To identify and assign unique labels to individual objects; it is unnecessary when there is only one object in the image"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_9092c9",
+      "question": "What is the benefit of using Fourier descriptors to represent an object shape?",
+      "options": {
+        "A": "Using Fourier descriptors eliminates the need for any computational processing in shape analysis",
+        "B": "Only a small fraction of the low-order coefficients is needed to approximate the shape of an object",
+        "C": "High-order Fourier coefficients capture the most significant features of an object's shape",
+        "D": "Fourier descriptors can represent both shape and color information simultaneously",
+        "E": "Fourier descriptors allow for the exact reconstruction of an object's shape without any loss of information"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_0ace30",
+      "question": "What invariance properties do the second order spatial moments have?",
+      "options": {
+        "A": "They are only scale invariant",
+        "B": "They are both translation and scale invariant, but not rotation invariant",
+        "C": "They are only rotation invariant",
+        "D": "They are only translation invariant",
+        "E": "They are not translation, scale, or rotation invariant"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_52231c",
+      "question": "What assumptions need to be made when using thresholding to binarize an image?",
+      "options": {
+        "A": "The foreground objects should have smooth boundaries with strong gradient, and the illumination can be varying",
+        "B": "The foreground objects should have sharp edges with colors that are different from the background, and the illumination should be non-uniform",
+        "C": "The foreground objects should have uniform color that is clearly different from the background colors, and the illumination should be relatively constant",
+        "D": "There is only one object in the image with relatively constant color, and the illumination should be uniform",
+        "E": "The foreground objects should have uniform color that is similar to the background colors, and the illumination should be variable"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_1e69b2",
+      "question": "When is image filtering useful in machine vision and what problems it may cause?",
+      "options": {
+        "A": "Image filtering is useful for adding special effects to an image, but it can cause the image to lose its original quality",
+        "B": "Image filtering is useful for compressing an image, but it can cause the image to lose important details",
+        "C": "Image filtering is useful for increasing the resolution of an image, but it can cause the image to become blurry",
+        "D": "Image filtering is useful for removing irrelevant information such as noise, but it can also change the information we are interested in",
+        "E": "Image filtering is useful for enhancing the colors in an image, but it can cause the image to become saturated"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_d4089b",
+      "question": "What is the limitation of template matching?",
+      "options": {
+        "A": "It struggles with images containing multiple objects",
+        "B": "It requires manual annotation of templates",
+        "C": "It cannot handle rotation or scaling",
+        "D": "It works only with affine transformations",
+        "E": "It is computationally intensive for complex models"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d1798c",
+      "question": "How does the Hough transform address the issues in least squares fitting?",
+      "options": {
+        "A": "By using re-weighted least squares",
+        "B": "By aligning points to a fixed template",
+        "C": "By iteratively fitting and adjusting models",
+        "D": "By fitting multiple models and selecting the best one",
+        "E": "By voting for compatible models"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_1844c0",
+      "question": "What transformation is achieved by reflecting an object about both x- and y-axes?",
+      "options": {
+        "A": "Translation",
+        "B": "180-degree rotation",
+        "C": "90-degree rotation",
+        "D": "Diagonal flipping",
+        "E": "Shearing"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_4afaa5",
+      "question": "What is the minimum number of points needed to perform ellipse fitting? If 60% of points are valid, how many random samples are needed for RANSAC to achieve 99% probability?",
+      "options": {
+        "A": "Five points and 57 samples",
+        "B": "Four points and 52 samples",
+        "C": "Six points and 74 samples",
+        "D": "Four points and 62 samples",
+        "E": "Three points and 49 samples"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_0d23dd",
+      "question": "How does RANSAC avoid the problems of least squares fitting?",
+      "options": {
+        "A": "By adjusting weights based on outlier frequency",
+        "B": "By randomly sampling subsets until no outliers remain",
+        "C": "By using gradient descent optimization",
+        "D": "By normalizing the data with random weights before fitting",
+        "E": "By clustering data points into smaller groups of inliers and outliers"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_720a7a",
+      "question": "How does image alignment differ from model fitting?",
+      "options": {
+        "A": "The geometric model is replaced by another image and a spatial transformation",
+        "B": "Only the edges of the images are considered in estimation of the model parameters",
+        "C": "It utilizes pixels values directly instead of feature points to determine the model parameters",
+        "D": "It minimizes the sum of squared errors between points and the model instead of pointwise distances",
+        "E": "It uses feature clustering instead of individual points to determine the geometric transformation"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_94489f",
+      "question": "What are outliers in model fitting?",
+      "options": {
+        "A": "Noise that enhances overall predictions",
+        "B": "Data that improves model accuracy",
+        "C": "Points perfectly aligned with the model",
+        "D": "Points with high error that dominate the fit",
+        "E": "Points uniformly distributed along the boundary"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_df4db6",
+      "question": "How do you convert a vector v=[a,b,c] from homogeneous to Cartesian coordinates?",
+      "options": {
+        "A": "Divide a and b by c",
+        "B": "Take the square root of each element",
+        "C": "Multiply by the vector [1/c,1/c,1/c] using a dot product",
+        "D": "Normalize the vector to unit length",
+        "E": "Add the scalar c to both a and b"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_095425",
+      "question": "What is the difference between affine transformation and homography?",
+      "options": {
+        "A": "Affine transformation can represent reflection, while homography cannot",
+        "B": "Homography maps lines to curves, while affine transformation maps lines to lines",
+        "C": "Affine transformation includes scaling, while homography does not",
+        "D": "Homography preserves angles, while affine transformation does not",
+        "E": "Homography is a non-linear transformation, while affine transformation is linear"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_4a433a",
+      "question": "When is it practical to use model fitting to determine object boundaries?",
+      "options": {
+        "A": "When the object boundaries are dynamic and change over time",
+        "B": "When the object is highly textured with complex details",
+        "C": "When the object is transparent and hard to distinguish",
+        "D": "When the object is in a cluttered environment with many overlapping elements",
+        "E": "When the object boundaries can be represented with simple primitives"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

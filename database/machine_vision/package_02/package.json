@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_e39fc1",
+      "question": "What is the problem with measuring distances in the RGB color space?",
+      "options": {
+        "A": "RGB color space cannot represent distances of colors with high luminance",
+        "B": "Distances in RGB space do not correspond to physical color differences",
+        "C": "Measuring distances in RGB space is computationally inefficient",
+        "D": "RGB space lacks the ability to represent transparent color differences",
+        "E": "Distances in RGB space do not correspond to perceived color differences"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d5de12",
+      "question": "What happens to the surface brightness if the distance between the surface and the light source is doubled?",
+      "options": {
+        "A": "The brightness increases fourfold",
+        "B": "The brightness doubles",
+        "C": "The brightness is halved",
+        "D": "The brightness remains the same",
+        "E": "The brightness decreases to 1/4 of the original"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_8032b9",
+      "question": "Why can't the sRGB color space reproduce all visible colors?",
+      "options": {
+        "A": "Because the sRGB primaries are positioned within the chromaticity diagram, restricting reproducible colors to those inside the triangle they define",
+        "B": "Because sRGB uses a limited bit depth, preventing it from representing a wide range of colors accurately",
+        "C": "Because sRGB relies on outdated color measurement techniques, reducing its ability to cover the full spectrum of visible colors",
+        "D": "Because sRGB does not include a luminance component, making it unable to represent certain shades and tints",
+        "E": "Because sRGB is optimized for print media, which limits its effectiveness on digital displays"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_a2df9c",
+      "question": "Color is typically described using three primaries, but why do we only need two parameters to represent chromaticity?",
+      "options": {
+        "A": "Because human vision merges two of the tristimulus values into a single dimension, leaving only two separate parameters to describe color fully",
+        "B": "Because two parameters are chosen for mathematical simplicity, even though all three primaries remain independently significant to color perception",
+        "C": "Because defining chromaticity traditionally omits the blue primary, reducing the necessary dimensions from three to two",
+        "D": "Because chromaticity is defined by normalizing the three tristimulus values by their sum, making one coordinate dependent on the other two",
+        "E": "Because one of the primaries always remains constant, removing the need for a third parameter in describing chromaticity"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_635480",
+      "question": "What does a specular highlight represent?",
+      "options": {
+        "A": "A scattering of light in all directions from a matte surface",
+        "B": "A reflection of the light source on a highly polished surface",
+        "C": "A refraction of light through a transparent object",
+        "D": "A shadow cast by an object when light is blocked",
+        "E": "A reflection of the light source on a rough surface"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_2aef28",
+      "question": "Why are color histograms invariant to spatial transformations such as translation and rotation?",
+      "options": {
+        "A": "Because color histograms prioritize central image colors, reducing the impact of surrounding areas during spatial transformations",
+        "B": "Because color histograms adjust color values based on geometric transformations, compensating for any changes in position or orientation",
+        "C": "Because color histograms utilize transformation-invariant features that realign colors after any spatial modification",
+        "D": "Because color histograms ignore the spatial arrangement of pixels and focus solely on the distribution of colors",
+        "E": "Because color histograms encode the exact positions of colors within the image, ensuring consistency even when the image is rotated or translated"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_5cf841",
+      "question": "How can we determine the tristimulus values of a given test color using three primary colors?",
+      "options": {
+        "A": "By adjusting the intensities of three primary colors until the test color is matched",
+        "B": "By adjusting the hue of three primary colors to match the test color",
+        "C": "By adjusting the color temperature of three primary colors until the test color is matched",
+        "D": "By adjusting the amplitudes of three color matching functions to achieve the desired color",
+        "E": "By adjusting the wavelengths of three primary colors to match the test color"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_514126",
+      "question": "What factors affect the brightness of the observed point under diffuse reflection? You can choose multiple options. (A, D, E)",
+      "options": {
+        "A": "Albedo",
+        "B": "Angle between the light source direction and the viewing direction",
+        "C": "Angle between the surface normal and the viewing direction",
+        "D": "Angle between the surface normal and the light source direction",
+        "E": "Light source intensity"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_2639c9",
+      "question": "What is the problem of the CIE RGB color space that is avoided by using the CIE XYZ color space?",
+      "options": {
+        "A": "The tristimulus values of the green primary become positive between 450 and 550 nm",
+        "B": "The tristimulus values of the green primary become negative between 450 and 550 nm",
+        "C": "The tristimulus values of the blue primary become negative between 450 and 550 nm",
+        "D": "The tristimulus values of all primaries become negative between 450 and 550 nm",
+        "E": "The tristimulus values of the red primary become negative between 450 and 550 nm"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_06f1be",
+      "question": "How is color temperature related to black body radiation?",
+      "options": {
+        "A": "Color temperature is the temperature at which a black body emits light of all colors",
+        "B": "Color temperature is the temperature of a black body that emits light of a specific color",
+        "C": "Color temperature is the temperature at which a black body reflects all incident light",
+        "D": "Color temperature is the temperature at which a black body absorbs all incident light",
+        "E": "Color temperature is the temperature of a black body that absorbs light of a specific color"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

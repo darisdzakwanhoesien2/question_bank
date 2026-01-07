@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_18f75d",
+      "question": "What is the purpose of using vector quantization in texture analysis?",
+      "options": {
+        "A": "To separate different texture types by assigning unique feature vectors to each distinct texture pattern",
+        "B": "To increase the dimensionality of feature vectors, allowing for more detailed texture representations in the histogram",
+        "C": "To transform texture features into a lower-dimensional space for faster image processing and analysis",
+        "D": "To normalize the feature vectors, ensuring consistent scale and improving the accuracy of texture classification",
+        "E": "To reduce the number of bins in the texture histogram by clustering high-dimensional feature vectors"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_f49124",
+      "question": "Based on the lecture material, how could you use texture segmentation to separate horizontal and vertical stripes appearing in an image?",
+      "options": {
+        "A": "Utilize wavelet transforms to capture multi-scale texture information and differentiate between horizontal and vertical stripes",
+        "B": "Use Gabor filters with orientations matching horizontal and vertical stripes to extract texture features and segment the image accordingly",
+        "C": "Apply local binary patterns (LBP) to extract texture descriptors and classify regions as horizontal or vertical stripes based on the patterns",
+        "D": "Apply both horizontal and vertical gradient filters to the image, compare their responses, and classify regions based on which gradient is stronger",
+        "E": "Perform a Fourier transform to identify dominant frequency orientations and separate stripes based on their frequency components"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_0d5de8",
+      "question": "Why does pixel-by-pixel comparison of images not work in texture analysis?",
+      "options": {
+        "A": "Because pixel-by-pixel comparison is too computationally intensive, so it's better to use color histogram comparisons instead",
+        "B": "Because pixel-by-pixel methods require color images to be converted to binary images before comparison",
+        "C": "Because pixel-by-pixel comparison cannot handle large variations in image contrast",
+        "D": "Because image patches that contain the same texture look similar but do not usually align perfectly",
+        "E": "Because pixel-by-pixel comparison cannot handle large variations in image brightness"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d95f8d",
+      "question": "What role does human pre-attentive perception have? When does it fail?",
+      "options": {
+        "A": "It is responsible for recognizing prominent objects but fails when they are too textured",
+        "B": "It is responsible for the texture matching but fails when textures are too detailed",
+        "C": "It is responsible for recognizing familiar shapes but fails when textures are not uniform",
+        "D": "It is responsible for recognizing salient textures but fails when textures are less prominent",
+        "E": "It is responsible for color recognition but fails when colors are too textured"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_02c548",
+      "question": "What makes texture segmentation more challenging than color segmentation?",
+      "options": {
+        "A": "Because texture segmentation requires more computational power than color segmentation",
+        "B": "Because texture segmentation is limited to gray scale images",
+        "C": "Because texture boundaries are not well-defined as they are computed over neighborhoods",
+        "D": "Because color features contain more information than texture features",
+        "E": "Because textures are less uniform than colors in most images"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_11fb2f",
+      "question": "Why cannot texture be recognized based on shape features?",
+      "options": {
+        "A": "Because shape features require segmenting the objects first",
+        "B": "Because texture is only related to color properties",
+        "C": "Because shape features are computed over small neighborhoods",
+        "D": "Because shape features are not sensitive to orientation",
+        "E": "Because shape features are only used for analyzing color images"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d58d42",
+      "question": "Why cannot texture be recognized based on the color histogram?",
+      "options": {
+        "A": "Because texture does not carry any information about colors",
+        "B": "Because color histograms do not contain spatial information",
+        "C": "Because texture is only related to shape features",
+        "D": "Because texture recognition requires segmentation",
+        "E": "Because color histograms have too many dimensions"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_0e34a0",
+      "question": "What is the challenge when using Gabor filters to represent texture?",
+      "options": {
+        "A": "Gabor filters are insensitive to changes in scale, making them ineffective for multi-scale texture analysis",
+        "B": "Gabor filters can only be applied to grayscale images, limiting their use with color textures",
+        "C": "Gabor filters are unable to capture orientation information in textures",
+        "D": "Gabor filters require careful selection of the parameters to ensure effective texture representation",
+        "E": "Gabor filters significantly increase the computational complexity of image processing tasks"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_547ee5",
+      "question": "Based on the lecture material, how would you test if two face images represent the same person using LBP?",
+      "options": {
+        "A": "Divide each face image into color channels, compute separate LBP histograms for each channel, average these histograms, and compare the averaged histograms for similarity",
+        "B": "Split each face image into smaller blocks, compute LBP histograms for each block, concatenate them to form feature descriptors, and compare the descriptors for similarity",
+        "C": "Use LBP to create a binary pattern for each face image and input these patterns into a neural network trained to classify whether the two patterns belong to the same person",
+        "D": "Apply LBP to extract edge features from each face image and perform a pixel-by-pixel comparison of these edge maps to verify if the faces match",
+        "E": "Convert each face image to grayscale, generate a single global LBP histogram for each image, and compare these histograms to determine if they represent the same person"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_a7a60f",
+      "question": "If the LBP value for a pixel is 136, what does it tell about the pixel and its neighborhood?",
+      "options": {
+        "A": "All eight neighbors in the 8-neighborhood have higher intensity than the center pixel",
+        "B": "Three consecutive neighbors in the 8-neighborhood have higher intensity than the center pixel",
+        "C": "No neighbors in the 8-neighborhood have higher intensity than the center pixel",
+        "D": "Two opposite neighbors in the 8-neighborhood have higher intensity than the center pixel",
+        "E": "Two adjacent neighbors in the 8-neighborhood have higher intensity than the center pixel"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

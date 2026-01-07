@@ -1,0 +1,157 @@
+{
+  "package_id": "pkg_exposure_01",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_11e87c",
+      "question": "How is the receiver operating curve (ROC) represented for a classifier?",
+      "options": {
+        "A": "By plotting the diagonal elements of a confusion matrix",
+        "B": "By plotting the area under the curve for different threshold values",
+        "C": "By plotting true positive rate vs. false positive rate",
+        "D": "By plotting precision vs. recall",
+        "E": "By plotting false negatives against true negatives"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_362cd6",
+      "question": "Consider a confusion matrix as defined in the lecture material. What does the sum of its single row indicate?",
+      "options": {
+        "A": "Number of true positives",
+        "B": "Number of samples that belong to a certain class",
+        "C": "Total number of samples",
+        "D": "Number of samples recognized to belong to a class",
+        "E": "Number of misclassified samples"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_98fecc",
+      "question": "What is the purpose of negative samples in object detection?",
+      "options": {
+        "A": "To represent the object of interest",
+        "B": "To evaluate the performance of the detector",
+        "C": "To normalize the feature values between 0 and 1",
+        "D": "To detect negative objects",
+        "E": "To train the classifier to differentiate objects"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_907636",
+      "question": "What is the essential difference between object detection and image categorization?",
+      "options": {
+        "A": "Image categorization processes regions, while object detection processes entire images",
+        "B": "Object detection locates and identifies objects, while image categorization assigns a single label to the entire image",
+        "C": "Object detection finds a single instance, while image categorization finds multiple instances",
+        "D": "Image categorization works with precise object locations, while object detection ignores spatial information",
+        "E": "Object detection uses global features, while image categorization relies on local descriptors"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_915ba8",
+      "question": "A face detector finds 100 correct faces, 15 incorrect faces, and misses 25 correct faces. What are the corresponding precision and recall values?",
+      "options": {
+        "A": "Precision: 74%, Recall: 65%",
+        "B": "Precision: 85%, Recall: 75%",
+        "C": "Precision: 91%, Recall: 85%",
+        "D": "Precision: 82%, Recall: 70%",
+        "E": "Precision: 87%, Recall: 80%"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_62edf2",
+      "question": "What is an obvious bottleneck of the nearest neighbor classifier?",
+      "options": {
+        "A": "It can only handle binary problems",
+        "B": "It requires high-dimensional feature space",
+        "C": "It assumes compact clusters",
+        "D": "It is computationally expensive",
+        "E": "It requires a large amount of training data"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_4fcae8",
+      "question": "What assumption is made when using k-means for color image segmentation?",
+      "options": {
+        "A": "Neighboring pixels share the same label",
+        "B": "Colors are distinct and separable in RGB-space",
+        "C": "The color values are uniformly distributed",
+        "D": "Colors form overlapping clusters in RGB-space",
+        "E": "Each color in the image has a unique label"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d93340",
+      "question": "What is the benefit of unsupervised learning compared to supervised learning?",
+      "options": {
+        "A": "It does not require labeling of training data",
+        "B": "It recognizes specific classes of interest",
+        "C": "It requires less data",
+        "D": "Unsupervised learning algorithms are faster",
+        "E": "The results are more accurate"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_a615eb",
+      "question": "What is assumed about the classification problem when using the nearest centroid classifier?",
+      "options": {
+        "A": "Feature space is low dimensional",
+        "B": "Feature space is high dimensional",
+        "C": "There are only two classes",
+        "D": "Classes form compact, sphere-shaped clusters",
+        "E": "Class centers are evenly distributed in the feature space"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_50c12e",
+      "question": "Why is visual bag of words good for image categorization but not good for object detection?",
+      "options": {
+        "A": "It focuses on texture information",
+        "B": "It is a global representation",
+        "C": "It is a local representation",
+        "D": "It is not invariant to spatial transformations",
+        "E": "It focuses on shape information"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

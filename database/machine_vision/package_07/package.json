@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_e771f1",
+      "question": "How does the Lucas-Kanade method address the aperture problem?",
+      "options": {
+        "A": "By ensuring gradients exist in two separate directions",
+        "B": "By relying on priors about the motion field",
+        "C": "By applying a Gaussian filter to smooth the motion vectors",
+        "D": "By tracking edges and corners within an aperture",
+        "E": "By normalizing the image intensity across the aperture"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_2ff80d",
+      "question": "What is the essential difference between direct and feature-based motion estimation methods?",
+      "options": {
+        "A": "Direct methods compare pixel values, while feature-based methods track visual features",
+        "B": "Direct methods assess motion through gradient descent, while feature-based methods use correlation tracking",
+        "C": "Direct methods use optical flow, while feature-based methods rely on motion capture technology",
+        "D": "Direct methods use edge detection, while feature-based methods use texture analysis",
+        "E": "Direct methods utilize color segmentation, while feature-based methods use shape matching"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_567418",
+      "question": "What is an advantage and disadvantage of the Lucas-Kanade method compared to feature matching?",
+      "options": {
+        "A": "Advantage: More effective for real-time applications. Disadvantage: More likely to fail with textured surfaces",
+        "B": "Advantage: Can handle larger motions. Disadvantage: Computationally more expensive",
+        "C": "Advantage: Computationally more efficient. Disadvantage: More likely to struggle with large motions",
+        "D": "Advantage: More robust to noise. Disadvantage: More sensitive to lighting changes",
+        "E": "Advantage: More accurate in dense areas. Disadvantage: Worse performance in sparse areas"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_cb0db5",
+      "question": "Based on the lecture material, what do smoothness of location and smoothness of velocity mean in point tracking?",
+      "options": {
+        "A": "Smoothness of location signifies that the object cannot be in multiple places at the same time, whereas smoothness of velocity means that the object\u2019s speed is limited to linear changes",
+        "B": "Smoothness of location means the object remains in a particular region of the image, while smoothness of velocity means the object retains a particular speed range",
+        "C": "Smoothness of location pertains to maintaining a constant magnitude of motion, while smoothness of velocity tries to enforce linear motion",
+        "D": "Smoothness of location means small directional changes, while smoothness of velocity means consistent speed between frames",
+        "E": "Smoothness of location is about maintaining a constant distance from a reference point, while smoothness of velocity deals with uniform motion"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_41b3b9",
+      "question": "Why do we need the small motion assumption when using the optical flow equation?",
+      "options": {
+        "A": "Small motion reduces the computational complexity of the optical flow algorithms",
+        "B": "Optical flow equation is inherently biased against large motions",
+        "C": "Small motion allows the first-order Taylor expansion to remain valid",
+        "D": "Small motion is necessary to avoid aliasing effects in the optical flow computation",
+        "E": "Small motion ensures that the time derivative of the image intensity remains constant"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_806dda",
+      "question": "What is the aperture problem in motion analysis?",
+      "options": {
+        "A": "The issue of identifying objects when they overlap in a frame",
+        "B": "The difficulty in distinguishing between moving objects and background noise",
+        "C": "The inability to determine true motion direction from an edge",
+        "D": "The inability to detect motion in low-light conditions",
+        "E": "The problem of tracking multiple moving objects simultaneously"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_be0449",
+      "question": "How does the human visual system deal with the aperture problem?",
+      "options": {
+        "A": "It uses the motion of surrounding objects to infer direction",
+        "B": "It relies on depth cues to solve the problem",
+        "C": "It uses color cues within the aperture to infer motion direction",
+        "D": "It ignores missing information completely",
+        "E": "It compensates using priors based on the aperture's shape"
+      },
+      "correct_option": "C",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_27f560",
+      "question": "What is the difference between a motion vector and a motion field?",
+      "options": {
+        "A": "Motion vector indicates speed, while motion field indicates velocity",
+        "B": "Motion field represents the magnitude, while motion vector represents the direction",
+        "C": "Motion vector is a vector quantity, while motion field is a scalar quantity",
+        "D": "Both terms are interchangeable in motion analysis",
+        "E": "Motion vector represents a single point, while a motion field represents multiple points"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_5d4587",
+      "question": "What is the relationship between perceived motion and depth?",
+      "options": {
+        "A": "The magnitude of motion is directly proportional to depth",
+        "B": "The magnitude of motion is inversely proportional to depth",
+        "C": "Motion decreases exponentially with depth",
+        "D": "The direction of motion is inversely proportional to depth",
+        "E": "Perceived motion is perpendicular to depth"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_f4f4a4",
+      "question": "What is the difference between apparent motion and actual motion?",
+      "options": {
+        "A": "Apparent motion refers to movement caused by optical illusions, whereas actual motion is movement physically occurring in space",
+        "B": "Apparent motion is influenced by the observer's frame of reference, while actual motion is absolute and unchanging",
+        "C": "Apparent motion occurs under constant lighting conditions, whereas actual motion can be observed under varying lighting conditions",
+        "D": "Apparent motion is perceived movement in the image, while actual motion is true physical movement",
+        "E": "Apparent motion can only be perceived in two dimensions, whereas actual motion occurs in three dimensions"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

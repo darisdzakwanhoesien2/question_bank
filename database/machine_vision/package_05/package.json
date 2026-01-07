@@ -1,0 +1,157 @@
+{
+  "package_id": "package",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "package_mcq_e76755",
+      "question": "How are scale-invariant interest points detected?",
+      "options": {
+        "A": "By clustering feature points obtained from each scale and selecting cluster centroids that appear across all scales with minimal variance",
+        "B": "By applying a single-scale Harris corner detector and verifying its responses against scale-space representations to ensure invariance",
+        "C": "By utilizing the Laplacian of Gaussian (LoG) operator to detect zero-crossings across scales and selecting points that persist across a predefined scale range",
+        "D": "By identifying extrema in the Difference of Gaussian (DoG) pyramid across scales and rejecting points based on low response thresholds and edge-like structures",
+        "E": "By performing non-maximum suppression on the gradient magnitude across scales and selecting points that maintain consistent orientation across multiple scales"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_9a7a44",
+      "question": "Why does the SIFT descriptor divide an image patch into 16 sub-patches?",
+      "options": {
+        "A": "To reduce computational complexity by limiting the number of gradients processed in each sub-patch, making the descriptor more efficient",
+        "B": "To increase the dimensionality of the descriptor, allowing for a more detailed representation of texture information within the patch",
+        "C": "To associate several gradient histograms with specific locations within the patch, retaining spatial information in the descriptor",
+        "D": "To enable multi-scale analysis by processing each sub-patch at different levels of image resolution, enhancing scale invariance",
+        "E": "To separate texture and edge information by assigning different types of gradient calculations to each sub-patch, improving feature discrimination"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_f8c80f",
+      "question": "How is ratio distance used in feature matching, and what are its possible minimum and maximum values?",
+      "options": {
+        "A": "Ratio distance is used to reject ambiguous matches. Only matches with a ratio distance below the threshold are accepted. Its minimum value is 0, and its maximum value is 1",
+        "B": "Ratio distance serves to prioritize matches based on their similarity scores, with higher values indicating better matches. The possible values range from 0 to infinity",
+        "C": "Ratio distance is employed to enhance the accuracy of matches by scaling feature distances. It ranges from -1 to 1, where negative values indicate mismatches",
+        "D": "Ratio distance is used to normalize feature distances across different scales, ensuring that all matches have a distance between 0 and 1",
+        "E": "Ratio distance helps in selecting the best match by ensuring that the best match is significantly better than the second-best match. It varies between 0 and 1, where values closer to 1 indicate a more reliable match"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_95c556",
+      "question": "What makes corner points repeatable, and why is this property important in image matching?",
+      "options": {
+        "A": "Corner points have significant gradients in at least two different directions, allowing them to be reliably detected from various viewpoints",
+        "B": "Corner points are always located at the intersections of image grid lines, making them easily identifiable and consistent across different images",
+        "C": "Corner points are determined by their proximity to a window function, ensuring they are consistently detected when images are captured from different perspectives",
+        "D": "Corner points have significant gradient response, ensuring their prominence and consistent detection across different lighting conditions",
+        "E": "Corner points are defined by their unique color patterns, which remain constant regardless of changes in image angle or illumination"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_e48140",
+      "question": "How is scale-space constructed and what is the role of its parameters?",
+      "options": {
+        "A": "By decomposing the image into multiple frequency bands using wavelet transforms, where each band corresponds to a different scale of image features",
+        "B": "By convolving the image with Gaussian kernels of varying standard deviations, where the standard deviation determines the scale of the detected features",
+        "C": "By segmenting the image into regions based on texture similarity, where the similarity threshold defines the granularity of the scale-space levels",
+        "D": "By applying a series of sharpening filters with varying strengths, where the strength parameter determines the emphasis on fine details versus coarse structures",
+        "E": "By progressively reducing the image resolution through downsampling, where the downsampling factor determines the scale of the observable features"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_1f97e0",
+      "question": "When extracting a small image patch around an interest point, converting it into a vector, and using it directly as a local descriptor, what are the advantages and limitations of this approach in feature matching?",
+      "options": {
+        "A": "The approach inherently normalizes for illumination changes, providing robustness against varying lighting conditions, but it sacrifices spatial detail, reducing the descriptor\u2019s distinctiveness",
+        "B": "The approach achieves invariance to affine transformations, but the matching process can introduce computational overhead and potential alignment errors",
+        "C": "The approach enables straightforward feature matching using simple distance metrics, but it fails to account for the spatial arrangement of pixel intensities",
+        "D": "The approach retains complete spatial and color information, ensuring high distinctiveness, but it is highly sensitive to geometric transformations such as scaling and rotation",
+        "E": "The approach maintains rotation and shift invariance, but it requires a hierarchical matching process that complicates the feature matching pipeline"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_ebdd35",
+      "question": "What can be inferred about an image point and its surrounding region based on the Harris corner response?",
+      "options": {
+        "A": "A large positive response signifies high contrast, a negative response indicates low contrast, and a response close to zero denotes uniform brightness",
+        "B": "A large positive response signifies an edge, a negative response indicates a corner, and a response close to zero denotes a textured region",
+        "C": "A large positive response indicates a corner, a negative response signifies a flat region, and a response close to zero denotes an edge",
+        "D": "A large positive response denotes a flat region, a negative response signifies a corner, and a response close to zero indicates an edge",
+        "E": "A large positive response indicates a corner, a negative response signifies an edge, and a response close to zero denotes a flat region"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_d51548",
+      "question": "Under which circumstances do SIFT and other local feature descriptors fail to provide reliable matches?",
+      "options": {
+        "A": "When images contain similar or repeated details",
+        "B": "When images are captured under varying lighting conditions",
+        "C": "When the viewpoint differences of the images are relatively small",
+        "D": "When images have high contrast and distinct edges",
+        "E": "When the images do not contain color information"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_388a73",
+      "question": "Under which circumstances do SIFT and other local feature descriptors fail to provide reliable matches?",
+      "options": {
+        "A": "When images contain similar or repeated details",
+        "B": "When images are captured under varying lighting conditions",
+        "C": "When the viewpoint differences of the images are relatively small",
+        "D": "When images have high contrast and distinct edges",
+        "E": "When the images do not contain color information"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "package_mcq_de4af1",
+      "question": "What makes texture analysis ineffective for image matching?",
+      "options": {
+        "A": "Texture descriptors capture global properties, whereas image matching requires descriptors linked to local details",
+        "B": "Texture descriptors are too computationally intensive, making real-time image matching impractical",
+        "C": "Texture analysis relies solely on color information, which is insufficient for distinguishing similar textures in image matching",
+        "D": "Texture descriptors are highly sensitive to image rotations, preventing accurate matching of rotated images",
+        "E": "Texture analysis only works on grayscale images, limiting its applicability in color-rich image matching scenarios"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}

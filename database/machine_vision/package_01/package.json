@@ -1,0 +1,157 @@
+{
+  "package_id": "pkg_exposure_01",
+  "source": "imaging_exposure.pdf",
+  "level": "introductory",
+  "mcqs": [
+    {
+      "id": "pkg_exposure_01_mcq_16212c",
+      "question": "What makes a pinhole camera impractical?",
+      "options": {
+        "A": "The image becomes too dark for practical purposes",
+        "B": "The pinhole camera is too large to be practical",
+        "C": "The pinhole camera produces only grayscale images",
+        "D": "The pinhole camera cannot capture moving objects",
+        "E": "The image becomes too bright for practical purposes"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_0f13be",
+      "question": "If the F-number changes from f/4 to f/8, how much longer exposure time is needed to keep the brightness level the same?",
+      "options": {
+        "A": "2 times longer exposure time",
+        "B": "6 times longer exposure time",
+        "C": "5 times longer exposure time",
+        "D": "3 times longer exposure time",
+        "E": "4 times longer exposure time"
+      },
+      "correct_option": "E",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_e65be0",
+      "question": "What causes chromatic aberration?",
+      "options": {
+        "A": "Light is absorbed differently in the lens depending on its wavelength",
+        "B": "Light is scattered differently in the lens depending on its wavelength",
+        "C": "Light is polarized differently in the lens depending on its wavelength",
+        "D": "Light is refracted differently in the lens depending on its wavelength",
+        "E": "Light is reflected differently in the lens depending on its wavelength"
+      },
+      "correct_option": "D",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_8f2158",
+      "question": "What is the purpose of white balancing in the camera image processing pipeline?",
+      "options": {
+        "A": "It optimizes the image for low light conditions",
+        "B": "It ensures correct reproduction of the image colors",
+        "C": "It maximizes the dynamic range between black and white",
+        "D": "It balances the exposure levels of the image",
+        "E": "It improves the overall brightness of the image"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_3e84ef",
+      "question": "In the pinhole camera model, what happens to the image when the focal length is doubled?",
+      "options": {
+        "A": "The image remains the same size",
+        "B": "The image becomes two times bigger",
+        "C": "The image becomes two times smaller",
+        "D": "The image becomes inverted",
+        "E": "The image becomes blurry"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_9ea156",
+      "question": "What happens to the image when it is transformed from the real image plane to the virtual front image plane?",
+      "options": {
+        "A": "It is flipped vertically",
+        "B": "It is rotated 90 degrees",
+        "C": "It is flipped horizontally",
+        "D": "It is rotated 180 degrees",
+        "E": "It is rotated -90 degrees"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_134124",
+      "question": "Wide angle lenses often have significant lens distortion. Why is it beneficial?",
+      "options": {
+        "A": "It allows for a wider aperture, enabling more light to enter the lens",
+        "B": "It increases the sharpness of the image",
+        "C": "It reduces the chromatic aberration in the image",
+        "D": "It minimizes the effect of perspective distortion",
+        "E": "It makes the brightness of the image more uniform"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_d54efb",
+      "question": "How do we observe if a given image has a shallow depth of field? When does it happen?",
+      "options": {
+        "A": "The image appears to be sharp across the entire frame. It happens when the lens aperture is small",
+        "B": "The image appears to be blurry only at the center. It happens when the lens aperture is small",
+        "C": "The image appears to be blurry only at the edges. It happens when the lens aperture is large",
+        "D": "The image appears to be blurry across the entire frame. It happens when the lens aperture is large",
+        "E": "The image appears to be sharp at a narrow range. It happens when the lens aperture is large"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_73966f",
+      "question": "In the thin lens model, if the object is infinitely far away from the camera, what is the distance from the lens where the image is focused?",
+      "options": {
+        "A": "The distance is infinite",
+        "B": "The distance is the same as the focal length",
+        "C": "The distance is zero",
+        "D": "The distance is half the focal length",
+        "E": "The distance is twice the focal length"
+      },
+      "correct_option": "B",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    },
+    {
+      "id": "pkg_exposure_01_mcq_40860c",
+      "question": "Why are there twice as many green pixels as blue and red pixels in the Bayer pattern CFA?",
+      "options": {
+        "A": "Human eye is more sensitive to green",
+        "B": "Human eye is less sensitive to green",
+        "C": "Energy content of green light is the lowest",
+        "D": "Green pixels are cheaper to produce",
+        "E": "Energy content of green light is the highest"
+      },
+      "correct_option": "A",
+      "difficulty": "easy",
+      "learning_objective": "",
+      "slide_refs": []
+    }
+  ]
+}
