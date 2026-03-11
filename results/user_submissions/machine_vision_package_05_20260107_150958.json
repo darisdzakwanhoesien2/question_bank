@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-01-07T15:09:58.061075",
+  "subject": "machine_vision",
+  "package_id": "package_05",
+  "mcq_score": 9,
+  "mcq_total": 10,
+  "essay_score": 0,
+  "essay_total": 0,
+  "final_score": 45.0,
+  "matched_keywords": [],
+  "user_answers": {
+    "package_mcq_e76755": "D",
+    "package_mcq_9a7a44": "C",
+    "package_mcq_f8c80f": "A",
+    "package_mcq_95c556": "A",
+    "package_mcq_e48140": "B",
+    "package_mcq_1f97e0": "D",
+    "package_mcq_ebdd35": "E",
+    "package_mcq_d51548": "A",
+    "package_mcq_388a73": "A",
+    "package_mcq_de4af1": "D"
+  },
+  "user_essay_answers": {}
+}

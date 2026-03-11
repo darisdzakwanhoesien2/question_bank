@@ -103,7 +103,7 @@
         "D": "Fourier descriptors can represent both shape and color information simultaneously",
         "E": "Fourier descriptors allow for the exact reconstruction of an object's shape without any loss of information"
       },
-      "correct_option": "E",
+      "correct_option": "B",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -118,7 +118,7 @@
         "D": "They are only translation invariant",
         "E": "They are not translation, scale, or rotation invariant"
       },
-      "correct_option": "E",
+      "correct_option": "B",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -133,7 +133,7 @@
         "D": "There is only one object in the image with relatively constant color, and the illumination should be uniform",
         "E": "The foreground objects should have uniform color that is similar to the background colors, and the illumination should be variable"
       },
-      "correct_option": "E",
+      "correct_option": "C",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []

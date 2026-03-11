@@ -28,7 +28,7 @@
         "D": "To enable multi-scale analysis by processing each sub-patch at different levels of image resolution, enhancing scale invariance",
         "E": "To separate texture and edge information by assigning different types of gradient calculations to each sub-patch, improving feature discrimination"
       },
-      "correct_option": "B",
+      "correct_option": "C",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -43,7 +43,7 @@
         "D": "Ratio distance is used to normalize feature distances across different scales, ensuring that all matches have a distance between 0 and 1",
         "E": "Ratio distance helps in selecting the best match by ensuring that the best match is significantly better than the second-best match. It varies between 0 and 1, where values closer to 1 indicate a more reliable match"
       },
-      "correct_option": "B",
+      "correct_option": "A",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -58,7 +58,7 @@
         "D": "Corner points have significant gradient response, ensuring their prominence and consistent detection across different lighting conditions",
         "E": "Corner points are defined by their unique color patterns, which remain constant regardless of changes in image angle or illumination"
       },
-      "correct_option": "B",
+      "correct_option": "A",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -148,7 +148,7 @@
         "D": "Texture descriptors are highly sensitive to image rotations, preventing accurate matching of rotated images",
         "E": "Texture analysis only works on grayscale images, limiting its applicability in color-rich image matching scenarios"
       },
-      "correct_option": "A",
+      "correct_option": "D",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []

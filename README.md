@@ -8,6 +8,8 @@ https://notebooklm.google.com/notebook/5301d379-ffae-4675-966c-43086804816d
 Prompt MCQ, Essay and Mixed into NotebookLM: https://chatgpt.com/c/6928415a-ae84-832a-8d6e-694e3aece3fc
 
 
+https://chatgpt.com/c/695e4369-b72c-8329-8e74-27599552225a Note-taking strategy
+
 test_question_bank_app/
 │
 ├── app.py                              # Streamlit frontend (select package/test mode/run)

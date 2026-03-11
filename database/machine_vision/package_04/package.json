@@ -28,7 +28,7 @@
         "D": "Apply both horizontal and vertical gradient filters to the image, compare their responses, and classify regions based on which gradient is stronger",
         "E": "Perform a Fourier transform to identify dominant frequency orientations and separate stripes based on their frequency components"
       },
-      "correct_option": "E",
+      "correct_option": "D",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -88,7 +88,7 @@
         "D": "Because shape features are not sensitive to orientation",
         "E": "Because shape features are only used for analyzing color images"
       },
-      "correct_option": "D",
+      "correct_option": "A",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -148,7 +148,7 @@
         "D": "Two opposite neighbors in the 8-neighborhood have higher intensity than the center pixel",
         "E": "Two adjacent neighbors in the 8-neighborhood have higher intensity than the center pixel"
       },
-      "correct_option": "B",
+      "correct_option": "D",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []

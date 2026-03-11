@@ -88,7 +88,7 @@
         "D": "It is rotated 180 degrees",
         "E": "It is rotated -90 degrees"
       },
-      "correct_option": "B",
+      "correct_option": "D",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -103,7 +103,7 @@
         "D": "It minimizes the effect of perspective distortion",
         "E": "It makes the brightness of the image more uniform"
       },
-      "correct_option": "B",
+      "correct_option": "D",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -118,7 +118,7 @@
         "D": "The image appears to be blurry across the entire frame. It happens when the lens aperture is large",
         "E": "The image appears to be sharp at a narrow range. It happens when the lens aperture is large"
       },
-      "correct_option": "B",
+      "correct_option": "E",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []

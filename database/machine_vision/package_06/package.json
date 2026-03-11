@@ -13,7 +13,7 @@
         "D": "By plotting precision vs. recall",
         "E": "By plotting false negatives against true negatives"
       },
-      "correct_option": "A",
+      "correct_option": "C",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -28,7 +28,7 @@
         "D": "Number of samples recognized to belong to a class",
         "E": "Number of misclassified samples"
       },
-      "correct_option": "A",
+      "correct_option": "B",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []

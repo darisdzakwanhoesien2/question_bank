@@ -58,7 +58,7 @@
         "D": "Because chromaticity is defined by normalizing the three tristimulus values by their sum, making one coordinate dependent on the other two",
         "E": "Because one of the primaries always remains constant, removing the need for a third parameter in describing chromaticity"
       },
-      "correct_option": "A",
+      "correct_option": "D",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -103,7 +103,7 @@
         "D": "By adjusting the amplitudes of three color matching functions to achieve the desired color",
         "E": "By adjusting the wavelengths of three primary colors to match the test color"
       },
-      "correct_option": "D",
+      "correct_option": "A",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
@@ -133,7 +133,7 @@
         "D": "The tristimulus values of all primaries become negative between 450 and 550 nm",
         "E": "The tristimulus values of the red primary become negative between 450 and 550 nm"
       },
-      "correct_option": "B",
+      "correct_option": "E",
       "difficulty": "easy",
       "learning_objective": "",
       "slide_refs": []
