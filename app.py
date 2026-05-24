@@ -1,9 +1,10 @@
-import streamlit as st
 import json
 import os
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, List
+
+import streamlit as st
 # from openai import OpenAI  # Uncomment when ready to use GPT generation
 
 # -------------------------------
@@ -36,10 +37,11 @@ def load_prompt() -> str:
 def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, level: str, subject: str) -> Dict:
     """Simulated version of GPT-based question generation (placeholder)."""
     import fitz  # PyMuPDF
-    doc = fitz.open(pdf_path)
-    text = ""
-    for page in doc:
-        text += page.get_text("text")
+
+    # Keep context extraction in place for future GPT integration while ensuring
+    # file handles are always released.
+    with fitz.open(pdf_path) as doc:
+        text = "".join(page.get_text("text") for page in doc)
 
     # Placeholder generation (OpenAI disabled)
     st.warning("⚠️ GPT generation is currently disabled. Using a sample placeholder instead.")
@@ -58,10 +60,10 @@ def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, lev
                     "criteria": [
                         {"keyword": "example", "weight": 40, "description": "Mentions example concept"},
                         {"keyword": "placeholder", "weight": 40, "description": "Mentions placeholder concept"},
-                        {"keyword": "essay", "weight": 20, "description": "Mentions essay structure"}
+                        {"keyword": "essay", "weight": 20, "description": "Mentions essay structure"},
                     ],
                     "grading_notes": "This is a placeholder rubric until OpenAI is re-enabled."
-                }
+                },
             },
             {
                 "id": f"{package_id}_essay2",
@@ -72,12 +74,13 @@ def generate_questions_from_pdf(pdf_path: str, package_id: str, source: str, lev
                     "criteria": [
                         {"keyword": "theory", "weight": 40, "description": "Mentions theoretical aspects"},
                         {"keyword": "understanding", "weight": 30, "description": "Shows comprehension"},
-                        {"keyword": "concept", "weight": 30, "description": "Explains key concepts"}
+                        {"keyword": "concept", "weight": 30, "description": "Explains key concepts"},
                     ],
                     "grading_notes": "Placeholder rubric for essay 2."
-                }
-            }
-        ]
+                },
+            },
+        ],
+        "source_text_chars": len(text),
     }
 
 def save_json(data: Dict, subject: str, package_id: str):
@@ -93,7 +96,10 @@ def load_packages(subject: str) -> List[str]:
     subject_dir = DB_DIR / subject
     if not subject_dir.exists():
         return []
-    return [pkg for pkg in os.listdir(subject_dir) if not pkg.startswith('.')]
+    return sorted(
+        pkg for pkg in os.listdir(subject_dir)
+        if not pkg.startswith(".") and (subject_dir / pkg).is_dir()
+    )
 
 def grade_mcq(mcq_data, user_answers):
     """Compute MCQ score."""
@@ -136,16 +142,21 @@ if mode == "🏗️ Generate Question Bank":
             f.write(pdf_file.getvalue())
 
         if st.button("🚀 Generate Questions"):
-            result = generate_questions_from_pdf(
-                pdf_path=str(pdf_path),
-                package_id=package_id,
-                source=pdf_file.name,
-                level=level,
-                subject=subject
-            )
-            if result:
-                save_json(result, subject, package_id)
-                st.json(result)
+            try:
+                result = generate_questions_from_pdf(
+                    pdf_path=str(pdf_path),
+                    package_id=package_id,
+                    source=pdf_file.name,
+                    level=level,
+                    subject=subject,
+                )
+                if result:
+                    save_json(result, subject, package_id)
+                    st.json(result)
+            finally:
+                # Avoid stale temp files between runs.
+                if pdf_path.exists():
+                    pdf_path.unlink()
 
 # -------------------------------
 # MODE 2: TAKE TEST
@@ -168,8 +179,10 @@ elif mode == "🧩 Take Test":
                 with open(package_file, "r", encoding="utf-8") as f:
                     package = json.load(f)
 
-                st.subheader(f"📦 {package['package_id']} — {package['source']}")
-                st.markdown(f"**Level:** {package['level']}")
+                st.subheader(
+                    f"📦 {package.get('package_id', package_id)} — {package.get('source', 'Unknown source')}"
+                )
+                st.markdown(f"**Level:** {package.get('level', 'Unknown')}")
 
                 # --- MCQ Section ---
                 user_mcq_answers = {}
